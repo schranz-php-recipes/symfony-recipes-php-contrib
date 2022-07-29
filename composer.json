@@ -1,0 +1,11 @@
+{
+    "require-dev": {
+        "php": "^8.1",
+        "symplify/config-transformer": "dev-main",
+        "symfony/finder": "^6.1",
+        "symfony/process": "^6.1",
+        "nunomaduro/termwind": "^1.13",
+        "symplify/easy-coding-standard": "^11.0",
+        "symplify/coding-standard": "^11.0"
+    }
+}
