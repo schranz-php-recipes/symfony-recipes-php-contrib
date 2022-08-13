@@ -1,5 +1,0 @@
-sb_redis:
-    clients:
-        default:
-            $options:    []
-            $parameters: ['%env(REDIS_URL)%']

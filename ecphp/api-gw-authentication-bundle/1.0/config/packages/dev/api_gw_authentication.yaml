@@ -1,3 +1,0 @@
-api_gw_authentication:
-    defaults:
-        env: acceptance # Available values are: acceptance, intra, production, user

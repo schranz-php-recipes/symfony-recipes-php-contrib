@@ -1,4 +1,0 @@
-oka_input_handler:
-    error_handler:
-        default_request_format: 'json'
-        override_problem_normalizer: true

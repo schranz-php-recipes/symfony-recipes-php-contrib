@@ -1,3 +1,0 @@
-mediamonks_rest_api:
-    request_matcher:
-        path: /api

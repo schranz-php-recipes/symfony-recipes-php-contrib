@@ -1,3 +1,0 @@
-tienvx_mbt:
-    email_from: '%env(EMAIL_FROM)%'
-    admin_url: '%env(ADMIN_URL)%'

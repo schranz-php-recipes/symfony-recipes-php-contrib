@@ -1,7 +1,0 @@
-monolog:
-    handlers:
-        blueScreen:
-            type: tracyBlueScreen
-
-monolog_tracy:
-    log_directory: '%kernel.logs_dir%/tracy'
