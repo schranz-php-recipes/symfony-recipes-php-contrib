@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/prod/sentry.yaml": {
+                    "contents": [
+                        "sentry:",
+                        "    dsn: '%env(SENTRY_DSN)%'",
+                        "    options:",
+                        "        excluded_exceptions:",
+                        "            - Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+                        "            - Symfony\\Component\\Security\\Core\\Exception\\AccessDeniedException",
+                        "",
+                        "#    If you are using Monolog, you also need these additional configuration and services to log the errors correctly:",
+                        "#    https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration",
+                        "#    register_error_listener: false",
+                        "",
+                        "#    monolog:",
+                        "#        handlers:",
+                        "#            sentry:",
+                        "#                type: service",
+                        "#                id: Sentry\\Monolog\\Handler",
+                        "",
+                        "#    services:",
+                        "#        Sentry\\Monolog\\Handler:",
+                        "#            arguments:",
+                        "#                $hub: '@Sentry\\State\\HubInterface'",
+                        "#                $level: !php/const Monolog\\Logger::ERROR",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fc6a6baeee961a34a70eca0f91e868d03ce7bd9b"
+        }
+    }
+}
