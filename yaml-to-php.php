@@ -88,10 +88,7 @@ render(<<<HTML
     </div>
 HTML);
 
-if (\in_array($process->run(), [0, 1], true)
-    // TODO currently 2 runs of ecs is required as "StandaloneLineInMultilineArrayFixer" is only applied correctly after first run
-    && \in_array($process->run(), [0, 1], true)
-) {
+if (\in_array($process->run(), [0, 1], true)) {
     render(<<<HTML
         <div>
             <div class="flex space-x-1 mx-2">
