@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Tests\Helper;
 
 // here you can define custom actions
@@ -6,5 +7,4 @@ namespace App\Tests\Helper;
 
 class Unit extends \Codeception\Module
 {
-
 }

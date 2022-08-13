@@ -1,3 +1,0 @@
-sulu_headless:
-    type: portal
-    resource: "@SuluHeadlessBundle/Resources/config/routing_website.yml"

@@ -10,7 +10,7 @@ use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-function handle_request(Request $request) : Response
+function handle_request(Request $request): Response
 {
     if (!isset($_SERVER['APP_ENV'])) {
         (new Dotenv())->load(__DIR__.'/.env');
@@ -30,7 +30,7 @@ function handle_request(Request $request) : Response
     return $response;
 }
 
-function main(array $args) : array
+function main(array $args): array
 {
     try {
         $request = RequestFactory::fromArgs($args);

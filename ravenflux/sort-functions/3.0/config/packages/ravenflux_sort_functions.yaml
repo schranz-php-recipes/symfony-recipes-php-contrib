@@ -1,6 +1,0 @@
-services:
-    ravenflux.twig.extension.sort_functions:
-        class: RavenFlux\Twig\SortExtension
-        tags:
-            -
-                name: twig.extension

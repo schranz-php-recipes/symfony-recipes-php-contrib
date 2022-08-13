@@ -1,3 +1,0 @@
-patchlevel_event_sourcing:
-    connection:
-        url: '%env(EVENTSTORE_URL)%'

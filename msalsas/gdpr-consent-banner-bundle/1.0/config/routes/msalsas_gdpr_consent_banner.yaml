@@ -1,4 +1,0 @@
-accept_gdpr_consent_banner:
-    path: /accept-gdpr-consent-banner
-    controller: Msalsas\GdprConsentBannerBundle\Controller\MsalsasGdprConsentBannerController:acceptGdprConsentBanner
-    methods: POST

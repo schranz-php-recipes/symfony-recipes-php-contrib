@@ -1,5 +1,0 @@
-services:
-    Kerox\TwigImagePlaceholder\SvgPlaceholderExtension:
-        autowire: true
-        autoconfigure: true
-

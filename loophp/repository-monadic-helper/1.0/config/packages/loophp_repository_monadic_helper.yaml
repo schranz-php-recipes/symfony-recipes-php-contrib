@@ -1,6 +1,0 @@
-services:
-    loophp\RepositoryMonadicHelper\MonadicRepositoryFactory:
-        autowire: true
-        autoconfigure: true
-
-    loophp\RepositoryMonadicHelper\MonadicRepositoryFactoryInterface: '@loophp\RepositoryMonadicHelper\MonadicRepositoryFactory'

@@ -1,3 +1,0 @@
-meteion:
-    dbal_connection: 'default'
-    rawexd_path: '%env(METEION_RAWEXD_PATH)%'

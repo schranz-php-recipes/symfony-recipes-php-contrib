@@ -1,3 +1,0 @@
-otobul_epaybg:
-    resource: '@OtobulEpaybgBundle/Resources/config/routes.xml'
-    prefix: /webhook/epaybg

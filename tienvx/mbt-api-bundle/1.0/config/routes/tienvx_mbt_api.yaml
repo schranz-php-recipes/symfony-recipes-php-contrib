@@ -1,3 +1,0 @@
-tienvx_mbt_api:
-    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'
-    prefix: '/mbt-api'

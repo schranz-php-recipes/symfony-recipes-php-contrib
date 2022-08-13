@@ -1,3 +1,0 @@
-easy_log:
-    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'
-    ignored_routes: ['_wdt', '_profiler']

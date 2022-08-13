@@ -22,12 +22,12 @@ add_action('after_setup_theme', function () {
         'widgets',
     ]);
 
-    register_nav_menu('main', __('Menu Principal','the_theme'));
+    register_nav_menu('main', __('Menu Principal', 'the_theme'));
 });
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style( 'the_theme-style', get_stylesheet_uri(), array());
+    wp_enqueue_style( 'the_theme-style', get_stylesheet_uri(), []);
 });
 
 // Remove JPEG compression.

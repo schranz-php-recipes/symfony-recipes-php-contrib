@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
@@ -20,7 +21,6 @@ use Networking\InitCmsBundle\Model\ContentRoute;
  * @ORM\HasLifecycleCallbacks()
  */
 class Page extends BasePage{
-
     /**
      * @var integer $id
      *

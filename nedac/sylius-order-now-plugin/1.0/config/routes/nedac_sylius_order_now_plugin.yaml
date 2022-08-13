@@ -1,2 +1,0 @@
-nedac_sylius_order_now_plugin:
-    resource: '@NedacSyliusOrderNowPlugin/Resources/config/shop_routing.yml'

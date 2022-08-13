@@ -1,3 +1,0 @@
-coop_tilleuls_sylius_quick_import_admin:
-    resource: "@CoopTilleulsSyliusQuickImportPlugin/Resources/config/admin_routing.yml"
-    prefix: /admin

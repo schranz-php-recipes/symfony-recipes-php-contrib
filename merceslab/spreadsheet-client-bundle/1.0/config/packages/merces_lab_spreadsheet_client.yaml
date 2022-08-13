@@ -1,3 +1,0 @@
-merces_lab_spreadsheet_client:
-    google:
-        credentials: '%env(GOOGLE_CREDENTIALS)%'
