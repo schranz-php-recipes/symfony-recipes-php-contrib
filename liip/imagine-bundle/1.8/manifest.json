@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Liip\\ImagineBundle\\LiipImagineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "public/": "%PUBLIC_DIR%/"
+    },
+    "gitignore": [
+        "/%PUBLIC_DIR%/media/cache/"
+    ]
+}

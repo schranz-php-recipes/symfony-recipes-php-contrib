@@ -1,0 +1,5 @@
+{
+    "env": {
+        "PUBSUB_EMULATOR_HOST": "http://localhost:8900"
+    }
+}
