@@ -1,4 +1,0 @@
-slot_mandrill:
-    api_key: '%env(MANDRILL_API_KEY)%'
-    default:
-        sender: '%env(MANDRILL_DEFAULT_SENDER)%'

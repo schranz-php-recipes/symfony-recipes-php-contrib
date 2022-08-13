@@ -1,3 +1,0 @@
-leapt_froala_editor:
-    resource: '@LeaptFroalaEditorBundle/Resources/config/routing.php'
-    prefix:   /froala-editor

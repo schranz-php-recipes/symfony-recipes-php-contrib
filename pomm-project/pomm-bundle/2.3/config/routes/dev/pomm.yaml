@@ -1,3 +1,0 @@
-_pomm:
-    resource: "@PommBundle/Resources/config/routing.yml"
-    prefix:   /_pomm

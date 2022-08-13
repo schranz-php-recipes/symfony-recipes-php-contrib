@@ -12,7 +12,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity()
  */
 class User extends BaseUser{
-
     /**
      * @var int
      *
@@ -27,5 +26,4 @@ class User extends BaseUser{
      * @ORM\Column(name="admin_settings", type="object", nullable=true)
      */
     protected $adminSettings;
-
 }

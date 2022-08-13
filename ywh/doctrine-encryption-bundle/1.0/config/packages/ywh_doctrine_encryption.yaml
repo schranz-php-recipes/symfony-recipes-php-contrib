@@ -1,3 +1,0 @@
-ywh_doctrine_encryption:
-    password: '%env(ENCRYPTION_PASSWORD)%'
-    key: '%env(ENCRYPTION_KEY)%'

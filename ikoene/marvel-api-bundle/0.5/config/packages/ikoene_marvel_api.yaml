@@ -1,3 +1,0 @@
-ikoene_marvel_api:
-    public_api_key: "%env(MARVEL_PUBLIC_API_KEY)%"
-    private_api_key: "%env(MARVEL_PRIVATE_API_KEY)%"

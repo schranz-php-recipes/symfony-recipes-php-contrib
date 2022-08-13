@@ -1,2 +1,0 @@
-infifni_sylius_euplatesc_plugin:
-    resource: "@InfifniSyliusEuPlatescPlugin/Resources/config/routing.yml"

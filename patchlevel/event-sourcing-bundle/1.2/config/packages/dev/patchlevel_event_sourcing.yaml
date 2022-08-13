@@ -1,3 +1,0 @@
-patchlevel_event_sourcing:
-    watch_server:
-        enabled: true

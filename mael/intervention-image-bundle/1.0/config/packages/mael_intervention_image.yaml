@@ -1,2 +1,0 @@
-mael_intervention_image:
-    driver: gd ## gd or imagick - Default is gd

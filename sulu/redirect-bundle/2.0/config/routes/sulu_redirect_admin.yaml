@@ -1,8 +1,0 @@
-sulu_redirect_api:
-    type: rest
-    resource: "@SuluRedirectBundle/Resources/config/routing_api.yml"
-    prefix: /admin/api
-
-sulu_redirect:
-    resource: "@SuluRedirectBundle/Resources/config/routing.yml"
-    prefix: /admin/redirects

@@ -1,4 +1,0 @@
-pomm:
-    configuration:
-        db:
-            dsn: "%env(DATABASE_URL)%"

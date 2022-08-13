@@ -1,3 +1,0 @@
-liip_monitor:
-    # enabling the controller requires that `assets` are enabled in the framework bundle
-    enable_controller: false

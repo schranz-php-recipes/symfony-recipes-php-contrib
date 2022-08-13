@@ -1,3 +1,0 @@
-_mobizel_markdowns:
-    resource: '@MobizelMarkdownDocsBundle/Resources/config/routes.xml'
-    prefix: docs

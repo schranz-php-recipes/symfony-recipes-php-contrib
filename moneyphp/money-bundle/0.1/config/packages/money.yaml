@@ -1,3 +1,0 @@
-services:
-    Money\Currencies:
-        alias: "moneyphp.iso.currencies"

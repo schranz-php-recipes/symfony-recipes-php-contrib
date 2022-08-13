@@ -1,2 +1,0 @@
-leapt_im:
-    resource: '@LeaptImBundle/Resources/config/routing.yml'

@@ -1,3 +1,0 @@
-netgen_layouts:
-    resource: "@NetgenLayoutsBundle/Resources/config/routing.yml"
-    prefix: "%netgen_layouts.route_prefix%"
