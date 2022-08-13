@@ -13,32 +13,52 @@
                 }
             },
             "files": {
-                "config/packages/sonata_admin.yaml": {
+                "config/packages/sonata_admin.php": {
                     "contents": [
-                        "sonata_admin:",
-                        "    title: 'Sonata Admin'",
-                        "    dashboard:",
-                        "        blocks:",
-                        "            - { type: sonata.admin.block.admin_list, position: left }",
+                        "<?php",
                         "",
-                        "sonata_block:",
-                        "    blocks:",
-                        "        sonata.admin.block.admin_list:",
-                        "            contexts: [admin]",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('sonata_admin', [",
+                        "        'title' => 'Sonata Admin',",
+                        "        'dashboard' => [",
+                        "            'blocks' => [[",
+                        "                'type' => 'sonata.admin.block.admin_list',",
+                        "                'position' => 'left',",
+                        "            ]],",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $containerConfigurator->extension('sonata_block', [",
+                        "        'blocks' => [",
+                        "            'sonata.admin.block.admin_list' => [",
+                        "                'contexts' => ['admin'],",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
                         ""
                     ],
                     "executable": false
                 },
-                "config/routes/sonata_admin.yaml": {
+                "config/routes/sonata_admin.php": {
                     "contents": [
-                        "admin_area:",
-                        "    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"",
-                        "    prefix: /admin",
+                        "<?php",
                         "",
-                        "_sonata_admin:",
-                        "    resource: .",
-                        "    type: sonata_admin",
-                        "    prefix: /admin",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@SonataAdminBundle/Resources/config/routing/sonata_admin.xml')",
+                        "        ->prefix('/admin');",
+                        "",
+                        "    $routingConfigurator->import('.', 'sonata_admin')",
+                        "        ->prefix('/admin');",
+                        "};",
                         ""
                     ],
                     "executable": false
@@ -50,7 +70,7 @@
                     "executable": false
                 }
             },
-            "ref": "0e5931df1732e3dccfba42a20853049e5e9db6ae"
+            "ref": "de8593d871a2f1b9307ceefbe90100902c65a671"
         }
     }
 }

@@ -12,18 +12,27 @@
                 }
             },
             "files": {
-                "config/packages/bazinga_hateoas.yaml": {
+                "config/packages/bazinga_hateoas.php": {
                     "contents": [
-                        "# For full configuration see https://github.com/willdurand/BazingaHateoasBundle/blob/master/Resources/doc/index.md#reference-configuration",
-                        "bazinga_hateoas:",
-                        "    twig_extension:",
-                        "        enabled: true",
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('bazinga_hateoas', [",
+                        "        'twig_extension' => [",
+                        "            'enabled' => true,",
+                        "        ],",
+                        "    ]);",
+                        "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
+            "ref": "1bc56e8a1b0d724369236dc950b3439763c065c5"
         }
     }
 }

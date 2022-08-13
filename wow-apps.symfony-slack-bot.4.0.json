@@ -15,18 +15,25 @@
                 }
             },
             "files": {
-                "config/packages/wow_apps_slack.yaml": {
+                "config/packages/wow_apps_slack.php": {
                     "contents": [
-                        "# SlackBot Configuration",
-                        "# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki",
-                        "wow_apps_slack:",
-                        "    api_url: '%env(WOW_APPS_SLACK_BOT_API_URL)%'",
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('wow_apps_slack', [",
+                        "        'api_url' => '%env(WOW_APPS_SLACK_BOT_API_URL)%',",
+                        "    ]);",
+                        "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "13f0faeb4edc98b33972b7f99e80b91e34050874"
+            "ref": "0570a0db86eab2c299438f2d1dd104c2911ac3d2"
         }
     }
 }
