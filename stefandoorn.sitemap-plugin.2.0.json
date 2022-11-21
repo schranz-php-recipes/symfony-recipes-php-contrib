@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "stefandoorn/sitemap-plugin": {
+            "manifest": {
+                "bundles": {
+                    "SitemapPlugin\\SitemapPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sitemap_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import(__DIR__.'/@SitemapPlugin/Resources/config/config.php');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sitemap_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@SitemapPlugin/Resources/config/routing.yml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7d4168ab2693f80492617e3095dfea5d9a8a1254"
+        }
+    }
+}
