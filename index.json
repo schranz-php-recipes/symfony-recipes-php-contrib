@@ -1740,11 +1740,11 @@
     "branch": "main",
     "is_contrib": true,
     "_links": {
-        "repository": "github.com/symfony-php-recipes/symfony-recipes-php-contrib",
-        "origin_template": "{package}:{version}@github.com/symfony-php-recipes/symfony-recipes-php-contrib:main",
-        "recipe_template": "https://raw.githubusercontent.com/symfony-php-recipes/symfony-recipes-php-contrib/flex/main/{package_dotted}.{version}.json",
+        "repository": "github.com/schranz-php-recipes/symfony-recipes-php-contrib",
+        "origin_template": "{package}:{version}@github.com/schranz-php-recipes/symfony-recipes-php-contrib:main",
+        "recipe_template": "https://raw.githubusercontent.com/schranz-php-recipes/symfony-recipes-php-contrib/flex/main/{package_dotted}.{version}.json",
         "recipe_template_relative": "{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/symfony-php-recipes/symfony-recipes-php-contrib/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/schranz-php-recipes/symfony-recipes-php-contrib/flex/main/archived/{package_dotted}/{ref}.json",
         "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }
