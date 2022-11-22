@@ -9,7 +9,7 @@ defaults:
 
 jobs:
     call-qa:
-        uses: symfony-php-recipes/symfony-recipes-php/.github/workflows/callable-qa.yml@main
+        uses: schranz-php-recipes/symfony-recipes-php/.github/workflows/callable-qa.yml@main
         with:
             contrib: true
             find_yaml: -not -wholename 'codeception/codeception/*/tests/*' -not -wholename 'codeception/codeception/*/codeception.yml'
