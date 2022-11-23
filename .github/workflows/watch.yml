@@ -3,6 +3,7 @@ name: Watch for changes
 on:
     schedule:
         - cron: '25 18 * * *'
+    workflow_dispatch:
 
 jobs:
     call-watch:
