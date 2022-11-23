@@ -2,7 +2,7 @@ name: Watch for changes
 
 on:
     schedule:
-        - cron: '0 11 * * *'
+        - cron: '31 11 * * *'
 
 jobs:
     call-watch:
