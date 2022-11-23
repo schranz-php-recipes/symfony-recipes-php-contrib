@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "pixelopen/cloudflare-turnstile-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PixelOpen\\CloudflareTurnstileBundle\\PixelOpenCloudflareTurnstileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TURNSTILE_KEY": "3x00000000000000000000FF",
+                    "TURNSTILE_SECRET": "1x0000000000000000000000000000000AA"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>Cloudflare Turnstile Bundle</> is almost ready",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/Pixel-Open/cloudflare-turnstile-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/pixel_open_cloudflare_turnstile.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('pixel_open_cloudflare_turnstile', [",
+                        "        'key' => '%env(TURNSTILE_KEY)%',",
+                        "        'secret' => '%env(TURNSTILE_SECRET)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f8e17ca69e85b0729b2bcde20a3150ee253aaadb"
+        }
+    }
+}
