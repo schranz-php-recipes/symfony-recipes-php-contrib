@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(__DIR__.'/@PayPlugSyliusPayPlugPlugin/Resources/config/config.php');
+    $containerConfigurator->import('@PayPlugSyliusPayPlugPlugin/Resources/config/config.yml');
 
-    $containerConfigurator->import(__DIR__.'/@PayPlugSyliusPayPlugPlugin/Resources/config/services.php');
+    $containerConfigurator->import('@PayPlugSyliusPayPlugPlugin/Resources/config/services.xml');
 };

@@ -6,37 +6,37 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/doctrine.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/doctrine.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/fos_ck_editor.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/fos_ck_editor.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/fos_user.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/fos_user.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/mopa_bootstrap.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/mopa_bootstrap.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/oneup_flysystem.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/oneup_flysystem.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/oneup_uploader.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/oneup_uploader.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_admin.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_admin.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_block.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_block.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_core.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_core.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_doctrine_admin.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_doctrine_admin.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_formatter.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_formatter.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_media.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_media.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_notification.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_notification.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/sonata_user.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/sonata_user.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/stof_doctrine_extensions.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/stof_doctrine_extensions.yaml');
 
-    $containerConfigurator->import(__DIR__.'/@NetworkingInitCmsBundle/Resources/config/cms/symfony_cmf_routing_extra.php');
+    $containerConfigurator->import('@NetworkingInitCmsBundle/Resources/config/cms/symfony_cmf_routing_extra.yaml');
 
     $containerConfigurator->extension('jms_serializer', [
         'metadata' => [
