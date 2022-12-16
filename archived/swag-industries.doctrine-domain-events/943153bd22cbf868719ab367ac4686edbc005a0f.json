@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "swag-industries/doctrine-domain-events": {
+            "manifest": {
+                "bundles": {
+                    "Biig\\Component\\Domain\\Integration\\Symfony\\DomainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_domain_event.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('biig_domain', [",
+                        "        'persist_listeners' => [",
+                        "            'doctrine' => ['default'],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "943153bd22cbf868719ab367ac4686edbc005a0f"
+        }
+    }
+}

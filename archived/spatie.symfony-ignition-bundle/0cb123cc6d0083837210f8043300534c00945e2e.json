@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "spatie/symfony-ignition-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Spatie\\SymfonyIgnitionBundle\\IgnitionBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ignition.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('ignition', [",
+                        "        'dark_mode' => false,",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0cb123cc6d0083837210f8043300534c00945e2e"
+        }
+    }
+}

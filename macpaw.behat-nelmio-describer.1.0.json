@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "macpaw/behat-nelmio-describer": {
+            "manifest": {
+                "bundles": {
+                    "BehatNelmioDescriber\\BehatNelmioDescriberBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/behat-nelmio-describer</>"
+                ]
+            },
+            "files": {
+                "config/packages/behat_nelmio_describer.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('behat_nelmio_describer', [",
+                        "        'behat_test_path' => '%kernel.project_dir%/features',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2838c5a0f7c5db9a79bce6c79fcd96b1c0d685fb"
+        }
+    }
+}

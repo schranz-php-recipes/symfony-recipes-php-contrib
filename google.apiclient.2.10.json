@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "google/apiclient": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_API_KEY": "",
+                    "GOOGLE_CLIENT_ID": "",
+                    "GOOGLE_CLIENT_SECRET": "",
+                    "GOOGLE_AUTH_CONFIG": "%kernel.project_dir%/path/to/file.json"
+                }
+            },
+            "files": {
+                "config/packages/google_apiclient.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->set('Google\\Client', 'Google\\Client')",
+                        "        ->call('setDeveloperKey', ['%env(GOOGLE_API_KEY)%'])",
+                        "        ->call('setClientId', ['%env(GOOGLE_CLIENT_ID)%'])",
+                        "        ->call('setClientSecret', ['%env(GOOGLE_CLIENT_SECRET)%'])",
+                        "        ->call('setAuthConfig', ['%env(resolve:GOOGLE_AUTH_CONFIG)%']);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e7e45fb27237df90c7aa3a4d939d6be2be4509c0"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "vich/uploader-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Vich\\UploaderBundle\\VichUploaderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/vich_uploader.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('vich_uploader', [",
+                        "        'db_driver' => 'orm',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3406b6564887edc42b14b68dac0244f247bfc596"
+        }
+    }
+}

@@ -22,6 +22,9 @@
         "ajardin/docker-symfony": [
             "0.2"
         ],
+        "ajgl/breakpoint-twig-extension": [
+            "0.3"
+        ],
         "akondas/symfony-consul-bundle": [
             "0.1"
         ],
@@ -193,6 +196,9 @@
         "coka/cors-bundle": [
             "1.0"
         ],
+        "coka/doctrine-encrypt-bundle": [
+            "1.0"
+        ],
         "coka/file-bundle": [
             "3.0"
         ],
@@ -234,7 +240,8 @@
             "4.6"
         ],
         "contao/installation-bundle": [
-            "4.6"
+            "4.6",
+            "4.10"
         ],
         "contentful/contentful-bundle": [
             "3.0",
@@ -496,6 +503,9 @@
         "facile-it/mongodb-bundle": [
             "0.6"
         ],
+        "fd6130/exabytes-sms-bundle": [
+            "1.0"
+        ],
         "felds/quick-mailer-bundle": [
             "5.0"
         ],
@@ -566,7 +576,8 @@
             "1.0"
         ],
         "google/apiclient": [
-            "2.0"
+            "2.0",
+            "2.10"
         ],
         "google/recaptcha": [
             "1.1"
@@ -681,7 +692,8 @@
         ],
         "jms/serializer-bundle": [
             "2.0",
-            "3.0"
+            "3.0",
+            "4.0"
         ],
         "jolicode/gif-exception-bundle": [
             "1.0"
@@ -872,6 +884,9 @@
         ],
         "machy8/webloader-bundle": [
             "1.1"
+        ],
+        "macpaw/behat-nelmio-describer": [
+            "1.0"
         ],
         "macpaw/sentry-monolog-adapter": [
             "0.0"
@@ -1338,6 +1353,9 @@
         "routmoute/routmoute-discord-bundle": [
             "1.1"
         ],
+        "routmoute/routmoute-sirene-bundle": [
+            "1.0"
+        ],
         "rundum/event-base": [
             "0.0"
         ],
@@ -1388,6 +1406,9 @@
         "soljian/steam-authentication-bundle": [
             "1.0"
         ],
+        "solvrtech/symfony-logbook": [
+            "1.0"
+        ],
         "sonata-project/admin-bundle": [
             "3.31",
             "3.64",
@@ -1420,13 +1441,17 @@
             "3.4"
         ],
         "sonata-project/page-bundle": [
-            "3.9"
+            "3.9",
+            "4.0"
         ],
         "sonata-project/translation-bundle": [
             "2.3"
         ],
         "sonata-project/twig-extensions": [
             "1.2"
+        ],
+        "spatie/symfony-ignition-bundle": [
+            "0.0"
         ],
         "spiechu/symfony-commons-bundle": [
             "0.1"
@@ -1493,6 +1518,9 @@
             "1.0"
         ],
         "svc/util-bundle": [
+            "1.0"
+        ],
+        "swag-industries/doctrine-domain-events": [
             "1.0"
         ],
         "swag-industries/melodiia": [
@@ -1627,7 +1655,8 @@
             "1.2"
         ],
         "vich/uploader-bundle": [
-            "1.7"
+            "1.7",
+            "1.13"
         ],
         "victor-prdh/recaptcha-bundle": [
             "1.5"

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "contao/installation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Contao\\InstallationBundle\\ContaoInstallationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/contao_installation.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@ContaoInstallationBundle/Resources/config/routes.yml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2fe3f52ca927706640a6a35141e1589c3967585e"
+        }
+    }
+}
