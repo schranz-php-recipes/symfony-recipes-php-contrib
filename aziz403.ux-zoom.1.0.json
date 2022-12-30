@@ -1,9 +1,9 @@
 {
     "manifests": {
-        "solvrtech/symfony-logbook": {
+        "aziz403/ux-zoom": {
             "manifest": {
                 "bundles": {
-                    "Solvrtech\\Symfony\\Logbook\\LogbookBundle": [
+                    "Aziz403\\UX\\Zoom\\UxZoomBundle": [
                         "all"
                     ]
                 },
@@ -11,13 +11,12 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "LOGBOOK_API_URL": "Logbook API url",
-                    "LOGBOOK_API_KEY": "Logbook API key",
-                    "LOGBOOK_LEVEL": "ERROR"
+                    "ZOOM_SDK_KEY": "!ChangeMe!",
+                    "ZOOM_SDK_SECRET": "!ChangeMe!"
                 }
             },
             "files": {
-                "config/packages/logbook.php": {
+                "config/packages/ux_zoom.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -26,12 +25,11 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('logbook', [",
-                        "        'api' => [",
-                        "            'url' => '%env(LOGBOOK_API_URL)%',",
-                        "            'key' => '%env(LOGBOOK_API_KEY)%',",
+                        "    $containerConfigurator->extension('ux_zoom', [",
+                        "        'sdk' => [",
+                        "            'key' => '%env(ZOOM_SDK_KEY)%',",
+                        "            'secret' => '%env(ZOOM_SDK_SECRET)%',",
                         "        ],",
-                        "        'level' => '%env(LOGBOOK_LEVEL)%',",
                         "    ]);",
                         "};",
                         ""
@@ -39,7 +37,7 @@
                     "executable": false
                 }
             },
-            "ref": "788460fa285957715d58aceff9d3c0e94ec4cbaf"
+            "ref": "9f655234b47ec69232bad6204f4565b855c59aa9"
         }
     }
 }

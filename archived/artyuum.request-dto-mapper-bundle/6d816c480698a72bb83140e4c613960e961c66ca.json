@@ -1,23 +1,18 @@
 {
     "manifests": {
-        "solvrtech/symfony-logbook": {
+        "artyuum/request-dto-mapper-bundle": {
             "manifest": {
                 "bundles": {
-                    "Solvrtech\\Symfony\\Logbook\\LogbookBundle": [
+                    "Artyum\\RequestDtoMapperBundle\\ArtyumRequestDtoMapperBundle": [
                         "all"
                     ]
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "env": {
-                    "LOGBOOK_API_URL": "Logbook API url",
-                    "LOGBOOK_API_KEY": "Logbook API key",
-                    "LOGBOOK_LEVEL": "ERROR"
                 }
             },
             "files": {
-                "config/packages/logbook.php": {
+                "config/packages/artyum_request_dto_mapper.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -26,12 +21,18 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('logbook', [",
-                        "        'api' => [",
-                        "            'url' => '%env(LOGBOOK_API_URL)%',",
-                        "            'key' => '%env(LOGBOOK_API_KEY)%',",
+                        "    $containerConfigurator->extension('artyum_request_dto_mapper', [",
+                        "        'default_extractor' => null,",
+                        "        'denormalizer' => [",
+                        "            'default_options' => [],",
+                        "            'additional_options' => [],",
                         "        ],",
-                        "        'level' => '%env(LOGBOOK_LEVEL)%',",
+                        "        'validation' => [",
+                        "            'enabled' => false,",
+                        "            'default_groups' => [],",
+                        "            'additional_groups' => [],",
+                        "            'throw_on_violation' => true,",
+                        "        ],",
                         "    ]);",
                         "};",
                         ""
@@ -39,7 +40,7 @@
                     "executable": false
                 }
             },
-            "ref": "788460fa285957715d58aceff9d3c0e94ec4cbaf"
+            "ref": "6d816c480698a72bb83140e4c613960e961c66ca"
         }
     }
 }

@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-rich-editor-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusRichEditorPlugin\\MonsieurBizSyliusRichEditorPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_rich_editor_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@MonsieurBizSyliusRichEditorPlugin/Resources/config/config.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_rich_editor_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing/admin.yaml')",
+                        "        ->prefix('/%sylius_admin.path_name%');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "904eac94c5634ec8f9bc107357c3ddaf7ebf84e0"
+        }
+    }
+}

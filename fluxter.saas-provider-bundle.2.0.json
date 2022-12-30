@@ -1,23 +1,18 @@
 {
     "manifests": {
-        "solvrtech/symfony-logbook": {
+        "fluxter/saas-provider-bundle": {
             "manifest": {
                 "bundles": {
-                    "Solvrtech\\Symfony\\Logbook\\LogbookBundle": [
+                    "Fluxter\\SaasProviderBundle\\SaasProviderBundle": [
                         "all"
                     ]
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                },
-                "env": {
-                    "LOGBOOK_API_URL": "Logbook API url",
-                    "LOGBOOK_API_KEY": "Logbook API key",
-                    "LOGBOOK_LEVEL": "ERROR"
                 }
             },
             "files": {
-                "config/packages/logbook.php": {
+                "config/packages/saas_provider_bundle.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -26,12 +21,9 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('logbook', [",
-                        "        'api' => [",
-                        "            'url' => '%env(LOGBOOK_API_URL)%',",
-                        "            'key' => '%env(LOGBOOK_API_KEY)%',",
-                        "        ],",
-                        "        'level' => '%env(LOGBOOK_LEVEL)%',",
+                        "    $containerConfigurator->extension('saas_provider', [",
+                        "        'client_entity' => 'App\\Entity\\Client',",
+                        "        'global_url' => 'app.yourdomain.tld',",
                         "    ]);",
                         "};",
                         ""
@@ -39,7 +31,7 @@
                     "executable": false
                 }
             },
-            "ref": "788460fa285957715d58aceff9d3c0e94ec4cbaf"
+            "ref": "6d71e238f5b1640658bb6a44391800ca66ae1844"
         }
     }
 }

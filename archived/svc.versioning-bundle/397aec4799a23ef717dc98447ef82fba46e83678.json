@@ -1,23 +1,21 @@
 {
     "manifests": {
-        "solvrtech/symfony-logbook": {
+        "svc/versioning-bundle": {
             "manifest": {
                 "bundles": {
-                    "Solvrtech\\Symfony\\Logbook\\LogbookBundle": [
+                    "Svc\\VersioningBundle\\SvcVersioningBundle": [
                         "all"
                     ]
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "env": {
-                    "LOGBOOK_API_URL": "Logbook API url",
-                    "LOGBOOK_API_KEY": "Logbook API key",
-                    "LOGBOOK_LEVEL": "ERROR"
-                }
+                "post-install-output": [
+                    "  * Please adapt config/packages/svc-versioning.yaml (see doc)"
+                ]
             },
             "files": {
-                "config/packages/logbook.php": {
+                "config/packages/svc_versioning.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -26,12 +24,9 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('logbook', [",
-                        "        'api' => [",
-                        "            'url' => '%env(LOGBOOK_API_URL)%',",
-                        "            'key' => '%env(LOGBOOK_API_KEY)%',",
-                        "        ],",
-                        "        'level' => '%env(LOGBOOK_LEVEL)%',",
+                        "    $containerConfigurator->extension('svc_versioning', [",
+                        "        'run_git' => false,",
+                        "        'run_deploy' => false,",
                         "    ]);",
                         "};",
                         ""
@@ -39,7 +34,7 @@
                     "executable": false
                 }
             },
-            "ref": "788460fa285957715d58aceff9d3c0e94ec4cbaf"
+            "ref": "397aec4799a23ef717dc98447ef82fba46e83678"
         }
     }
 }

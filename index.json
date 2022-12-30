@@ -71,6 +71,9 @@
             "1.0",
             "1.14"
         ],
+        "artyuum/request-dto-mapper-bundle": [
+            "1.0"
+        ],
         "assoconnect/mjml-bundle": [
             "1.0"
         ],
@@ -83,6 +86,9 @@
         ],
         "aws/aws-sdk-php-symfony": [
             "1.3"
+        ],
+        "aziz403/ux-zoom": [
+            "1.0"
         ],
         "backup-manager/symfony": [
             "2.1"
@@ -362,6 +368,9 @@
         "drenso/symfony-shared": [
             "0.8"
         ],
+        "drinksco/console-ui-bundle": [
+            "0.2"
+        ],
         "drupol/ecl-twig-bundle": [
             "0.1"
         ],
@@ -411,7 +420,8 @@
             "0.9"
         ],
         "emag-tech-labs/annotation-cache-bundle": [
-            "5.0"
+            "5.0",
+            "6.0"
         ],
         "emag-tech-labs/rabbitmq-bundle": [
             "2.0"
@@ -517,6 +527,9 @@
         ],
         "flux-se/sylius-payum-stripe-plugin": [
             "1.2",
+            "2.0"
+        ],
+        "fluxter/saas-provider-bundle": [
             "2.0"
         ],
         "fpt/stripe-bundle": [
@@ -765,7 +778,8 @@
         "kunstmaan/admin-bundle": [
             "5.2",
             "5.9",
-            "5.10"
+            "5.10",
+            "6.0"
         ],
         "kunstmaan/adminlist-bundle": [
             "5.2"
@@ -823,6 +837,9 @@
         "lag/adminbundle": [
             "1.0"
         ],
+        "league/oauth2-server-bundle": [
+            "0.3"
+        ],
         "league/tactician-bundle": [
             "1.0"
         ],
@@ -866,6 +883,9 @@
         ],
         "long-running/long-running": [
             "0.1"
+        ],
+        "longitude-one/meta-bundle": [
+            "1.0"
         ],
         "loophp/psr17": [
             "1.0"
@@ -1015,9 +1035,13 @@
             "0.1"
         ],
         "monsieurbiz/sylius-rich-editor-plugin": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "monsieurbiz/sylius-sales-reports-plugin": [
+            "1.0"
+        ],
+        "monsieurbiz/sylius-search-plugin": [
             "1.0"
         ],
         "monsieurbiz/sylius-settings-plugin": [
@@ -1489,7 +1513,8 @@
         ],
         "sulu/form-bundle": [
             "2.0",
-            "2.2"
+            "2.2",
+            "2.4"
         ],
         "sulu/headless-bundle": [
             "0.1"
@@ -1519,6 +1544,9 @@
             "1.0"
         ],
         "svc/util-bundle": [
+            "1.0"
+        ],
+        "svc/versioning-bundle": [
             "1.0"
         ],
         "swag-industries/doctrine-domain-events": [
@@ -1631,7 +1659,8 @@
         ],
         "timiki/rpc-server-bundle": [
             "4.0",
-            "4.2"
+            "4.2",
+            "5.0"
         ],
         "toiba/fullcalendar-bundle": [
             "6.2"
@@ -1664,6 +1693,9 @@
         ],
         "vincentchalamon/nav-bundle": [
             "1.0"
+        ],
+        "vincentlanglet/twig-cs-fixer": [
+            "0.6"
         ],
         "wandi/easyadmin-plus-bundle": [
             "0.1",
