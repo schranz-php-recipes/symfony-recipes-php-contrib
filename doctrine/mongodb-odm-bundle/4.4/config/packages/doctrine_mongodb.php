@@ -21,7 +21,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 'mappings' => [
                     'App' => [
                         'is_bundle' => false,
-                        'type' => 'annotation',
                         'dir' => '%kernel.project_dir%/src/Document',
                         'prefix' => 'App\Document',
                         'alias' => 'App',
