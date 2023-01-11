@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "aziz403/ux-datatable": {
+            "manifest": {
+                "bundles": {
+                    "Aziz403\\UX\\Datatable\\DatatableBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/datatable.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('datatable', [",
+                        "        'language_from_cdn' => false,",
+                        "        'language' => 'English',",
+                        "        'template_parameters' => [",
+                        "            'style' => 'bootstrap5',",
+                        "            'className' => 'table table-bordered',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "77fbb51a05f0d5db49e33478adc60554829cbc9c"
+        }
+    }
+}

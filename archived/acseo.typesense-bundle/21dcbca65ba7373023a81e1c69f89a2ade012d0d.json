@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "acseo/typesense-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ACSEO\\TypesenseBundle\\ACSEOTypesenseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TYPESENSE_URL": "http://localhost:8108",
+                    "TYPESENSE_KEY": "123"
+                }
+            },
+            "files": {
+                "config/packages/acseo_typesense.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('acseo_typesense', [",
+                        "        'typesense' => [",
+                        "            'url' => '%env(resolve:TYPESENSE_URL)%',",
+                        "            'key' => '%env(resolve:TYPESENSE_KEY)%',",
+                        "        ],",
+                        "        'collections' => null,",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "21dcbca65ba7373023a81e1c69f89a2ade012d0d"
+        }
+    }
+}

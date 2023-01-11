@@ -7,6 +7,9 @@
         "ablaise/meteion-bundle": [
             "1.0"
         ],
+        "acseo/typesense-bundle": [
+            "0.7"
+        ],
         "ad3n/ratchet-bundle": [
             "0.4"
         ],
@@ -86,6 +89,9 @@
         ],
         "aws/aws-sdk-php-symfony": [
             "1.3"
+        ],
+        "aziz403/ux-datatable": [
+            "1.0"
         ],
         "aziz403/ux-zoom": [
             "1.0"
