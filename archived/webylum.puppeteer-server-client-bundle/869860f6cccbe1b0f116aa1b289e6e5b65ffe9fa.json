@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "webylum/puppeteer-server-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Webylum\\PuppeteerServerClient\\WebylumPuppeteerServerClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "PUPPETEER_SERVER_URL": "http://localhost:10000"
+                }
+            },
+            "files": {
+                "config/packages/webylum_puppeteer_server_client.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('webylum_puppeteer_server_client', [",
+                        "        'server' => [",
+                        "            'url' => '%env(PUPPETEER_SERVER_URL)%',",
+                        "        ],",
+                        "        'public_dir' => '%kernel.project_dir%/public',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "869860f6cccbe1b0f116aa1b289e6e5b65ffe9fa"
+        }
+    }
+}

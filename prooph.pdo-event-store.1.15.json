@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "prooph/pdo-event-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "scripts/": "%CONFIG_DIR%/scripts/"
+                },
+                "env": {
+                    "EVENT_STORE_DSN": "pgsql:host=127.0.0.1;dbname=event_streams",
+                    "EVENT_STORE_USER": "user",
+                    "EVENT_STORE_PASSWORD": "password"
+                },
+                "post-install-output": [
+                    "  * Modify your EVENT_STORE_* configuration in <fg=green>.env</>",
+                    "",
+                    "  * Create event streams and projections tables using SQL scripts",
+                    "    in <comment>%CONFIG_DIR%/scripts/*</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/prooph_pdo_event_store.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "use function Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\service;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->defaults();",
+                        "",
+                        "    $services->set('app.event_store.default', 'Prooph\\EventStore\\Pdo\\PostgresEventStore')",
+                        "        ->args([service('prooph_event_store.message_factory'), service('app.event_store.pdo_connection.postgres'), service('app.event_store.postgres.persistence_strategy')]);",
+                        "",
+                        "    $services->set('app.event_store.pdo_connection.postgres', PDO::class)",
+                        "        ->args(['%env(EVENT_STORE_DSN)%', '%env(EVENT_STORE_USER)%', '%env(EVENT_STORE_PASSWORD)%']);",
+                        "",
+                        "    $services->set('app.event_store.postgres.persistence_strategy', 'Prooph\\EventStore\\Pdo\\PersistenceStrategy\\PostgresSingleStreamStrategy');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "67959cf3cae636386bea5a3d2a09785bffbbecb0"
+        }
+    }
+}

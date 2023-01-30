@@ -1282,8 +1282,12 @@
         "phpzlc/document-bundle": [
             "1.1"
         ],
+        "phpzlc/flex": [
+            "2.0"
+        ],
         "phpzlc/phpzlc": [
-            "1.0"
+            "1.0",
+            "2.5"
         ],
         "phpzlc/platform-business": [
             "1.0"
@@ -1295,7 +1299,8 @@
             "1.0"
         ],
         "phpzlc/upload-business": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "picoss/yousign-bundle": [
             "2.0",
@@ -1326,10 +1331,12 @@
             "3.1"
         ],
         "prooph/event-store-symfony-bundle": [
-            "0.4"
+            "0.4",
+            "0.10"
         ],
         "prooph/pdo-event-store": [
-            "1.7"
+            "1.7",
+            "1.15"
         ],
         "prooph/service-bus-symfony-bundle": [
             "0.6"
@@ -1720,6 +1727,9 @@
             "2.0",
             "2.1",
             "2.3"
+        ],
+        "webylum/puppeteer-server-client-bundle": [
+            "1.2"
         ],
         "weglot/translate-bundle": [
             "0.6"

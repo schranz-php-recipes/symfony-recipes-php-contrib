@@ -409,11 +409,12 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [phpzlc/auth-business](https://packagist.org/packages/phpzlc/auth-business) | [1.0](phpzlc/auth-business/1.0) |
 | [phpzlc/captcha-business](https://packagist.org/packages/phpzlc/captcha-business) | [1.0](phpzlc/captcha-business/1.0) |
 | [phpzlc/document-bundle](https://packagist.org/packages/phpzlc/document-bundle) | [1.1](phpzlc/document-bundle/1.1) |
-| [phpzlc/phpzlc](https://packagist.org/packages/phpzlc/phpzlc) | [1.0](phpzlc/phpzlc/1.0) |
+| [phpzlc/flex](https://packagist.org/packages/phpzlc/flex) | [2.0](phpzlc/flex/2.0) |
+| [phpzlc/phpzlc](https://packagist.org/packages/phpzlc/phpzlc) | [2.5](phpzlc/phpzlc/2.5) |
 | [phpzlc/platform-business](https://packagist.org/packages/phpzlc/platform-business) | [1.0](phpzlc/platform-business/1.0) |
 | [phpzlc/rbac-business](https://packagist.org/packages/phpzlc/rbac-business) | [1.0](phpzlc/rbac-business/1.0) |
 | [phpzlc/snapshot-business](https://packagist.org/packages/phpzlc/snapshot-business) | [1.0](phpzlc/snapshot-business/1.0) |
-| [phpzlc/upload-business](https://packagist.org/packages/phpzlc/upload-business) | [1.0](phpzlc/upload-business/1.0) |
+| [phpzlc/upload-business](https://packagist.org/packages/phpzlc/upload-business) | [2.0](phpzlc/upload-business/2.0) |
 | [picoss/yousign-bundle](https://packagist.org/packages/picoss/yousign-bundle) | [2.2](picoss/yousign-bundle/2.2) |
 | [pierstoval/character-manager](https://packagist.org/packages/pierstoval/character-manager) | [0.5](pierstoval/character-manager/0.5) |
 | [piou-piou/ribs-cron-bundle](https://packagist.org/packages/piou-piou/ribs-cron-bundle) | [1.0](piou-piou/ribs-cron-bundle/1.0) |
@@ -423,8 +424,8 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [pond5/async-request-bundle](https://packagist.org/packages/pond5/async-request-bundle) | [1.1](pond5/async-request-bundle/1.1) |
 | [prolix/maintenance-bundle](https://packagist.org/packages/prolix/maintenance-bundle) | [2.1](prolix/maintenance-bundle/2.1) |
 | [prooph/event-store-bus-bridge](https://packagist.org/packages/prooph/event-store-bus-bridge) | [3.1](prooph/event-store-bus-bridge/3.1) |
-| [prooph/event-store-symfony-bundle](https://packagist.org/packages/prooph/event-store-symfony-bundle) | [0.4](prooph/event-store-symfony-bundle/0.4) |
-| [prooph/pdo-event-store](https://packagist.org/packages/prooph/pdo-event-store) | [1.7](prooph/pdo-event-store/1.7) |
+| [prooph/event-store-symfony-bundle](https://packagist.org/packages/prooph/event-store-symfony-bundle) | [0.10](prooph/event-store-symfony-bundle/0.10) |
+| [prooph/pdo-event-store](https://packagist.org/packages/prooph/pdo-event-store) | [1.15](prooph/pdo-event-store/1.15) |
 | [prooph/service-bus-symfony-bundle](https://packagist.org/packages/prooph/service-bus-symfony-bundle) | [0.6](prooph/service-bus-symfony-bundle/0.6) |
 | [pugx/geo-form-bundle](https://packagist.org/packages/pugx/geo-form-bundle) | [0.2](pugx/geo-form-bundle/0.2) |
 | [pusher/pusher-php-server](https://packagist.org/packages/pusher/pusher-php-server) | [3.0](pusher/pusher-php-server/3.0) |
@@ -545,6 +546,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [wandi/mailer-bundle](https://packagist.org/packages/wandi/mailer-bundle) | [1.0](wandi/mailer-bundle/1.0) |
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](web-auth/webauthn-symfony-bundle/3.0) |
 | [webinarium/symfony-lazysec](https://packagist.org/packages/webinarium/symfony-lazysec) | [2.3](webinarium/symfony-lazysec/2.3) |
+| [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](webylum/puppeteer-server-client-bundle/1.2) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](weglot/translate-bundle/0.6) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](wemakecustom/doctrine-naming-strategy-bundle/1.0) |
 | [wiet-at/symfony-dev](https://packagist.org/packages/wiet-at/symfony-dev) | [1.0](wiet-at/symfony-dev/1.0) |

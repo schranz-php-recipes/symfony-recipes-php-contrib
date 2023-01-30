@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "prooph/event-store-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Prooph\\Bundle\\EventStore\\ProophEventStoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prooph_event_store.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Prooph\\EventSourcing\\EventStoreIntegration\\AggregateTranslator;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('prooph_event_store', [",
+                        "        'stores' => [",
+                        "            'default' => [",
+                        "                'event_store' => 'app.event_store.default',",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->defaults();",
+                        "",
+                        "    $services->alias('Prooph\\EventStore\\EventStore', 'prooph_event_store.default');",
+                        "",
+                        "    $services->set(AggregateTranslator::class);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0b20db4ae2e74847bf98e6425d722aa9225dd91d"
+        }
+    }
+}
