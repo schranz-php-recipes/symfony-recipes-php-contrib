@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "specshaper/encrypt-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SpecShaper\\EncryptBundle\\SpecShaperEncryptBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SPEC_SHAPER_ENCRYPT_KEY": "change_me"
+                }
+            },
+            "files": {
+                "config/packages/spec_shaper_encrypt.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('spec_shaper_encrypt', [",
+                        "        'encrypt_key' => '%env(SPEC_SHAPER_ENCRYPT_KEY)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0b181e5194696fa1187559d8b2c761dc6e18061e"
+        }
+    }
+}
