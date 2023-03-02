@@ -233,6 +233,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jolicode/gif-exception-bundle](https://packagist.org/packages/jolicode/gif-exception-bundle) | [1.0](jolicode/gif-exception-bundle/1.0) |
 | [jolicode/jolitypo](https://packagist.org/packages/jolicode/jolitypo) | [1.0](jolicode/jolitypo/1.0) |
 | [jonathankablan/fast-entity-bundle](https://packagist.org/packages/jonathankablan/fast-entity-bundle) | [2.0](jonathankablan/fast-entity-bundle/2.0) |
+| [jrmgx/interactive-bundle](https://packagist.org/packages/jrmgx/interactive-bundle) | [1.0](jrmgx/interactive-bundle/1.0) |
 | [jsor/doctrine-postgis](https://packagist.org/packages/jsor/doctrine-postgis) | [1.7](jsor/doctrine-postgis/1.7) |
 | [jupi/prestashop-webservice-bundle](https://packagist.org/packages/jupi/prestashop-webservice-bundle) | [1.0](jupi/prestashop-webservice-bundle/1.0) |
 | [jurry/amqp-symfony-bundle](https://packagist.org/packages/jurry/amqp-symfony-bundle) | [1.0](jurry/amqp-symfony-bundle/1.0) |
@@ -353,6 +354,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [nedac/sylius-minimum-order-value-plugin](https://packagist.org/packages/nedac/sylius-minimum-order-value-plugin) | [1.0](nedac/sylius-minimum-order-value-plugin/1.0) |
 | [nedac/sylius-order-now-plugin](https://packagist.org/packages/nedac/sylius-order-now-plugin) | [1.0](nedac/sylius-order-now-plugin/1.0) |
 | [nedac/sylius-temporarily-out-of-stock-plugin](https://packagist.org/packages/nedac/sylius-temporarily-out-of-stock-plugin) | [1.0](nedac/sylius-temporarily-out-of-stock-plugin/1.0) |
+| [neimheadh/sonata-annotation-bundle](https://packagist.org/packages/neimheadh/sonata-annotation-bundle) | [2.0](neimheadh/sonata-annotation-bundle/2.0) |
 | [nella/monolog-tracy-bundle](https://packagist.org/packages/nella/monolog-tracy-bundle) | [2.0](nella/monolog-tracy-bundle/2.0) |
 | [nelmio/api-doc-bundle](https://packagist.org/packages/nelmio/api-doc-bundle) | [3.0](nelmio/api-doc-bundle/3.0) |
 | [nelmio/solarium-bundle](https://packagist.org/packages/nelmio/solarium-bundle) | [2.4](nelmio/solarium-bundle/2.4) |
@@ -550,6 +552,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](webylum/puppeteer-server-client-bundle/1.2) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](weglot/translate-bundle/0.6) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](wemakecustom/doctrine-naming-strategy-bundle/1.0) |
+| [wemxo/dynamic-form-bundle](https://packagist.org/packages/wemxo/dynamic-form-bundle) | [1.0](wemxo/dynamic-form-bundle/1.0) |
 | [wiet-at/symfony-dev](https://packagist.org/packages/wiet-at/symfony-dev) | [1.0](wiet-at/symfony-dev/1.0) |
 | [willdurand/geocoder-bundle](https://packagist.org/packages/willdurand/geocoder-bundle) | [5.0](willdurand/geocoder-bundle/5.0) |
 | [willdurand/hateoas-bundle](https://packagist.org/packages/willdurand/hateoas-bundle) | [2.0](willdurand/hateoas-bundle/2.0) |

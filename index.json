@@ -724,6 +724,9 @@
         "jonathankablan/fast-entity-bundle": [
             "2.0"
         ],
+        "jrmgx/interactive-bundle": [
+            "1.0"
+        ],
         "jsor/doctrine-postgis": [
             "1.7"
         ],
@@ -1101,6 +1104,9 @@
         ],
         "nedac/sylius-temporarily-out-of-stock-plugin": [
             "1.0"
+        ],
+        "neimheadh/sonata-annotation-bundle": [
+            "2.0"
         ],
         "nella/monolog-tracy-bundle": [
             "2.0"
@@ -1740,6 +1746,9 @@
             "0.6"
         ],
         "wemakecustom/doctrine-naming-strategy-bundle": [
+            "1.0"
+        ],
+        "wemxo/dynamic-form-bundle": [
             "1.0"
         ],
         "wiet-at/symfony-dev": [

@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "wemxo/dynamic-form-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wemxo\\DynamicFormBundle\\DynamicFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dynamic_form.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('dynamic_form', [",
+                        "        'recursive' => true,",
+                        "        'config_paths' => ['%kernel.project_dir%/config/dynamic_form'],",
+                        "        'cache_pool' => null,",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d2103862feb8b876862a252f737d39bb7c01f724"
+        }
+    }
+}

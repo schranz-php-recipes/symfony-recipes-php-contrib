@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "neimheadh/sonata-annotation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Neimheadh\\SonataAnnotationBundle\\SonataAnnotationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_annotation.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('sonata_annotation', [",
+                        "        'directory' => '%kernel.project_dir%/src/Entity',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "66aecdeeb04daab9279fe5436cc04fcf6e05a3f2"
+        }
+    }
+}
