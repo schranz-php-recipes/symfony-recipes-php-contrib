@@ -564,7 +564,8 @@
             "1.6"
         ],
         "friendsofsymfony/rest-bundle": [
-            "2.2"
+            "2.2",
+            "3.0"
         ],
         "fsi/files": [
             "1.5"
@@ -1784,6 +1785,9 @@
             "2.0"
         ],
         "yamilovs/sms-bundle": [
+            "1.0"
+        ],
+        "youritservices/mock-server-bundle": [
             "1.0"
         ],
         "ywh/cvss-bundle": [

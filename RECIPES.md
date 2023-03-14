@@ -183,7 +183,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [friendsofsymfony/elastica-bundle](https://packagist.org/packages/friendsofsymfony/elastica-bundle) | [5.0](friendsofsymfony/elastica-bundle/5.0) |
 | [friendsofsymfony/jsrouting-bundle](https://packagist.org/packages/friendsofsymfony/jsrouting-bundle) | [2.3](friendsofsymfony/jsrouting-bundle/2.3) |
 | [friendsofsymfony/oauth-server-bundle](https://packagist.org/packages/friendsofsymfony/oauth-server-bundle) | [1.6](friendsofsymfony/oauth-server-bundle/1.6) |
-| [friendsofsymfony/rest-bundle](https://packagist.org/packages/friendsofsymfony/rest-bundle) | [2.2](friendsofsymfony/rest-bundle/2.2) |
+| [friendsofsymfony/rest-bundle](https://packagist.org/packages/friendsofsymfony/rest-bundle) | [3.0](friendsofsymfony/rest-bundle/3.0) |
 | [fsi/files](https://packagist.org/packages/fsi/files) | [1.5](fsi/files/1.5) |
 | [geosocio/http-serializer-bundle](https://packagist.org/packages/geosocio/http-serializer-bundle) | [2.0](geosocio/http-serializer-bundle/2.0) |
 | [gesdinet/jwt-refresh-token-bundle](https://packagist.org/packages/gesdinet/jwt-refresh-token-bundle) | [1.0](gesdinet/jwt-refresh-token-bundle/1.0) |
@@ -563,6 +563,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [xcore/inline-editing-bundle](https://packagist.org/packages/xcore/inline-editing-bundle) | [1.2](xcore/inline-editing-bundle/1.2) |
 | [xiidea/easy-audit](https://packagist.org/packages/xiidea/easy-audit) | [2.0](xiidea/easy-audit/2.0) |
 | [yamilovs/sms-bundle](https://packagist.org/packages/yamilovs/sms-bundle) | [1.0](yamilovs/sms-bundle/1.0) |
+| [youritservices/mock-server-bundle](https://packagist.org/packages/youritservices/mock-server-bundle) | [1.0](youritservices/mock-server-bundle/1.0) |
 | [ywh/cvss-bundle](https://packagist.org/packages/ywh/cvss-bundle) | [1.0](ywh/cvss-bundle/1.0) |
 | [ywh/doctrine-encryption-bundle](https://packagist.org/packages/ywh/doctrine-encryption-bundle) | [1.0](ywh/doctrine-encryption-bundle/1.0) |
 | [zendesk/zendesk_api_client_php](https://packagist.org/packages/zendesk/zendesk_api_client_php) | [2.2](zendesk/zendesk_api_client_php/2.2) |

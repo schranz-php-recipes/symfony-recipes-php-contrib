@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "youritservices/mock-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "YourITServices\\MockServerBundle\\MockServerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MOCK_SERVER_HOST": "http://mock-api:1080"
+                }
+            },
+            "files": {
+                "config/packages/mock_server.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    if ($containerConfigurator->env() === 'test') {",
+                        "        $containerConfigurator->extension('mock_server', [",
+                        "            'host_url' => '%env(MOCK_SERVER_HOST)%',",
+                        "            'mocks_directory' => '%kernel.project_dir%/tests/apiMocks',",
+                        "        ]);",
+                        "    }",
+                        "    if ($containerConfigurator->env() === 'dev') {",
+                        "        $containerConfigurator->extension('mock_server', [",
+                        "            'host_url' => '%env(MOCK_SERVER_HOST)%',",
+                        "            'mocks_directory' => '%kernel.project_dir%/tests/apiMocks',",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "27573b4789a7de1e587c33eb73cc20e0e6caa7cb"
+        }
+    }
+}
