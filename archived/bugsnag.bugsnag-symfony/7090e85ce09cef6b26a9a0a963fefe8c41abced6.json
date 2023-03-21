@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "bugsnag/bugsnag-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Bugsnag\\BugsnagBundle\\BugsnagBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BUGSNAG_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/bugsnag.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('bugsnag', [",
+                        "        'api_key' => '%env(BUGSNAG_API_KEY)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7090e85ce09cef6b26a9a0a963fefe8c41abced6"
+        }
+    }
+}

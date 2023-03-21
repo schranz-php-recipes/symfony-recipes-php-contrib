@@ -177,6 +177,9 @@
         "broadway/read-model-mongodb": [
             "0.2"
         ],
+        "bugsnag/bugsnag-symfony": [
+            "1.13"
+        ],
         "bukashk0zzz/filter-bundle": [
             "2.0"
         ],
