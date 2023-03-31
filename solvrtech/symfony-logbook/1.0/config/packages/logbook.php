@@ -7,9 +7,8 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('logbook', [
         'api' => [
-            'url' => '%env(LOGBOOK_API_URL)%',
-            'key' => '%env(LOGBOOK_API_KEY)%',
+            'url' => '',
+            'key' => '',
         ],
-        'level' => '%env(LOGBOOK_LEVEL)%',
     ]);
 };
