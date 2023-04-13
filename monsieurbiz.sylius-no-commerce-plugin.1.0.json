@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-no-commerce-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusNoCommercePlugin\\MonsieurBizSyliusNoCommercePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_nocommerce_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@MonsieurBizSyliusNoCommercePlugin/Resources/config/config.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3971d2b8d163304e93b9ae00ceaf7d11f448a998"
+        }
+    }
+}
