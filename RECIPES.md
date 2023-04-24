@@ -134,6 +134,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ecphp/cas-bundle](https://packagist.org/packages/ecphp/cas-bundle) | [2.0](ecphp/cas-bundle/2.0) |
 | [ecphp/eu-login-api-authentication-bundle](https://packagist.org/packages/ecphp/eu-login-api-authentication-bundle) | [1.0](ecphp/eu-login-api-authentication-bundle/1.0) |
 | [ecphp/eu-login-bundle](https://packagist.org/packages/ecphp/eu-login-bundle) | [2.0](ecphp/eu-login-bundle/2.0) |
+| [eduandebruijne/admin-bundle](https://packagist.org/packages/eduandebruijne/admin-bundle) | [11.0](eduandebruijne/admin-bundle/11.0) |
 | [egeloen/ckeditor-bundle](https://packagist.org/packages/egeloen/ckeditor-bundle) | [5.0](egeloen/ckeditor-bundle/5.0) |
 | [eightpoints/guzzle-bundle](https://packagist.org/packages/eightpoints/guzzle-bundle) | [7.0](eightpoints/guzzle-bundle/7.0) |
 | [ekino/newrelic-bundle](https://packagist.org/packages/ekino/newrelic-bundle) | [2.0](ekino/newrelic-bundle/2.0) |
@@ -510,7 +511,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
 | [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [0.5](sylius/invoicing-plugin/0.5) |
 | [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [0.4](sylius/refund-plugin/0.4) |
-| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.6](sylius/resource-bundle/1.6) |
+| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.9](sylius/resource-bundle/1.9) |
 | [symandy/makefile-maker-bundle](https://packagist.org/packages/symandy/makefile-maker-bundle) | [0.5](symandy/makefile-maker-bundle/0.5) |
 | [symfony-bundles/kafka-bundle](https://packagist.org/packages/symfony-bundles/kafka-bundle) | [1.0](symfony-bundles/kafka-bundle/1.0) |
 | [symfony-bundles/redis-bundle](https://packagist.org/packages/symfony-bundles/redis-bundle) | [2.0](symfony-bundles/redis-bundle/2.0) |

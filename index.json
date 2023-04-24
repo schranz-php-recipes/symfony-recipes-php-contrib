@@ -406,6 +406,9 @@
             "1.0",
             "2.0"
         ],
+        "eduandebruijne/admin-bundle": [
+            "11.0"
+        ],
         "egeloen/ckeditor-bundle": [
             "5.0"
         ],
@@ -1612,7 +1615,8 @@
             "0.4"
         ],
         "sylius/resource-bundle": [
-            "1.6"
+            "1.6",
+            "1.9"
         ],
         "symandy/makefile-maker-bundle": [
             "0.5"
