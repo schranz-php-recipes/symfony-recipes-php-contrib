@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "datana-gmbh/url-shortener-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "URL_SHORTENER_API_BASE_URI": "",
+                    "URL_SHORTENER_API_USERNAME": "",
+                    "URL_SHORTENER_API_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_url_shortener_api.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Datana\\UrlShortener\\Api\\UrlShortenerApi;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->defaults()",
+                        "        ->autowire();",
+                        "",
+                        "    $services->set('Datana\\UrlShortener\\Api\\UrlShortenerClient')",
+                        "        ->args(['%env(URL_SHORTENER_API_BASE_URI)%', '%env(URL_SHORTENER_API_USERNAME)%', '%env(URL_SHORTENER_API_PASSWORD)%']);",
+                        "",
+                        "    $services->set(UrlShortenerApi::class);",
+                        "",
+                        "    $services->alias('Datana\\UrlShortener\\Api\\UrlShortenerApiInterface', 'Datana\\UrlShortener\\Api\\UrlShortenerApi');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a59e87da673dea50a7536f19859c21189f8997e6"
+        }
+    }
+}

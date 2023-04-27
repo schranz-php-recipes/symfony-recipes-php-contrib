@@ -320,6 +320,9 @@
         "datana-gmbh/sendgrid-dynamic-template-mailer": [
             "1.0"
         ],
+        "datana-gmbh/url-shortener-api": [
+            "1.0"
+        ],
         "datana-gmbh/zammad-api": [
             "1.0"
         ],
@@ -1800,6 +1803,9 @@
         ],
         "youritservices/mock-server-bundle": [
             "1.0"
+        ],
+        "yousign/zdd-message-bundle": [
+            "0.1"
         ],
         "ywh/cvss-bundle": [
             "1.0"
