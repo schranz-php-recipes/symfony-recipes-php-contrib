@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "eniams/safe-migrations": {
+            "manifest": {
+                "bundles": {
+                    "Eniams\\SafeMigrationsBundle\\SafeMigrationsBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/safe_migrations.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('safe_migrations', [",
+                        "        'migrations_path' => '%kernel.project_dir%/migrations',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fd6fd7a4019a0701893e577f4317774e648252bd"
+        }
+    }
+}
