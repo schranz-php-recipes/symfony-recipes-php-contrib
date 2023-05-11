@@ -1,0 +1,81 @@
+{
+    "manifests": {
+        "shopware/app-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Shopware\\AppBundle\\ShopwareAppBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "SHOPWARE_APP_NAME": "TestApp",
+                    "SHOPWARE_APP_SECRET": "MySecret"
+                }
+            },
+            "files": {
+                "config/packages/shopware_app.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('shopware_app', [",
+                        "        'shop_class' => 'App\\Entity\\Shop',",
+                        "        'name' => '%env(SHOPWARE_APP_NAME)%',",
+                        "        'secret' => '%env(SHOPWARE_APP_SECRET)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/shopware_app.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@ShopwareAppBundle/Resources/config/routing/lifecycle.xml')",
+                        "        ->prefix('/app');",
+                        "",
+                        "    $routingConfigurator->import('@ShopwareAppBundle/Resources/config/routing/webhook.xml')",
+                        "        ->prefix('/app');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Shop.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping\\Entity;",
+                        "use Shopware\\AppBundle\\Entity\\AbstractShop;",
+                        "",
+                        "#[Entity]",
+                        "class Shop extends AbstractShop",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "078a660eff2974db69b8ac0b25e3422cd7972672"
+        }
+    }
+}
