@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "formatz/fz-hosting-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Formatz\\FzHostingBundle\\FormatzFzHostingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FZ_HOSTING_API_ENDPOINT": "https://hostings.format-z.ch",
+                    "FZ_HOSTING_API_KEY": "changeme"
+                },
+                "post-install-output": [
+                    "    Change <comment>FZ_HOSTING_API_KEY</> then run <comment>fz-hosting:send-current-versions</>."
+                ]
+            },
+            "files": {
+                "config/packages/formatz_fz_hosting.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('formatz_fz_hosting', [",
+                        "        'api_key' => '%env(resolve:FZ_HOSTING_API_KEY)%',",
+                        "        'api_endpoint' => '%env(resolve:FZ_HOSTING_API_ENDPOINT)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bece8be3c282a23c7274f104276cfe8637f4a037"
+        }
+    }
+}
