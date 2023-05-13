@@ -11,14 +11,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'creation_profiles' => [
             'default' => [
                 'rp' => [
-                    'name' => '%env(RELAYING_PARTY_NAME)%',
-                    'id' => '%env(RELAYING_PARTY_ID)%',
+                    'name' => '%env(RELYING_PARTY_NAME)%',
+                    'id' => '%env(RELYING_PARTY_ID)%',
                 ],
             ],
         ],
         'request_profiles' => [
             'default' => [
-                'rp_id' => '%env(RELAYING_PARTY_ID)%',
+                'rp_id' => '%env(RELYING_PARTY_ID)%',
             ],
         ],
     ]);
