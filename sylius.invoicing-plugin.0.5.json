@@ -41,14 +41,16 @@
                         "",
                         "    $routingConfigurator->import('@SyliusInvoicingPlugin/Resources/config/app/routing/shop_invoicing.yml')",
                         "        ->prefix('/{_locale}')",
-                        "        ->requirements(['_locale' => '^[a-z]{2}(?:_[A-Z]{2})?$']);",
+                        "        ->requirements([",
+                        "            '_locale' => '^[a-z]{2}(?:_[A-Z]{2})?$',",
+                        "        ]);",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "d1ea099b23f8bb03f99a56ba9a5462ed230327d0"
+            "ref": "3b78f7508f21c8ef9cf6e27447f59a2adb19a577"
         }
     }
 }
