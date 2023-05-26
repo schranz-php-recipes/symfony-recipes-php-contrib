@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Datana\UrlShortener\Api\FakeUrlShortenerApi;
 use Datana\UrlShortener\Api\UrlShortenerApi;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -15,6 +16,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->args(['%env(URL_SHORTENER_API_BASE_URI)%', '%env(URL_SHORTENER_API_USERNAME)%', '%env(URL_SHORTENER_API_PASSWORD)%']);
 
     $services->set(UrlShortenerApi::class);
+
+    $services->set(FakeUrlShortenerApi::class);
 
     $services->alias('Datana\UrlShortener\Api\UrlShortenerApiInterface', 'Datana\UrlShortener\Api\UrlShortenerApi');
 };
