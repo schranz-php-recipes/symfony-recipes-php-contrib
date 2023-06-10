@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "gponty/symfony-idloom-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gponty\\IdLoomBundle\\IdLoomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "IDLOOM_URL": "your_idloom_url"
+                }
+            },
+            "files": {
+                "config/packages/idloom.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('id_loom', [",
+                        "        'idloom_url' => '%env(resolve:IDLOOM_URL)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "624781f7df7ee3a27a247fffb24e6979ab9fb63d"
+        }
+    }
+}
