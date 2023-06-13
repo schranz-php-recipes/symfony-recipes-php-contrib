@@ -9,7 +9,7 @@ return static function (RoutingConfigurator $routingConfigurator): void {
         ->prefix('/%sylius_admin.path_name%');
 
     $routingConfigurator->add('monsieurbiz_sylius_homepage_homepage', '/{_locale}/')
-        ->controller('monsieurbiz_homepage.controller.homepage:indexAction')
+        ->controller(['monsieurbiz_homepage.controller.homepage', 'indexAction'])
         ->defaults([
             '_sylius' => [
                 'template' => '@MonsieurBizSyliusHomepagePlugin/Homepage/index.html.twig',
