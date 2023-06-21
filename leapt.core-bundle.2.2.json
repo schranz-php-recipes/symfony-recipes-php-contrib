@@ -24,14 +24,16 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('leapt_core', ['upload_dir' => '%kernel.project_dir%/public']);",
+                        "    $containerConfigurator->extension('leapt_core', [",
+                        "        'upload_dir' => '%kernel.project_dir%/public',",
+                        "    ]);",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "caa53d9d7ce6a01e00a9fb63acea16491220d075"
+            "ref": "6766d779c9739507f4e20be86383cad4bb30aeb0"
         }
     }
 }
