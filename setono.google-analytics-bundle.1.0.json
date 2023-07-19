@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "setono/google-analytics-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Setono\\GoogleAnalyticsBundle\\SetonoGoogleAnalyticsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_ANALYTICS_MEASUREMENT_ID": "YOUR_GOOGLE_ANALYTICS_MEASUREMENT_ID"
+                }
+            },
+            "files": {
+                "config/packages/setono_google_analytics.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('setono_google_analytics', [",
+                        "        'gtag' => [",
+                        "            'properties' => [[",
+                        "                'measurement_id' => '%env(GOOGLE_ANALYTICS_MEASUREMENT_ID)%',",
+                        "            ]],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "abd2f1d7b8577c9802916dbed2471e10a0e028c9"
+        }
+    }
+}

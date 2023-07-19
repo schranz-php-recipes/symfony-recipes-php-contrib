@@ -1304,6 +1304,9 @@
         "phpfastcgi/fastcgi-daemon": [
             "0.11"
         ],
+        "phpstan/phpstan": [
+            "1.0"
+        ],
         "phpsword/sword-bundle": [
             "1.0"
         ],
@@ -1465,6 +1468,9 @@
             "3.0",
             "4.0",
             "4.6"
+        ],
+        "setono/google-analytics-bundle": [
+            "1.0"
         ],
         "sg/datatablesbundle": [
             "1.0"
@@ -1778,6 +1784,9 @@
         ],
         "webylum/puppeteer-server-client-bundle": [
             "1.2"
+        ],
+        "wedrix/watchtower-bundle": [
+            "1.0"
         ],
         "weglot/translate-bundle": [
             "0.6"

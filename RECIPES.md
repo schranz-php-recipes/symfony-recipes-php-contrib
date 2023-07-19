@@ -415,6 +415,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [php-translation/symfony-bundle](https://packagist.org/packages/php-translation/symfony-bundle) | [0.10](php-translation/symfony-bundle/0.10) |
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](phpfastcache/phpfastcache-bundle/3.0) |
 | [phpfastcgi/fastcgi-daemon](https://packagist.org/packages/phpfastcgi/fastcgi-daemon) | [0.11](phpfastcgi/fastcgi-daemon/0.11) |
+| [phpstan/phpstan](https://packagist.org/packages/phpstan/phpstan) | [1.0](phpstan/phpstan/1.0) |
 | [phpsword/sword-bundle](https://packagist.org/packages/phpsword/sword-bundle) | [1.0](phpsword/sword-bundle/1.0) |
 | [phpzlc/admin](https://packagist.org/packages/phpzlc/admin) | [1.0](phpzlc/admin/1.0) |
 | [phpzlc/admin-business](https://packagist.org/packages/phpzlc/admin-business) | [1.0](phpzlc/admin-business/1.0) |
@@ -465,6 +466,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [seferov/aws-bundle](https://packagist.org/packages/seferov/aws-bundle) | [3.0](seferov/aws-bundle/3.0) |
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
 | [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [4.6](sentry/sentry-symfony/4.6) |
+| [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [1.0](shopware/app-bundle/1.0) |
 | [siganushka/generic-bundle](https://packagist.org/packages/siganushka/generic-bundle) | [0.3](siganushka/generic-bundle/0.3) |
@@ -561,6 +563,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](web-auth/webauthn-symfony-bundle/3.0) |
 | [webinarium/symfony-lazysec](https://packagist.org/packages/webinarium/symfony-lazysec) | [2.3](webinarium/symfony-lazysec/2.3) |
 | [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](webylum/puppeteer-server-client-bundle/1.2) |
+| [wedrix/watchtower-bundle](https://packagist.org/packages/wedrix/watchtower-bundle) | [1.0](wedrix/watchtower-bundle/1.0) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](weglot/translate-bundle/0.6) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](wemakecustom/doctrine-naming-strategy-bundle/1.0) |
 | [wemxo/dynamic-form-bundle](https://packagist.org/packages/wemxo/dynamic-form-bundle) | [1.0](wemxo/dynamic-form-bundle/1.0) |

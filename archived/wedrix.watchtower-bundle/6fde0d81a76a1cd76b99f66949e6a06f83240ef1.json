@@ -1,0 +1,108 @@
+{
+    "manifests": {
+        "wedrix/watchtower-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wedrix\\WatchtowerBundle\\WedrixWatchtowerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/wedrix_watchtower_bundle.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('wedrix_watchtower', [",
+                        "        'endpoint' => '/graphql.json',",
+                        "        'schema_file' => '%kernel.project_dir%/config/watchtower/schema.graphql',",
+                        "        'plugins_directory' => '%kernel.project_dir%/config/watchtower/plugins',",
+                        "        'scalar_type_definitions_directory' => '%kernel.project_dir%/config/watchtower/scalar_type_definitions',",
+                        "        'schema_cache_directory' => '%kernel.project_dir%/var/cache/watchtower/schema',",
+                        "        'cache_schema' => false,",
+                        "        'debug' => true,",
+                        "        'context' => [",
+                        "            'entity_manager' => 'doctrine.orm.entity_manager',",
+                        "        ],",
+                        "    ]);",
+                        "    if ($containerConfigurator->env() === 'prod') {",
+                        "        $containerConfigurator->extension('wedrix_watchtower', [",
+                        "            'cache_schema' => true,",
+                        "            'debug' => false,",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/wedrix_watchtower_bundle_routes.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@WedrixWatchtowerBundle/config/routes.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/authorizors/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/filters/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/mutations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/orderings/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/resolvers/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/selectors/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/scalar_type_definitions/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6fde0d81a76a1cd76b99f66949e6a06f83240ef1"
+        }
+    }
+}
