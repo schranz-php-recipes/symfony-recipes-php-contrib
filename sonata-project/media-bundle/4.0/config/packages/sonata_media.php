@@ -24,12 +24,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ],
         'cdn' => [
             'server' => [
-                'path' => '/upload/media',
+                'path' => '/uploads/media',
             ],
         ],
         'filesystem' => [
             'local' => [
-                'directory' => '%kernel.project_dir%/public/upload/media',
+                'directory' => '%kernel.project_dir%/public/uploads/media',
                 'create' => false,
             ],
         ],
