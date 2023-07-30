@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-order-history-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusOrderHistoryPlugin\\MonsieurBizSyliusOrderHistoryPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_order_history_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@MonsieurBizSyliusOrderHistoryPlugin/Resources/config/config.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_order_history_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@MonsieurBizSyliusOrderHistoryPlugin/Resources/config/routes.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "46ea53f62669a84cad299d5cc7ea90492b58e9da"
+        }
+    }
+}
