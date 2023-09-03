@@ -105,6 +105,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [datana-gmbh/doctrine-postgres-milliseconds-platform](https://packagist.org/packages/datana-gmbh/doctrine-postgres-milliseconds-platform) | [1.0](datana-gmbh/doctrine-postgres-milliseconds-platform/1.0) |
 | [datana-gmbh/doctrine-postgres-public-schema-listener](https://packagist.org/packages/datana-gmbh/doctrine-postgres-public-schema-listener) | [1.0](datana-gmbh/doctrine-postgres-public-schema-listener/1.0) |
 | [datana-gmbh/intercom-config](https://packagist.org/packages/datana-gmbh/intercom-config) | [1.1](datana-gmbh/intercom-config/1.1) |
+| [datana-gmbh/iusta-api](https://packagist.org/packages/datana-gmbh/iusta-api) | [1.0](datana-gmbh/iusta-api/1.0) |
 | [datana-gmbh/logz-io-handler](https://packagist.org/packages/datana-gmbh/logz-io-handler) | [1.0](datana-gmbh/logz-io-handler/1.0) |
 | [datana-gmbh/sendgrid-dynamic-template-mailer](https://packagist.org/packages/datana-gmbh/sendgrid-dynamic-template-mailer) | [1.0](datana-gmbh/sendgrid-dynamic-template-mailer/1.0) |
 | [datana-gmbh/url-shortener-api](https://packagist.org/packages/datana-gmbh/url-shortener-api) | [1.0](datana-gmbh/url-shortener-api/1.0) |
@@ -297,6 +298,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [longitude-one/meta-bundle](https://packagist.org/packages/longitude-one/meta-bundle) | [1.0](longitude-one/meta-bundle/1.0) |
 | [loophp/psr17](https://packagist.org/packages/loophp/psr17) | [1.0](loophp/psr17/1.0) |
 | [loophp/repository-monadic-helper](https://packagist.org/packages/loophp/repository-monadic-helper) | [1.0](loophp/repository-monadic-helper/1.0) |
+| [luzrain/workerman-bundle](https://packagist.org/packages/luzrain/workerman-bundle) | [0.1](luzrain/workerman-bundle/0.1) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
 | [maba/webpack-bundle](https://packagist.org/packages/maba/webpack-bundle) | [1.0](maba/webpack-bundle/1.0) |
@@ -347,7 +349,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [monsieurbiz/sylius-order-history-plugin](https://packagist.org/packages/monsieurbiz/sylius-order-history-plugin) | [1.0](monsieurbiz/sylius-order-history-plugin/1.0) |
 | [monsieurbiz/sylius-rich-editor-plugin](https://packagist.org/packages/monsieurbiz/sylius-rich-editor-plugin) | [2.0](monsieurbiz/sylius-rich-editor-plugin/2.0) |
 | [monsieurbiz/sylius-sales-reports-plugin](https://packagist.org/packages/monsieurbiz/sylius-sales-reports-plugin) | [1.0](monsieurbiz/sylius-sales-reports-plugin/1.0) |
-| [monsieurbiz/sylius-search-plugin](https://packagist.org/packages/monsieurbiz/sylius-search-plugin) | [1.0](monsieurbiz/sylius-search-plugin/1.0) |
+| [monsieurbiz/sylius-search-plugin](https://packagist.org/packages/monsieurbiz/sylius-search-plugin) | [2.0](monsieurbiz/sylius-search-plugin/2.0) |
 | [monsieurbiz/sylius-settings-plugin](https://packagist.org/packages/monsieurbiz/sylius-settings-plugin) | [1.0](monsieurbiz/sylius-settings-plugin/1.0) |
 | [monsieurbiz/sylius-shipping-slot-plugin](https://packagist.org/packages/monsieurbiz/sylius-shipping-slot-plugin) | [1.0](monsieurbiz/sylius-shipping-slot-plugin/1.0) |
 | [monsieursloop/woleet-bundle](https://packagist.org/packages/monsieursloop/woleet-bundle) | [1.2](monsieursloop/woleet-bundle/1.2) |

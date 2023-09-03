@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "datana-gmbh/iusta-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "IUSTA_API_BASE_URI": "",
+                    "IUSTA_API_USERNAME": "",
+                    "IUSTA_API_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_iusta_api.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Datana\\Iusta\\Api\\AktenApi;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->defaults()",
+                        "        ->autowire();",
+                        "",
+                        "    $services->set('Datana\\Iusta\\Api\\IustaClient')",
+                        "        ->args(['%env(IUSTA_API_BASE_URI)%', '%env(IUSTA_API_USERNAME)%', '%env(IUSTA_API_PASSWORD)%']);",
+                        "",
+                        "    $services->set(AktenApi::class);",
+                        "",
+                        "    $services->alias('Datana\\Iusta\\Api\\AktenApiInterface', 'Datana\\Iusta\\Api\\AktenApi');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "45c8ba64e523ece14657ef2a13dd1793c76039a1"
+        }
+    }
+}

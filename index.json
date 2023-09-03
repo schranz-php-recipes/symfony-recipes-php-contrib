@@ -315,6 +315,9 @@
         "datana-gmbh/intercom-config": [
             "1.1"
         ],
+        "datana-gmbh/iusta-api": [
+            "1.0"
+        ],
         "datana-gmbh/logz-io-handler": [
             "1.0"
         ],
@@ -926,6 +929,9 @@
         "loophp/repository-monadic-helper": [
             "1.0"
         ],
+        "luzrain/workerman-bundle": [
+            "0.1"
+        ],
         "m-adamski/symfony-mailer-bundle": [
             "1.0"
         ],
@@ -1085,7 +1091,8 @@
             "1.0"
         ],
         "monsieurbiz/sylius-search-plugin": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "monsieurbiz/sylius-settings-plugin": [
             "1.0"
