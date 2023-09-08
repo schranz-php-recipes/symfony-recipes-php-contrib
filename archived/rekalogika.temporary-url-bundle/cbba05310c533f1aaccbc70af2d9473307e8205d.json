@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "rekalogika/temporary-url-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Rekalogika\\TemporaryUrl\\RekalogikaTemporaryUrlBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/rekalogika_temporary_url.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@RekalogikaTemporaryUrlBundle/config/routes.xml')",
+                        "        ->prefix('/_temporary');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cbba05310c533f1aaccbc70af2d9473307e8205d"
+        }
+    }
+}
