@@ -21,7 +21,11 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('kunstmaan_node', ['lock' => ['enabled' => true]]);",
+                        "    $containerConfigurator->extension('kunstmaan_node', [",
+                        "        'lock' => [",
+                        "            'enabled' => true,",
+                        "        ],",
+                        "    ]);",
                         "};",
                         ""
                     ],
@@ -47,7 +51,7 @@
                     "executable": false
                 }
             },
-            "ref": "07ac47d18b566ec40d39f102e1285cd0663488f1"
+            "ref": "b4652036ef220cdbac9f76a7425932d978509dbb"
         }
     }
 }
