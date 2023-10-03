@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-media-manager-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusMediaManagerPlugin\\MonsieurBizSyliusMediaManagerPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONSIEURBIZ_SYLIUS_MEDIA_MANAGER_PUBLIC_FOLDER": "%kernel.project_dir%/public",
+                    "MONSIEURBIZ_SYLIUS_MEDIA_MANAGER_ROOT_FOLDER_FROM_PUBLIC": "media",
+                    "MONSIEURBIZ_SYLIUS_MEDIA_MANAGER_MAX_FILE_SIZE": "5M"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_media_manager_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@MonsieurBizSyliusMediaManagerPlugin/Resources/config/config.yaml');",
+                        "",
+                        "    $containerConfigurator->extension('liip_imagine', [",
+                        "        'loaders' => [",
+                        "            'default' => [",
+                        "                'filesystem' => [",
+                        "                    'data_root' => ['%sylius_core.public_dir%/media/image', '%sylius_core.public_dir%/media'],",
+                        "                ],",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $containerConfigurator->extension('twig', [",
+                        "        'form_themes' => ['@MonsieurBizSyliusMediaManagerPlugin/Admin/MediaManager/Form/_theme.html.twig'],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_media_manager_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@MonsieurBizSyliusMediaManagerPlugin/Resources/config/routes.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ba4f904d0743e69beae8e0fda1706359197f2527"
+        }
+    }
+}
