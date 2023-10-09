@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Datana\FakeApi\Api\Formulario\DateneingabenApi;
-use Datana\FakeApi\Api\Formulario\StatisticsApi;
+use Datana\FakeApi\Formulario\DateneingabenApi;
+use Datana\FakeApi\Formulario\StatisticsApi;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -12,7 +12,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->defaults()
         ->autowire();
 
-    $services->set('Datana\FakeApi\Api\FakeApiClient')
+    $services->set('Datana\FakeApi\FakeApiClient')
         ->args(['%env(FAKE_API_BASE_URI)%', '%env(FAKE_API_USERNAME)%', '%env(FAKE_API_PASSWORD)%', '%env(bool:FAKE_API_DISABLE_CACHE)%']);
 
     $services->set(DateneingabenApi::class);
