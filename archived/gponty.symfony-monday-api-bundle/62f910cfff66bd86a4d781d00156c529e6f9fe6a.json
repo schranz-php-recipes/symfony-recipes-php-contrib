@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "gponty/symfony-monday-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gponty\\MondayBundle\\MondayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONDAY_API_KEY": "your_monday_api_key",
+                    "MONDAY_API_VERSION": "your_monday_api_version"
+                }
+            },
+            "files": {
+                "config/packages/monday.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('monday', [",
+                        "        'api_key' => '%env(MONDAY_API_KEY)%',",
+                        "        'api_version' => '%env(MONDAY_API_VERSION)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "62f910cfff66bd86a4d781d00156c529e6f9fe6a"
+        }
+    }
+}
