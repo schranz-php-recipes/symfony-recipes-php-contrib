@@ -25,16 +25,14 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('symbok', [",
-                        "        'namespaces' => null,",
-                        "    ]);",
+                        "    $containerConfigurator->extension('symbok', ['namespaces' => null]);",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "105d2362f43ad8027f74fb0827d058ac9bba0ff8"
+            "ref": "7ce016f4c1a9525737906101661378bc721f9b72"
         }
     }
 }

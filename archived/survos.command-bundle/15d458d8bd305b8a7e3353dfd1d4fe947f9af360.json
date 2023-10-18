@@ -1,0 +1,62 @@
+{
+    "manifests": {
+        "survos/command-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Survos\\CommandBundle\\SurvosCommandBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=green;fg=white>                </>",
+                    "<bg=green;fg=white> success        </>",
+                    "<bg=green;fg=white>                </>",
+                    "",
+                    "  * <fg=yellow>Next steps:</>",
+                    "    1. Configure /config/packages/survos_command.php to expose the namespaces (command prefixes)",
+                    "    2. <comment>secure the /admin route, configure the route in config/routes/survos_command.php</>;",
+                    "    3. Visit <comment>/admin/commmands</>."
+                ]
+            },
+            "files": {
+                "config/packages/survos_command.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('survos_command', [",
+                        "        'namespaces' => ['app'],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/survos_command.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routes): void {",
+                        "    $routes->import('@SurvosCommandBundle/config/routes.php')",
+                        "        ->prefix('/admin') // consider adding this path to the access_control key in security",
+                        "    ;",
+                        "};",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "15d458d8bd305b8a7e3353dfd1d4fe947f9af360"
+        }
+    }
+}
