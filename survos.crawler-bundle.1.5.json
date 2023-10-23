@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "survos/crawler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Survos\\CrawlerBundle\\SurvosCrawlerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=green;fg=white>                </>",
+                    "<bg=green;fg=white> success        </>",
+                    "<bg=green;fg=white>                </>",
+                    "",
+                    "  * <fg=yellow>Next steps:</>",
+                    "    1. Configure /config/packages/survos_crawler.php and add the users and routes to ignore",
+                    "    2. Run symfony console survos:crawl",
+                    "    3. Visit <comment>/admin/crawler-results</>."
+                ]
+            },
+            "files": {
+                "config/packages/survos_crawler.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('survos_crawler', [",
+                        "        'user_class' => 'App\\Entity\\User',",
+                        "        'users' => ['user@user.com'],",
+                        "        'max_depth' => 3,",
+                        "        'routes_to_ignore' => ['app_logout'],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/survos_crawler.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routes): void {",
+                        "    $routes->import('@SurvosCrawlerBundle/config/routes.php')",
+                        "        ->prefix('/admin') // consider adding this path to the access_control key in security",
+                        "    ;",
+                        "};",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "eadffe227892e9df393301d697ca9aa53a142445"
+        }
+    }
+}

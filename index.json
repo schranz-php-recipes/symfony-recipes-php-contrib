@@ -1445,6 +1445,9 @@
         "redrat/api-helper-bundle": [
             "0.1"
         ],
+        "rekalogika/gotenberg-pdf-bundle": [
+            "1.0"
+        ],
         "rekalogika/temporary-url-bundle": [
             "1.0"
         ],
@@ -1636,6 +1639,9 @@
             "1.0"
         ],
         "survos/command-bundle": [
+            "1.5"
+        ],
+        "survos/crawler-bundle": [
             "1.5"
         ],
         "svc/contactform-bundle": [

@@ -459,6 +459,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [redirectionio/proxy-symfony](https://packagist.org/packages/redirectionio/proxy-symfony) | [0.2](redirectionio/proxy-symfony/0.2) |
 | [redjanym/fcm-bundle](https://packagist.org/packages/redjanym/fcm-bundle) | [1.1](redjanym/fcm-bundle/1.1) |
 | [redrat/api-helper-bundle](https://packagist.org/packages/redrat/api-helper-bundle) | [0.1](redrat/api-helper-bundle/0.1) |
+| [rekalogika/gotenberg-pdf-bundle](https://packagist.org/packages/rekalogika/gotenberg-pdf-bundle) | [1.0](rekalogika/gotenberg-pdf-bundle/1.0) |
 | [rekalogika/temporary-url-bundle](https://packagist.org/packages/rekalogika/temporary-url-bundle) | [1.0](rekalogika/temporary-url-bundle/1.0) |
 | [request-tracing/request-tracing-bundle](https://packagist.org/packages/request-tracing/request-tracing-bundle) | [0.1](request-tracing/request-tracing-bundle/0.1) |
 | [rikudou/psr6-dynamo-db-bundle](https://packagist.org/packages/rikudou/psr6-dynamo-db-bundle) | [2.0](rikudou/psr6-dynamo-db-bundle/2.0) |
@@ -518,6 +519,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [suncat/mobile-detect-bundle](https://packagist.org/packages/suncat/mobile-detect-bundle) | [1.0](suncat/mobile-detect-bundle/1.0) |
 | [survos/barcode-bundle](https://packagist.org/packages/survos/barcode-bundle) | [1.0](survos/barcode-bundle/1.0) |
 | [survos/command-bundle](https://packagist.org/packages/survos/command-bundle) | [1.5](survos/command-bundle/1.5) |
+| [survos/crawler-bundle](https://packagist.org/packages/survos/crawler-bundle) | [1.5](survos/crawler-bundle/1.5) |
 | [svc/contactform-bundle](https://packagist.org/packages/svc/contactform-bundle) | [1.0](svc/contactform-bundle/1.0) |
 | [svc/param-bundle](https://packagist.org/packages/svc/param-bundle) | [1.0](svc/param-bundle/1.0) |
 | [svc/util-bundle](https://packagist.org/packages/svc/util-bundle) | [1.0](svc/util-bundle/1.0) |
