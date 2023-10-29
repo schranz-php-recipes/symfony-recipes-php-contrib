@@ -1520,6 +1520,9 @@
             "2.1",
             "3.4"
         ],
+        "simply-stream/twitch-api-bundle": [
+            "0.1"
+        ],
         "slot/mandrill-bundle": [
             "1.1"
         ],

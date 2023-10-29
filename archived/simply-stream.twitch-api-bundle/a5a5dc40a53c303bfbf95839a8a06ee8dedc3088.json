@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "simply-stream/twitch-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SimplyStream\\TwitchApiBundle\\SimplyStreamTwitchApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TWITCH_ID": "",
+                    "TWITCH_SECRET": "",
+                    "TWITCH_REDIRECT_URI": "",
+                    "TWITCH_WEBHOOK_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/simplystream_twitch_api.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('simplystream_twitch_api', [",
+                        "        'twitch_id' => '%env(TWITCH_ID)%',",
+                        "        'twitch_secret' => '%env(TWITCH_SECRET)%',",
+                        "        'redirect_uri' => '%env(TWITCH_REDIRECT_URI)%',",
+                        "        'webhook' => [",
+                        "            'secret' => '%env(TWITCH_WEBHOOK_SECRET)%',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a5a5dc40a53c303bfbf95839a8a06ee8dedc3088"
+        }
+    }
+}
