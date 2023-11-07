@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sonata-project/entity-audit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SimpleThings\\EntityAudit\\SimpleThingsEntityAuditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sonata_entity_audit.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@SimpleThingsEntityAuditBundle/Resources/config/routing/audit.xml')",
+                        "        ->prefix('/audit');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5df98b37da0d526466121f959202f9e908775c31"
+        }
+    }
+}
