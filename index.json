@@ -1056,6 +1056,9 @@
         "moneyphp/money-bundle": [
             "0.1"
         ],
+        "mongodb/symfony-bundle": [
+            "0.1"
+        ],
         "monofony/admin-meta": [
             "0.8"
         ],

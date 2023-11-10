@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "mongodb/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MongoDB\\Bundle\\MongoDBBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONGODB_URI": "mongodb://localhost:27017"
+                }
+            },
+            "files": {
+                "config/packages/mongodb.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('mongodb', [",
+                        "        'clients' => [",
+                        "            'default' => '%env(MONGODB_URI)%',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "570e788d347e1c47d342204af286d5495ddcfb0e"
+        }
+    }
+}
