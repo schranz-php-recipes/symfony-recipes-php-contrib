@@ -7,6 +7,5 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('monday', [
         'api_key' => '%env(MONDAY_API_KEY)%',
-        'api_version' => '%env(MONDAY_API_VERSION)%',
     ]);
 };
