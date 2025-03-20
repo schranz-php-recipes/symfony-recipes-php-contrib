@@ -11,8 +11,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'crowd_service_url' => 'http://crowd.your_domain.com:8095',
         'sso_cookie_domain' => 'your_domain.com',
         'roles_to_groups' => [
-            'ROLE_USER' => ['users'],
-            'ROLE_ADMIN' => ['admins', 'superadmins'],
+            'ROLE_USER' => [
+                'users',
+            ],
+            'ROLE_ADMIN' => [
+                'admins',
+                'superadmins',
+            ],
         ],
     ]);
 };

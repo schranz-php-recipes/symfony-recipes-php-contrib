@@ -9,6 +9,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->set('anezi_twig.locale_extension', 'Anezi\Locale\Twig\Extension\LocaleExtension')
         ->private()
-        ->arg('$locales', ['fr', 'en'])
+        ->arg('$locales', [
+            'fr',
+            'en',
+        ])
         ->tag('twig.extension');
 };

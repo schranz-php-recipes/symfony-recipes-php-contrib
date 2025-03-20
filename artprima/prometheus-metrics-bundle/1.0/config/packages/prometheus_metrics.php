@@ -8,6 +8,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('artprima_prometheus_metrics', [
         'namespace' => 'myapp',
         'type' => 'apcu',
-        'ignored_routes' => ['prometheus_bundle_prometheus', '_wdt'],
+        'ignored_routes' => [
+            'prometheus_bundle_prometheus',
+            '_wdt',
+        ],
     ]);
 };

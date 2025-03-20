@@ -59,28 +59,35 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 'template' => '@NetworkingInitCms/sandbox/page/one_column.html.twig',
                 'name' => 'Single Column',
                 'icon' => 'bundles/networkinginitcms/img/template_header_one_column.png',
-                'zones' => [[
-                    'name' => 'header',
-                    'class' => 'col-md-12',
-                ], [
-                    'name' => 'main_content',
-                    'class' => 'col-md-12',
-                ]],
+                'zones' => [
+                    [
+                        'name' => 'header',
+                        'class' => 'col-md-12',
+                    ],
+                    [
+                        'name' => 'main_content',
+                        'class' => 'col-md-12',
+                    ],
+                ],
             ],
             'app_two_column' => [
                 'template' => '@NetworkingInitCms/sandbox/page/two_column.html.twig',
                 'name' => 'Two Column',
                 'icon' => 'bundles/networkinginitcms/img/template_header_two_column.png',
-                'zones' => [[
-                    'name' => 'header',
-                    'class' => 'col-md-12',
-                ], [
-                    'name' => 'left',
-                    'class' => 'col-md-3',
-                ], [
-                    'name' => 'right',
-                    'class' => 'col-md-9',
-                ]],
+                'zones' => [
+                    [
+                        'name' => 'header',
+                        'class' => 'col-md-12',
+                    ],
+                    [
+                        'name' => 'left',
+                        'class' => 'col-md-3',
+                    ],
+                    [
+                        'name' => 'right',
+                        'class' => 'col-md-9',
+                    ],
+                ],
             ],
         ],
         'cache' => [

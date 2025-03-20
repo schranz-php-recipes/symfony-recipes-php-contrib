@@ -9,17 +9,25 @@ return static function (RoutingConfigurator $routingConfigurator): void {
         ->prefix('/%sylius_admin.path_name%');
 
     $routingConfigurator->add('monsieurbiz_sylius_homepage_homepage', '/{_locale}/')
-        ->controller(['monsieurbiz_homepage.controller.homepage', 'indexAction'])
+        ->controller([
+            'monsieurbiz_homepage.controller.homepage',
+            'indexAction',
+        ])
         ->defaults([
             '_sylius' => [
                 'template' => '@MonsieurBizSyliusHomepagePlugin/Homepage/index.html.twig',
                 'repository' => [
                     'method' => 'findOneByChannelAndLocale',
-                    'arguments' => ['expr:service(\'sylius.context.channel\').getChannel()', 'expr:service(\'sylius.context.locale\').getLocaleCode()'],
+                    'arguments' => [
+                        'expr:service(\'sylius.context.channel\').getChannel()',
+                        'expr:service(\'sylius.context.locale\').getLocaleCode()',
+                    ],
                 ],
             ],
         ])
-        ->methods(['GET'])
+        ->methods([
+            'GET',
+        ])
         ->requirements([
             '_locale' => '^[a-z]{2}(?:_[A-Z]{2})?$',
         ]);

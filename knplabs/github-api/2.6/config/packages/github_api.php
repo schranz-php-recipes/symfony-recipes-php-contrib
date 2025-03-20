@@ -9,8 +9,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Github\Client')
-        ->args([service('Github\HttpClient\Builder')]);
+        ->args([
+            service('Github\HttpClient\Builder'),
+        ]);
 
     $services->set('Github\HttpClient\Builder')
-        ->args([service('?Http\Client\HttpClient'), service('?Http\Message\RequestFactory'), service('?Http\Message\StreamFactory')]);
+        ->args([
+            service('?Http\Client\HttpClient'),
+            service('?Http\Message\RequestFactory'),
+            service('?Http\Message\StreamFactory'),
+        ]);
 };

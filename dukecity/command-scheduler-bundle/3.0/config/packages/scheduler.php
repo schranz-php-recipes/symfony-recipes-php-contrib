@@ -7,6 +7,17 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('dukecity_command_scheduler', [
         'log_path' => '%kernel.logs_dir%',
-        'excluded_command_namespaces' => ['_global', 'scheduler', 'server', 'container', 'config', 'generate', 'init', 'router', 'doctrine', 'debug'],
+        'excluded_command_namespaces' => [
+            '_global',
+            'scheduler',
+            'server',
+            'container',
+            'config',
+            'generate',
+            'init',
+            'router',
+            'doctrine',
+            'debug',
+        ],
     ]);
 };

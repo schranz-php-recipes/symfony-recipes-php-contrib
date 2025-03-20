@@ -8,6 +8,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('ravenflux.twig.extension.php_functions', 'RavenFlux\Twig\PhpFunctionsExtension')
-        ->args([['count'], ['nl2br']])
+        ->args([
+            [
+                'count',
+            ],
+            [
+                'nl2br',
+            ],
+        ])
         ->tag('twig.extension');
 };

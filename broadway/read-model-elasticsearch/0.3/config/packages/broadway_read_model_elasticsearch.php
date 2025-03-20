@@ -15,9 +15,17 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->set('broadway.elasticsearch.client_factory', 'Broadway\ReadModel\ElasticSearch\ElasticSearchClientFactory');
 
     $services->set('broadway.read_model.elasticsearch.repository_factory', 'Broadway\ReadModel\ElasticSearch\ElasticSearchRepositoryFactory')
-        ->args([service('broadway.elasticsearch.client'), service('broadway.serializer.readmodel')]);
+        ->args([
+            service('broadway.elasticsearch.client'),
+            service('broadway.serializer.readmodel'),
+        ]);
 
     $services->set('broadway.elasticsearch.client', 'Elasticsearch\Client')
-        ->factory([service('broadway.elasticsearch.client_factory'), 'create'])
-        ->args(['%elasticsearch%']);
+        ->factory([
+            service('broadway.elasticsearch.client_factory'),
+            'create',
+        ])
+        ->args([
+            '%elasticsearch%',
+        ]);
 };

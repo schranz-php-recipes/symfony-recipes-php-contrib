@@ -8,7 +8,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Google_Client', 'Google_Client')
-        ->call('setDeveloperKey', ['%env(GOOGLE_API_KEY)%'])
-        ->call('setClientId', ['%env(GOOGLE_CLIENT_ID)%'])
-        ->call('setClientSecret', ['%env(GOOGLE_CLIENT_SECRET)%']);
+        ->call('setDeveloperKey', [
+            '%env(GOOGLE_API_KEY)%',
+        ])
+        ->call('setClientId', [
+            '%env(GOOGLE_CLIENT_ID)%',
+        ])
+        ->call('setClientSecret', [
+            '%env(GOOGLE_CLIENT_SECRET)%',
+        ]);
 };

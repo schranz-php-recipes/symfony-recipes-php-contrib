@@ -12,7 +12,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire();
 
     $services->set('Datana\Iusta\Api\IustaClient')
-        ->args(['%env(IUSTA_API_BASE_URI)%', '%env(IUSTA_API_USERNAME)%', '%env(IUSTA_API_PASSWORD)%']);
+        ->args([
+            '%env(IUSTA_API_BASE_URI)%',
+            '%env(IUSTA_API_USERNAME)%',
+            '%env(IUSTA_API_PASSWORD)%',
+        ]);
 
     $services->set(AktenApi::class);
 

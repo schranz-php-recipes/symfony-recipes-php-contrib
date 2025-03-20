@@ -8,7 +8,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('graphqlite', [
         'namespace' => [
             'controllers' => 'App\Controller\\',
-            'types' => ['App\\'],
+            'types' => [
+                'App\\',
+            ],
         ],
     ]);
 };

@@ -7,6 +7,11 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('kunstmaan_translator', [
         'enabled' => true,
-        'managed_locales' => ['nl', 'en', 'de', 'fr'],
+        'managed_locales' => [
+            'nl',
+            'en',
+            'de',
+            'fr',
+        ],
     ]);
 };

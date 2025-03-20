@@ -9,7 +9,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'default_context' => 'default',
         'contexts' => [
             'default' => [
-                'providers' => ['sonata.media.provider.dailymotion', 'sonata.media.provider.youtube', 'sonata.media.provider.image', 'sonata.media.provider.file', 'sonata.media.provider.vimeo'],
+                'providers' => [
+                    'sonata.media.provider.dailymotion',
+                    'sonata.media.provider.youtube',
+                    'sonata.media.provider.image',
+                    'sonata.media.provider.file',
+                    'sonata.media.provider.vimeo',
+                ],
                 'formats' => [
                     'small' => [
                         'width' => 100,

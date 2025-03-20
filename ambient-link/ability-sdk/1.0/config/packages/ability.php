@@ -9,14 +9,22 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('AmbientLink\SDK\SmartMonkeyConnection')
-        ->args([service('amnient.link_connection_settings'), '%env(AMBIENT_LINK_USERNAME)%', '%env(AMBIENT_LINK_PASSWORD)%']);
+        ->args([
+            service('amnient.link_connection_settings'),
+            '%env(AMBIENT_LINK_USERNAME)%',
+            '%env(AMBIENT_LINK_PASSWORD)%',
+        ]);
 
     $services->set('amnient.link_connection_settings', 'PhpMqtt\Client\ConnectionSettings');
 
     $services->alias('PhpMqtt\Client\Contracts\MQTTClient', 'PhpMqtt\Client\MQTTClient');
 
     $services->set('PhpMqtt\Client\MQTTClient')
-        ->args(['%env(AMBIENT_LINK_HOST)%', '%env(AMBIENT_LINK_PORT)%', '%env(AMBIENT_LINK_MONKEY_ID)%']);
+        ->args([
+            '%env(AMBIENT_LINK_HOST)%',
+            '%env(AMBIENT_LINK_PORT)%',
+            '%env(AMBIENT_LINK_MONKEY_ID)%',
+        ]);
 
     $services->set('AmbientLink\SDK\Mqtt\MqttAdapter')
         ->arg('$username', '%env(AMBIENT_LINK_USERNAME)%')

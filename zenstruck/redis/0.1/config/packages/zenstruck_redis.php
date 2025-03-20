@@ -8,6 +8,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Zenstruck\Redis')
-        ->factory(['Zenstruck\Redis', 'create'])
-        ->args(['%env(REDIS_DSN)%']);
+        ->factory([
+            'Zenstruck\Redis',
+            'create',
+        ])
+        ->args([
+            '%env(REDIS_DSN)%',
+        ]);
 };

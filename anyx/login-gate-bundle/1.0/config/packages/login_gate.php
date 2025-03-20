@@ -6,7 +6,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('login_gate', [
-        'storages' => ['session'],
+        'storages' => [
+            'session',
+        ],
         'options' => [
             'max_count_attempts' => 3,
             'timeout' => 600,

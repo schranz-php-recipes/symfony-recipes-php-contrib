@@ -6,11 +6,13 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('workerman', [
-        'servers' => [[
-            'name' => 'Symfony webserver',
-            'listen' => 'http://0.0.0.0:80',
-            'processes' => 4,
-        ]],
+        'servers' => [
+            [
+                'name' => 'Symfony webserver',
+                'listen' => 'http://0.0.0.0:80',
+                'processes' => 4,
+            ],
+        ],
         'reload_strategy' => [
             'exception' => [
                 'active' => true,

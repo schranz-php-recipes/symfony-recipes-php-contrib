@@ -11,13 +11,18 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'loaders' => [
             'default' => [
                 'filesystem' => [
-                    'data_root' => ['%sylius_core.public_dir%/media/image', '%sylius_core.public_dir%/media'],
+                    'data_root' => [
+                        '%sylius_core.public_dir%/media/image',
+                        '%sylius_core.public_dir%/media',
+                    ],
                 ],
             ],
         ],
     ]);
 
     $containerConfigurator->extension('twig', [
-        'form_themes' => ['@MonsieurBizSyliusMediaManagerPlugin/Admin/MediaManager/Form/_theme.html.twig'],
+        'form_themes' => [
+            '@MonsieurBizSyliusMediaManagerPlugin/Admin/MediaManager/Form/_theme.html.twig',
+        ],
     ]);
 };

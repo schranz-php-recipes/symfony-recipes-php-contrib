@@ -23,7 +23,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->set('doctrine_mongodb.system_cache_provider', 'Symfony\Component\Cache\DoctrineProvider')
         ->private()
-        ->args([service('doctrine_mongodb.system_cache_pool')]);
+        ->args([
+            service('doctrine_mongodb.system_cache_pool'),
+        ]);
 
     $containerConfigurator->extension('framework', [
         'cache' => [

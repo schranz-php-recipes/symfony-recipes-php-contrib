@@ -8,7 +8,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('sentry', [
         'dsn' => '%env(SENTRY_DSN)%',
         'options' => [
-            'excluded_exceptions' => ['Symfony\Component\HttpKernel\Exception\NotFoundHttpException', 'Symfony\Component\Security\Core\Exception\AccessDeniedException'],
+            'excluded_exceptions' => [
+                'Symfony\Component\HttpKernel\Exception\NotFoundHttpException',
+                'Symfony\Component\Security\Core\Exception\AccessDeniedException',
+            ],
         ],
     ]);
 };

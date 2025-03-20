@@ -7,7 +7,12 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('annotation_cache', [
         'provider' => 'cache.app',
-        'ignore_namespaces' => ['App\Entity'],
-        'ignore_names' => ['legacy', 'required'],
+        'ignore_namespaces' => [
+            'App\Entity',
+        ],
+        'ignore_names' => [
+            'legacy',
+            'required',
+        ],
     ]);
 };

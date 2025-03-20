@@ -12,5 +12,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autoconfigure();
 
     $services->load('App\\', __DIR__.'/../src/')
-        ->exclude([__DIR__.'/../src/Entity/', __DIR__.'/../src/Kernel.php']);
+        ->exclude([
+            __DIR__.'/../src/Entity/',
+            __DIR__.'/../src/Kernel.php',
+        ]);
 };

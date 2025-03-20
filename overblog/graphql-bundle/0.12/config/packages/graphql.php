@@ -11,11 +11,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 'query' => 'Query',
             ],
             'mappings' => [
-                'types' => [[
-                    'type' => 'yaml',
-                    'dir' => '%kernel.project_dir%/config/graphql/types',
-                    'suffix' => null,
-                ]],
+                'types' => [
+                    [
+                        'type' => 'yaml',
+                        'dir' => '%kernel.project_dir%/config/graphql/types',
+                        'suffix' => null,
+                    ],
+                ],
             ],
         ],
     ]);

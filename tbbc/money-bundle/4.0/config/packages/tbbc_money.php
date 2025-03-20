@@ -6,7 +6,10 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('tbbc_money', [
-        'currencies' => ['USD', 'EUR'],
+        'currencies' => [
+            'USD',
+            'EUR',
+        ],
         'reference_currency' => 'EUR',
         'decimals' => 2,
     ]);

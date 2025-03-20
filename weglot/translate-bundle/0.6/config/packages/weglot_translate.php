@@ -9,6 +9,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'api_key' => '%env(WG_API_KEY)%',
         'original_language' => 'en',
         'cache' => true,
-        'destination_languages' => ['fr', 'de'],
+        'destination_languages' => [
+            'fr',
+            'de',
+        ],
     ]);
 };

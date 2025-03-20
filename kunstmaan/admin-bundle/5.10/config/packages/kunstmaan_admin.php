@@ -9,7 +9,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'multi_language' => true,
         'required_locales' => 'nl|fr|en',
         'default_locale' => 'en',
-        'admin_locales' => ['en'],
+        'admin_locales' => [
+            'en',
+        ],
         'website_title' => 'MyProject',
         'exception_logging' => false,
         'authentication' => [

@@ -6,8 +6,10 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('symfony_health_check', [
-        'health_checks' => [[
-            'id' => 'symfony_health_check.status_up_check',
-        ]],
+        'health_checks' => [
+            [
+                'id' => 'symfony_health_check.status_up_check',
+            ],
+        ],
     ]);
 };

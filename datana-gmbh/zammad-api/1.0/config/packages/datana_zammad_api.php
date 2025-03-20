@@ -14,7 +14,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire();
 
     $services->set('Datana\Zammad\Api\ZammadClient')
-        ->args(['%env(ZAMMAD_API_BASE_URI)%', '%env(ZAMMAD_API_TOKEN)%']);
+        ->args([
+            '%env(ZAMMAD_API_BASE_URI)%',
+            '%env(ZAMMAD_API_TOKEN)%',
+        ]);
 
     $services->set(TicketsApi::class);
 

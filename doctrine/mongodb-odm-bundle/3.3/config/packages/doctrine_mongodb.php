@@ -11,7 +11,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'connections' => [
             'default' => [
                 'server' => '%env(resolve:MONGODB_URL)%',
-                'options' => [],
+                'options' => [
+                ],
             ],
         ],
         'default_database' => '%env(resolve:MONGODB_DB)%',

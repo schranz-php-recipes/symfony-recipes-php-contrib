@@ -8,6 +8,16 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('fitbit', [
         'clientId' => '%env(FITBIT_CLIENT_ID)%',
         'clientSecret' => '%env(FITBIT_CLIENT_SECRET)%',
-        'scopes' => ['activity', 'heartrate', 'location', 'nutrition', 'profile', 'settings', 'sleep', 'social', 'weight'],
+        'scopes' => [
+            'activity',
+            'heartrate',
+            'location',
+            'nutrition',
+            'profile',
+            'settings',
+            'sleep',
+            'social',
+            'weight',
+        ],
     ]);
 };

@@ -13,7 +13,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire();
 
     $services->set('Datana\Formulario\Api\FormularioClient')
-        ->args(['%env(FORMULARIO_API_BASE_URI)%', '%env(FORMULARIO_API_TOKEN)%']);
+        ->args([
+            '%env(FORMULARIO_API_BASE_URI)%',
+            '%env(FORMULARIO_API_TOKEN)%',
+        ]);
 
     $services->set(DateneingabenApi::class);
 

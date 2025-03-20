@@ -8,6 +8,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     if ($containerConfigurator->env() === 'prod') {
         $containerConfigurator->extension('sentry', [
             'dsn' => '%env(SENTRY_DSN)%',
+            'tracing' => [
+                'enabled' => false,
+            ],
         ]);
     }
 };

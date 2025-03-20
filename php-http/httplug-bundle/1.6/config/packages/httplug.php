@@ -17,7 +17,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'clients' => [
             'app' => [
                 'http_methods_client' => true,
-                'plugins' => ['httplug.plugin.content_length', 'httplug.plugin.redirect'],
+                'plugins' => [
+                    'httplug.plugin.content_length',
+                    'httplug.plugin.redirect',
+                ],
             ],
         ],
     ]);
