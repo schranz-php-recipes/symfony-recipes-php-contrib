@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "softspring/cms-module-collection": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "config/"
+                }
+            },
+            "files": {
+                "config/packages/sfs_cms_modules.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('sfs_cms', [",
+                        "        'collections' => [",
+                        "            'vendor/softspring/cms-module-collection',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9e662ce6a4f70f410c87117c0055c5e53b57d802"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "21torr/storyblok": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\Storyblok\\TorrStoryblokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STORYBLOK_SPACE_ID": "",
+                    "STORYBLOK_MANAGEMENT_TOKEN": "",
+                    "STORYBLOK_CONTENT_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/storyblok.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('storyblok', [",
+                        "        'space_id' => '%env(int:STORYBLOK_SPACE_ID)%',",
+                        "        'management_token' => '%env(STORYBLOK_MANAGEMENT_TOKEN)%',",
+                        "        'content_token' => '%env(STORYBLOK_CONTENT_TOKEN)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b691f493af7c1bf4d244933833fabcd569bcdd84"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "endeavour/groeigids-api-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Endeavour\\GroeigidsApiClientBundle\\GroeigidsApiClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GROEIGIDS_API_KEY": "your-groeigids-api-key"
+                }
+            },
+            "files": {
+                "config/packages/groeigids_api_client.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('groeigids_api_client', [",
+                        "        'api_key' => '%env(GROEIGIDS_API_KEY)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c9c3f1d6bce85ece27f6c636958bc6059caa4db5"
+        }
+    }
+}

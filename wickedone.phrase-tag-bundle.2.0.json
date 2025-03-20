@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "wickedone/phrase-tag-bundle": {
+            "manifest": {
+                "bundles": {
+                    "WickedOne\\PhraseTagBundle\\WickedOnePhraseTagBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PHRASE_DSN": "phrase://PROJECT_ID:API_TOKEN@default?userAgent=myProject"
+                }
+            },
+            "files": {
+                "config/packages/wicked_one_phrase_tag.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('wicked_one_phrase_tag', [",
+                        "        'dsn' => '%env(PHRASE_DSN)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "528db00710de3ec7ceed43a547b9878fe31e1f49"
+        }
+    }
+}

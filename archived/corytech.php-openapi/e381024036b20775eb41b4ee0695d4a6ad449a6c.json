@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "corytech/php-openapi": {
+            "manifest": {
+                "bundles": {
+                    "Corytech\\OpenApi\\CorytechOpenApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/corytech_open_api.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('corytech_open_api', [",
+                        "        'handle_exceptions_on_path_prefixes' => [",
+                        "            '/api/v1',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e381024036b20775eb41b4ee0695d4a6ad449a6c"
+        }
+    }
+}

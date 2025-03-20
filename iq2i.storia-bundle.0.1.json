@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "iq2i/storia-bundle": {
+            "manifest": {
+                "bundles": {
+                    "IQ2i\\StoriaBundle\\IQ2iStoriaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "storia/": "storia/"
+                }
+            },
+            "files": {
+                "config/packages/iq2i_storia.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('iq2i_storia', [",
+                        "        'default_path' => '%kernel.project_dir%/storia',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/iq2i_storia.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@IQ2iStoriaBundle/config/routes.php')",
+                        "        ->prefix('/storia');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "storia/components/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "storia/pages/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f6c1b561438ade6ebec36e63f34468ae354e7527"
+        }
+    }
+}

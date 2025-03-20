@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "swag-industries/doctrine-domain-events": {
+            "manifest": {
+                "bundles": {
+                    "Biig\\Component\\Domain\\Integration\\Symfony\\DomainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_domain_event.php": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a9087fffbbb43c2def732e744d7d27a959f146b1"
+        }
+    }
+}

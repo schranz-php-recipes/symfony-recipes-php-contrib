@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "zim32/symfony-tracing-orm": {
+            "manifest": {
+                "bundles": {
+                    "Zim\\SymfonyOrmTracingBundle\\SymfonyOrmTracingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tracing_orm.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('tracing', [",
+                        "        'tracers' => [",
+                        "            'doctrine' => null,",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $containerConfigurator->extension('orm_tracing', [",
+                        "        'ignored_patterns' => [",
+                        "            'messenger_messages',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8d8786dac72de01ae043eccd4d28d917c159efce"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "dama/doctrine-test-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DAMA\\DoctrineTestBundle\\DAMADoctrineTestBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "phpunit.xml.dist",
+                        "content": "        <extension class=\"DAMA\\DoctrineTestBundle\\PHPUnit\\PHPUnitExtension\" />",
+                        "position": "after_target",
+                        "target": "<extensions>",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/dama_doctrine_test_bundle.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    if ($containerConfigurator->env() === 'test') {",
+                        "        $containerConfigurator->extension('dama_doctrine_test', [",
+                        "            'enable_static_connection' => true,",
+                        "            'enable_static_meta_data_cache' => true,",
+                        "            'enable_static_query_cache' => true,",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5a46dfe0908eef90328818388cc82c3c13a2a5bb"
+        }
+    }
+}

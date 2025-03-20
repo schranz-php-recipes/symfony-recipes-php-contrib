@@ -1,0 +1,179 @@
+{
+    "manifests": {
+        "softspring/cms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Softspring\\CmsBundle\\SfsCmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "config/",
+                    "translations/": "translations/"
+                },
+                "post-install-output": [
+                    "* Your admin is almost ready:",
+                    "",
+                    "1. Install webpack by running <comment>composer require webpack</comment>",
+                    "2. Install Javascript dependencies",
+                    "    yarn install",
+                    "    yarn add @popperjs/core bootstrap underscore.string bootstrap-icons --dev",
+                    "    yarn build",
+                    "3. Edit <comment>webpack.config.js</comment> and <info>uncomment</info> the following lines:",
+                    "",
+                    "    Encore",
+                    "        // ...",
+                    "        .addEntry('admin', './assets/js/admin.js')",
+                    "        // ...",
+                    "        .enableSassLoader()",
+                    "        // ..."
+                ]
+            },
+            "files": {
+                "config/packages/sfs_admin_menu_cms.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('twig', [",
+                        "        'globals' => [",
+                        "            'admin_menu' => [",
+                        "                'cms' => [",
+                        "                    'translation_key' => 'sidebar.menu.cms.title',",
+                        "                    'pages' => [",
+                        "                        'translation_key' => 'sidebar.menu.cms.pages',",
+                        "                        'route' => 'sfs_cms_admin_content_page_list',",
+                        "                        'active_expression' => 'sfs_cms_admin_content_page_',",
+                        "                        'icon' => 'bi bi-code-slash',",
+                        "                    ],",
+                        "                    'menus' => [",
+                        "                        'translation_key' => 'sidebar.menu.cms.menus',",
+                        "                        'route' => 'sfs_cms_admin_menus_list',",
+                        "                        'active_expression' => 'sfs_cms_admin_menus_',",
+                        "                        'icon' => 'bi bi-list-nested',",
+                        "                    ],",
+                        "                    'blocks' => [",
+                        "                        'translation_key' => 'sidebar.menu.cms.blocks',",
+                        "                        'route' => 'sfs_cms_admin_blocks_list',",
+                        "                        'active_expression' => 'sfs_cms_admin_blocks_',",
+                        "                        'icon' => 'bi bi-puzzle',",
+                        "                    ],",
+                        "                    'medias' => [",
+                        "                        'translation_key' => 'sidebar.menu.cms.medias',",
+                        "                        'route' => 'sfs_media_admin_medias_list',",
+                        "                        'active_expression' => 'sfs_media_admin_medias_',",
+                        "                        'icon' => 'bi bi-images',",
+                        "                    ],",
+                        "                    'routes' => [",
+                        "                        'translation_key' => 'sidebar.menu.cms.routes',",
+                        "                        'route' => 'sfs_cms_admin_routes_list',",
+                        "                        'active_expression' => 'sfs_cms_admin_routes_',",
+                        "                        'icon' => 'bi bi-signpost-split',",
+                        "                    ],",
+                        "                    'sites' => [",
+                        "                        'translation_key' => 'sidebar.menu.cms.sites',",
+                        "                        'route' => 'sfs_cms_admin_sites_list',",
+                        "                        'active_expression' => 'sfs_cms_admin_sites_',",
+                        "                        'icon' => 'bi bi-diagram-3',",
+                        "                    ],",
+                        "                ],",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/sfs_cms.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@SfsCmsBundle/config/security/admin_role_hierarchy.yaml');",
+                        "",
+                        "    $containerConfigurator->extension('security', [",
+                        "        'role_hierarchy' => [",
+                        "            'ROLE_ADMIN' => [",
+                        "                'ROLE_SFS_MEDIA_ADMIN_MEDIAS_RW',",
+                        "                'ROLE_SFS_CMS_ADMIN_BLOCKS_RW',",
+                        "                'ROLE_SFS_CMS_ADMIN_CONTENTS_RW',",
+                        "                'ROLE_SFS_CMS_ADMIN_ROUTES_RW',",
+                        "                'ROLE_SFS_CMS_ADMIN_MENUS_RW',",
+                        "                'ROLE_SFS_CMS_ADMIN_SITES_RO',",
+                        "                'ROLE_SFS_CMS_ADMIN_CONTENTS_TRANSLATOR',",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $containerConfigurator->extension('sfs_cms', [",
+                        "        'site' => [",
+                        "            'identification' => 'domain',",
+                        "            'throw_not_found' => false,",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sfs_cms_admin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@SfsCmsBundle/config/routing/admin_pages.yaml')",
+                        "        ->prefix('/admin/pages');",
+                        "",
+                        "    $routingConfigurator->import('@SfsCmsBundle/config/routing/admin_routes.yaml')",
+                        "        ->prefix('/admin/routes');",
+                        "",
+                        "    $routingConfigurator->import('@SfsCmsBundle/config/routing/admin_menus.yaml')",
+                        "        ->prefix('/admin/menus');",
+                        "",
+                        "    $routingConfigurator->import('@SfsCmsBundle/config/routing/admin_blocks.yaml')",
+                        "        ->prefix('/admin/blocks');",
+                        "",
+                        "    $routingConfigurator->import('@SfsCmsBundle/config/routing/admin_sites.yaml')",
+                        "        ->prefix('/admin/sites');",
+                        "",
+                        "    $routingConfigurator->import('@SfsMediaBundle/config/routing/admin_media.yaml')",
+                        "        ->prefix('/admin/media');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "translations/sfs_components.en.yaml": {
+                    "contents": [
+                        "sidebar:",
+                        "    menu:",
+                        "        cms:",
+                        "            title: \"CMS\"",
+                        "            pages: \"Pages\"",
+                        "            menus: \"Menus\"",
+                        "            blocks: \"Blocks\"",
+                        "            medias: \"Medias\"",
+                        "            routes: \"Routes\"",
+                        "            sites: \"Sites\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "eb090c11eb1bb11dffb57e7ea4437e4dd80341f5"
+        }
+    }
+}

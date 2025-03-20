@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sylius/admin-ui": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\AdminUi\\Symfony\\SyliusAdminUiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sylius_admin_ui.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@SyliusAdminUiBundle/config/routes.php')",
+                        "        ->prefix('/admin');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "84e0fec52e739f0d11ff7f9c8e9ed919b031ca97"
+        }
+    }
+}

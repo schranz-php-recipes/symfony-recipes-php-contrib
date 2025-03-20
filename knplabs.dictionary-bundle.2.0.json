@@ -22,7 +22,8 @@
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
                         "    $containerConfigurator->extension('knp_dictionary', [",
-                        "        'dictionaries' => [],",
+                        "        'dictionaries' => [",
+                        "        ],",
                         "    ]);",
                         "};",
                         ""
@@ -30,7 +31,7 @@
                     "executable": false
                 }
             },
-            "ref": "2b0ae44fec95ad45cb58da70762c1fe88087c23c"
+            "ref": "6a32b54b2550030cb1d99bff040ba21e4fc0302d"
         }
     }
 }

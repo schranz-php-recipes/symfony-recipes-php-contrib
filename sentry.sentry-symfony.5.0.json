@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.4",
+                    "symfony/monolog-bundle": "<3.7"
+                }
+            },
+            "files": {
+                "config/packages/sentry.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    if ($containerConfigurator->env() === 'prod') {",
+                        "        $containerConfigurator->extension('sentry', [",
+                        "            'dsn' => '%env(SENTRY_DSN)%',",
+                        "            'options' => [",
+                        "                'ignore_exceptions' => [",
+                        "                    'Symfony\\Component\\ErrorHandler\\Error\\FatalError',",
+                        "                    'Symfony\\Component\\Debug\\Exception\\FatalErrorException',",
+                        "                ],",
+                        "            ],",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "07bc3103db67bf9c81a8a60d8cfc5b4647c76e55"
+        }
+    }
+}

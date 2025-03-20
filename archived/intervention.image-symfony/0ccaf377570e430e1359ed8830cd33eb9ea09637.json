@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "intervention/image-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Intervention\\Image\\Symfony\\InterventionImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/intervention_image.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('intervention_image', [",
+                        "        'driver' => 'Intervention\\Image\\Drivers\\Gd\\Driver',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0ccaf377570e430e1359ed8830cd33eb9ea09637"
+        }
+    }
+}

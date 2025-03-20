@@ -1,0 +1,67 @@
+{
+    "manifests": {
+        "sensiolabs/gotenberg-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sensiolabs\\GotenbergBundle\\SensiolabsGotenbergBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOTENBERG_DSN": "http://gotenberg:3000"
+                },
+                "docker-compose": {
+                    "compose.yaml": {
+                        "services": [
+                            "gotenberg:",
+                            "  image: 'gotenberg/gotenberg:8'"
+                        ]
+                    },
+                    "compose.override.yaml": {
+                        "services": [
+                            "gotenberg:",
+                            "  ports:",
+                            "    - \"3000\""
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "  * Do not forget to start the new <fg=green>Gotenberg</> container if enabled."
+                ]
+            },
+            "files": {
+                "config/packages/gotenberg.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('framework', [",
+                        "        'http_client' => [",
+                        "            'scoped_clients' => [",
+                        "                'gotenberg.client' => [",
+                        "                    'base_uri' => '%env(GOTENBERG_DSN)%',",
+                        "                ],",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $containerConfigurator->extension('sensiolabs_gotenberg', [",
+                        "        'http_client' => 'gotenberg.client',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b20f907474264089e4e2187e8847bae02c705abd"
+        }
+    }
+}

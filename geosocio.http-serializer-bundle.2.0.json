@@ -12,25 +12,16 @@
                 }
             },
             "files": {
-                "config/packages/geosocio_http_serializer.php": {
+                "config/packages/geosocio_http_serializer.yaml": {
                     "contents": [
-                        "<?php",
-                        "",
-                        "declare(strict_types=1);",
-                        "",
-                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
-                        "",
-                        "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('geosocio_http_serializer', [",
-                        "        'default_format' => 'json',",
-                        "    ]);",
-                        "};",
+                        "geosocio_http_serializer:",
+                        "    default_format: 'json'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "c41c4a9f50920ea34690c90a55d873fa6cfd6eb1"
+            "ref": "05d9632be5489143e6f0d0ed07b91aae27b20445"
         }
     }
 }

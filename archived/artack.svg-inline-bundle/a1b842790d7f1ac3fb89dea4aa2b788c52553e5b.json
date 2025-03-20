@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "artack/svg-inline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Artack\\SvgInlineBundle\\SvgInlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/artack_svg_inline.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('svg_inline', [",
+                        "        'path' => '%kernel.project_dir%/assets/svg',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a1b842790d7f1ac3fb89dea4aa2b788c52553e5b"
+        }
+    }
+}

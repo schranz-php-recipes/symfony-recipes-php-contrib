@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "storyblok/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Storyblok\\Bundle\\StoryblokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+                    "STORYBLOK_API_TOKEN": "",
+                    "#1": "STORYBLOK_VERSION=",
+                    "#2": "STORYBLOK_ASSETS_API_TOKEN=",
+                    "#3": "STORYBLOK_WEBHOOK_SECRET="
+                }
+            },
+            "files": {
+                "config/packages/storyblok.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('storyblok', [",
+                        "        'base_uri' => '%env(STORYBLOK_API_BASE_URI)%',",
+                        "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/storyblok.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@StoryblokBundle/config/routes.php');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4f4cc9bece6442efd176d40f2fe3d2aa941b1180"
+        }
+    }
+}

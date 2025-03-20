@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "21torr/task-manager": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\TaskManager\\TaskManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/task_manager.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('task_manager', [",
+                        "        'queues' => [",
+                        "            'app_very_urgent',",
+                        "            'app_urgent',",
+                        "            'app',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "21c7416e22c75a29aa7ed4ec7f1e61d95e79be12"
+        }
+    }
+}

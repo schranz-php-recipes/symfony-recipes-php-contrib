@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "oskarstark/doctrine-postgres-public-schema-listener": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_doctrine_postgres_public_schema_listener.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->defaults()",
+                        "        ->autowire();",
+                        "",
+                        "    $services->set('OskarStark\\Doctrine\\EventSubscriber\\MigrationEventSubscriber')",
+                        "        ->tag('doctrine.event_subscriber', [",
+                        "            'connection' => 'default',",
+                        "        ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9a490e8e5a786e5e9d794d9f33ef1db4d7610834"
+        }
+    }
+}

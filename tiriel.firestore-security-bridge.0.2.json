@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "tiriel/firestore-security-bridge": {
+            "manifest": {
+                "bundles": {
+                    "Tiriel\\FirestoreSecurityBridge\\TirielFirestoreSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tiriel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('tiriel_firestore_security', [",
+                        "        'user_manager' => 'my_manager_id',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "05c3fb79afd5885af9b32efa484596c535b99214"
+        }
+    }
+}

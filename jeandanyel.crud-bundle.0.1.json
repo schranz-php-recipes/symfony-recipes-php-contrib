@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "jeandanyel/crud-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jeandanyel\\CrudBundle\\JeandanyelCrudBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/jeandanyel_crud.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@JeandanyelCrudBundle/config/routes.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5ef09047415158b9696c979abbb7dbcb33045412"
+        }
+    }
+}

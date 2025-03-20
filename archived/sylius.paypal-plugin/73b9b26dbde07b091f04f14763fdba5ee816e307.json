@@ -1,0 +1,66 @@
+{
+    "manifests": {
+        "sylius/paypal-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\PayPalPlugin\\SyliusPayPalPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "config/routes/sylius_shop.yaml",
+                        "position": "bottom",
+                        "warn_if_missing": true,
+                        "content": "sylius_shop_override_paypal:\n    resource: \"@SyliusPayPalPlugin/Resources/config/sylius_shop_override_routing.yaml\"\n    prefix: /{_locale}\n    requirements:\n        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$\n"
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_paypal.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@SyliusPayPalPlugin/Resources/config/config.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_paypal.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@SyliusPayPalPlugin/Resources/config/admin_routing.yml')",
+                        "        ->prefix('/%sylius_admin.path_name%');",
+                        "",
+                        "    $routingConfigurator->import('@SyliusPayPalPlugin/Resources/config/shop_routing.yaml')",
+                        "        ->prefix('/{_locale}')",
+                        "        ->requirements([",
+                        "            '_locale' => '^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$',",
+                        "        ]);",
+                        "",
+                        "    $routingConfigurator->import('@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "73b9b26dbde07b091f04f14763fdba5ee816e307"
+        }
+    }
+}

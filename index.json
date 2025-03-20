@@ -1,6 +1,16 @@
 {
     "aliases": [],
     "recipes": {
+        "21torr/hosting": [
+            "2.1",
+            "3.2"
+        ],
+        "21torr/storyblok": [
+            "3.0"
+        ],
+        "21torr/task-manager": [
+            "2.0"
+        ],
         "abel/keycloak-bearer-only-adapter-bundle": [
             "1.0"
         ],
@@ -18,6 +28,9 @@
         ],
         "adlarge/fixtures-documentation-bundle": [
             "1.1"
+        ],
+        "agilelab-fr/captcha-bundle": [
+            "1.0"
         ],
         "ajardin/blizzard-sdk-bundle": [
             "1.0"
@@ -43,6 +56,12 @@
         "algolia/search-bundle": [
             "3.0"
         ],
+        "alms/cycle-bundle": [
+            "0.1"
+        ],
+        "alteis/hagreed-bundle": [
+            "1.0"
+        ],
         "ambient-link/ability-sdk": [
             "1.0"
         ],
@@ -61,7 +80,13 @@
         "anyx/login-gate-bundle": [
             "1.0"
         ],
+        "arad021/entity-already-exists-validation-constraint": [
+            "1.0"
+        ],
         "armin/scssphp-bundle": [
+            "1.0"
+        ],
+        "artack/svg-inline-bundle": [
             "1.0"
         ],
         "artox-lab/clarc-bundle": [
@@ -156,8 +181,15 @@
         "bitbag/shipping-export-plugin": [
             "1.0"
         ],
+        "bitbag/wishlist-plugin": [
+            "4.4"
+        ],
+        "bizkit/versioning-bundle": [
+            "1.0"
+        ],
         "boshurik/telegram-bot-bundle": [
-            "3.1"
+            "3.1",
+            "6.0"
         ],
         "botjaeger/nexmo-bundle": [
             "0.5"
@@ -206,7 +238,8 @@
             "0.3"
         ],
         "codeception/codeception": [
-            "2.3"
+            "2.3",
+            "5.0"
         ],
         "coka/api-bundle": [
             "3.0",
@@ -240,11 +273,17 @@
         "coka/wsse-authentication-bundle": [
             "1.0"
         ],
+        "commerce-weavers/sylius-tpay-plugin": [
+            "2.0"
+        ],
         "commercetools/symfony-bundle": [
             "0.4"
         ],
         "comsave/salesforce-outbound-message-bundle": [
             "0.3"
+        ],
+        "conejerock/idempotency-bundle": [
+            "1.0"
         ],
         "connectholland/cookie-consent-bundle": [
             "0.4"
@@ -281,6 +320,12 @@
         "core23/shariff-bundle": [
             "3.0"
         ],
+        "corytech/php-monitoring": [
+            "1.0"
+        ],
+        "corytech/php-openapi": [
+            "1.0"
+        ],
         "cpliakas/git-wrapper": [
             "3.0"
         ],
@@ -293,8 +338,15 @@
         "cyberomulus/sitemap-generator-bundle": [
             "1.2"
         ],
+        "dahromy/glide-symfony": [
+            "1.0"
+        ],
+        "dahromy/mvola-bundle": [
+            "1.0"
+        ],
         "dama/doctrine-test-bundle": [
-            "4.0"
+            "4.0",
+            "7.2"
         ],
         "damienharper/auditor-bundle": [
             "4.0"
@@ -327,10 +379,14 @@
             "1.1"
         ],
         "datana-gmbh/iusta-api": [
-            "1.0"
+            "1.0",
+            "2.0",
+            "3.0",
+            "3.8"
         ],
         "datana-gmbh/logz-io-handler": [
-            "1.0"
+            "1.0",
+            "1.7"
         ],
         "datana-gmbh/sendgrid-dynamic-template-mailer": [
             "1.0"
@@ -339,6 +395,9 @@
             "1.0"
         ],
         "datana-gmbh/zammad-api": [
+            "1.0"
+        ],
+        "datana-gmbh/zendesk-api": [
             "1.0"
         ],
         "deamon/logger-extra-bundle": [
@@ -381,7 +440,8 @@
         "doctrine/mongodb-odm-bundle": [
             "3.3",
             "4.1",
-            "4.4"
+            "4.4",
+            "5.0"
         ],
         "doctrine/phpcr-bundle": [
             "2.0"
@@ -418,14 +478,16 @@
         ],
         "ecphp/cas-bundle": [
             "1.0",
-            "2.0"
+            "2.0",
+            "3.0"
         ],
         "ecphp/eu-login-api-authentication-bundle": [
             "1.0"
         ],
         "ecphp/eu-login-bundle": [
             "1.0",
-            "2.0"
+            "2.0",
+            "3.0"
         ],
         "eduandebruijne/admin-bundle": [
             "11.0"
@@ -461,6 +523,9 @@
         ],
         "emanuilnikolov/igdb-api-bundle": [
             "1.0"
+        ],
+        "endeavour/groeigids-api-client-bundle": [
+            "0.1"
         ],
         "enhavo/app-bundle": [
             "0.9"
@@ -552,6 +617,9 @@
         "fd6130/exabytes-sms-bundle": [
             "1.0"
         ],
+        "fdekker/log-viewer-bundle": [
+            "1.0"
+        ],
         "felds/quick-mailer-bundle": [
             "5.0"
         ],
@@ -559,6 +627,10 @@
             "1.0"
         ],
         "flagception/flagception-bundle": [
+            "3.0"
+        ],
+        "fluffydiscord/roadrunner-symfony-bundle": [
+            "2.3",
             "3.0"
         ],
         "flux-se/sylius-payum-stripe-plugin": [
@@ -688,8 +760,12 @@
         "hugosoltys/fitz-bundle": [
             "1.0"
         ],
+        "huluti/doctrine-relations-analyser": [
+            "0.3"
+        ],
         "hwi/oauth-bundle": [
-            "0.6"
+            "0.6",
+            "2.0"
         ],
         "idci/keycloak-security-bundle": [
             "1.0",
@@ -724,7 +800,15 @@
             "0.4"
         ],
         "inspector-apm/inspector-symfony": [
+            "1.0",
+            "1.3",
+            "1.4"
+        ],
+        "intervention/image-symfony": [
             "1.0"
+        ],
+        "iq2i/storia-bundle": [
+            "0.1"
         ],
         "isaac/gazesymfonybundle": [
             "0.1"
@@ -744,8 +828,17 @@
         "jawira/case-converter-twig": [
             "0.0"
         ],
+        "jawira/doctrine-diagram-bundle": [
+            "0.7"
+        ],
         "jbtcd/fitbit-bundle": [
             "1.0"
+        ],
+        "jeandanyel/crud-bundle": [
+            "0.1"
+        ],
+        "jeandanyel/list-bundle": [
+            "0.1"
         ],
         "jmose/command-scheduler-bundle": [
             "2.0"
@@ -815,6 +908,10 @@
         "knyk/mailbox-bundle": [
             "1.0"
         ],
+        "kocal/biome-js-bundle": [
+            "1.0",
+            "1.1"
+        ],
         "koff/i18n-form-bundle": [
             "4.0"
         ],
@@ -867,7 +964,8 @@
             "5.6"
         ],
         "kunstmaan/seo-bundle": [
-            "5.2"
+            "5.2",
+            "7.3"
         ],
         "kunstmaan/sitemap-bundle": [
             "5.2"
@@ -902,7 +1000,8 @@
         ],
         "leapt/im-bundle": [
             "2.0",
-            "4.1"
+            "4.1",
+            "5.0"
         ],
         "leogout/seo-bundle": [
             "1.0"
@@ -920,7 +1019,8 @@
             "1.8"
         ],
         "liip/monitor-bundle": [
-            "2.6"
+            "2.6",
+            "3.0"
         ],
         "lireincore/imgcache-bundle": [
             "0.1"
@@ -942,6 +1042,9 @@
         ],
         "loophp/repository-monadic-helper": [
             "1.0"
+        ],
+        "lox24eu/lox24_api_client_bundle": [
+            "0.3"
         ],
         "luzrain/workerman-bundle": [
             "0.1"
@@ -974,6 +1077,9 @@
         "mael/recaptcha-bundle": [
             "0.1"
         ],
+        "magenable/sylius-top-bar-notification-plugin": [
+            "1.0"
+        ],
         "mailgun/mailgun-php": [
             "2.3"
         ],
@@ -990,6 +1096,9 @@
             "0.4"
         ],
         "mangati/zenvia-notifier": [
+            "1.0"
+        ],
+        "manojx/encrypter-bundle": [
             "1.0"
         ],
         "mapado/rest-client-sdk-bundle": [
@@ -1024,6 +1133,12 @@
         ],
         "meteo-concept/hcaptcha-bundle": [
             "1.0"
+        ],
+        "mezcalito/ux-filemanager": [
+            "0.1"
+        ],
+        "mezcalito/ux-search": [
+            "0.1"
         ],
         "mgdsoft/stackdriver-bundle": [
             "0.1"
@@ -1176,10 +1291,12 @@
             "3.0"
         ],
         "nelmio/solarium-bundle": [
-            "2.4"
+            "2.4",
+            "5.0"
         ],
         "neo4j/neo4j-bundle": [
-            "0.4"
+            "0.4",
+            "1.0"
         ],
         "netbull/security-bundle": [
             "1.0"
@@ -1261,6 +1378,9 @@
         "onurb/doctrine-yuml-bundle": [
             "1.1"
         ],
+        "opctim/symfony-csp-bundle": [
+            "1.1"
+        ],
         "openai-php/symfony": [
             "0.3"
         ],
@@ -1269,6 +1389,15 @@
         ],
         "orbitale/easyimpress-bundle": [
             "1.0"
+        ],
+        "oskarstark/doctrine-datetime-milliseconds-type": [
+            "2.1"
+        ],
+        "oskarstark/doctrine-postgres-milliseconds-platform": [
+            "2.1"
+        ],
+        "oskarstark/doctrine-postgres-public-schema-listener": [
+            "1.2"
         ],
         "oskarstark/env-var-extension": [
             "1.0"
@@ -1281,6 +1410,9 @@
         ],
         "oskarstark/symfony-http-responder": [
             "0.1"
+        ],
+        "otezvikentiy/json-rpc-api": [
+            "1.7"
         ],
         "otobul/epaybg-bundle": [
             "1.0"
@@ -1302,7 +1434,9 @@
         "patchlevel/event-sourcing-bundle": [
             "1.0",
             "1.2",
-            "2.0"
+            "2.0",
+            "3.0",
+            "3.6"
         ],
         "payplug/sylius-payplug-plugin": [
             "0.2"
@@ -1316,13 +1450,17 @@
         "pentatrion/vite-bundle": [
             "0.1",
             "0.2",
-            "1.0"
+            "1.0",
+            "6.5"
         ],
         "php-amqplib/rabbitmq-bundle": [
             "1.12"
         ],
         "php-http/httplug-bundle": [
             "1.6"
+        ],
+        "php-llm/llm-chain-bundle": [
+            "0.16"
         ],
         "php-translation/loco-adapter": [
             "0.8"
@@ -1339,6 +1477,9 @@
         ],
         "phpstan/phpstan": [
             "1.0"
+        ],
+        "phpstreamserver/symfony": [
+            "0.4"
         ],
         "phpsword/sword-bundle": [
             "1.0"
@@ -1426,6 +1567,9 @@
         "qandidate/toggle-bundle": [
             "1.0"
         ],
+        "qossmic/deptrac": [
+            "2.0"
+        ],
         "qossmic/deptrac-shim": [
             "0.7",
             "0.19"
@@ -1470,6 +1614,9 @@
         "rokka/client-bundle": [
             "1.0"
         ],
+        "rossel/mwu-sdk": [
+            "0.1"
+        ],
         "roukmoute/hashids-bundle": [
             "1.4"
         ],
@@ -1485,8 +1632,14 @@
         "ruwler/ruwler-sdk-bundle": [
             "1.0"
         ],
+        "saqqal/llm-integration-bundle": [
+            "1.0"
+        ],
         "scheb/two-factor-bundle": [
             "3.16"
+        ],
+        "schranz-search/symfony-bundle": [
+            "0.2"
         ],
         "sebtm/inwx-api-bundle": [
             "0.1",
@@ -1499,14 +1652,29 @@
         "seferov/aws-bundle": [
             "3.0"
         ],
+        "sensiolabs-de/storyblok-bundle": [
+            "0.1",
+            "0.2",
+            "0.3"
+        ],
         "sensiolabs/connect-bundle": [
             "4.0"
+        ],
+        "sensiolabs/gotenberg-bundle": [
+            "0.1"
+        ],
+        "sensiolabs/minify-bundle": [
+            "0.9"
+        ],
+        "sensiolabs/storybook-bundle": [
+            "0.1"
         ],
         "sentry/sentry-symfony": [
             "1.0",
             "3.0",
             "4.0",
-            "4.6"
+            "4.6",
+            "5.0"
         ],
         "setono/google-analytics-bundle": [
             "1.0"
@@ -1515,6 +1683,10 @@
             "1.0"
         ],
         "shopware/app-bundle": [
+            "1.0",
+            "4.0"
+        ],
+        "siburuxue/doctrine-helper": [
             "1.0"
         ],
         "siganushka/generic-bundle": [
@@ -1530,11 +1702,44 @@
         "simply-stream/twitch-api-bundle": [
             "0.1"
         ],
+        "skipthedragon/inertia-bundle": [
+            "1.0"
+        ],
         "slot/mandrill-bundle": [
             "1.1"
         ],
         "snc/redis-bundle": [
             "2.0"
+        ],
+        "sofascore/purgatory-bundle": [
+            "1.0"
+        ],
+        "softavis/flysystem-cloudflare-bundle": [
+            "0.1"
+        ],
+        "softspring/cms-bundle": [
+            "5.2"
+        ],
+        "softspring/cms-module-collection": [
+            "5.2"
+        ],
+        "softspring/components": [
+            "5.1"
+        ],
+        "softspring/doctrine-migrations-version-comparator": [
+            "5.1"
+        ],
+        "softspring/media-bundle": [
+            "5.2"
+        ],
+        "softspring/permissions-bundle": [
+            "5.2"
+        ],
+        "softspring/twig-extra-bundle": [
+            "5.2"
+        ],
+        "softspring/user-bundle": [
+            "5.2"
         ],
         "soljian/steam-authentication-bundle": [
             "1.0"
@@ -1622,6 +1827,12 @@
         "stof/doctrine-extensions-bundle": [
             "1.2"
         ],
+        "stogon/unleash-bundle": [
+            "0.4"
+        ],
+        "storyblok/symfony-bundle": [
+            "0.1"
+        ],
         "sulu/article-bundle": [
             "2.0"
         ],
@@ -1651,6 +1862,9 @@
         "survos/barcode-bundle": [
             "1.0"
         ],
+        "survos/bunny-bundle": [
+            "1.5"
+        ],
         "survos/command-bundle": [
             "1.5"
         ],
@@ -1670,7 +1884,8 @@
             "1.0"
         ],
         "swag-industries/doctrine-domain-events": [
-            "1.0"
+            "1.0",
+            "3.1"
         ],
         "swag-industries/melodiia": [
             "0.7"
@@ -1681,6 +1896,12 @@
         "sylius/admin-order-creation-plugin": [
             "0.6"
         ],
+        "sylius/admin-ui": [
+            "0.4"
+        ],
+        "sylius/bootstrap-admin-ui": [
+            "0.4"
+        ],
         "sylius/customer-order-cancellation-plugin": [
             "0.2"
         ],
@@ -1688,14 +1909,30 @@
             "1.0"
         ],
         "sylius/invoicing-plugin": [
-            "0.5"
+            "0.5",
+            "1.0"
+        ],
+        "sylius/paypal-plugin": [
+            "1.7",
+            "2.0"
         ],
         "sylius/refund-plugin": [
-            "0.4"
+            "0.4",
+            "2.0"
         ],
         "sylius/resource-bundle": [
             "1.6",
-            "1.9"
+            "1.9",
+            "1.12"
+        ],
+        "sylius/twig-extra": [
+            "0.4"
+        ],
+        "sylius/twig-hooks": [
+            "0.4"
+        ],
+        "sylius/ui-translations": [
+            "0.4"
         ],
         "symandy/makefile-maker-bundle": [
             "0.5"
@@ -1725,8 +1962,14 @@
         "systemsdk/easy-log-bundle": [
             "1.10"
         ],
+        "tales-from-a-dev/flowbite-bundle": [
+            "0.4"
+        ],
         "tales-from-a-dev/twig-tailwind-extra": [
             "0.2"
+        ],
+        "talleu/php-redis-om": [
+            "0.3"
         ],
         "tattali/calendar-bundle": [
             "1.1"
@@ -1748,10 +1991,14 @@
         ],
         "thecodingmachine/graphqlite-bundle": [
             "3.0",
-            "4.0"
+            "4.0",
+            "6.0"
         ],
         "thecodingmachine/tdbm-bundle": [
             "5.0"
+        ],
+        "thedevopser/castor-symfony": [
+            "1.0"
         ],
         "theplankmeister/form-data-transposer": [
             "1.0"
@@ -1765,6 +2012,9 @@
             "1.7",
             "1.15",
             "1.17"
+        ],
+        "tiime/tested-routes-checker-bundle": [
+            "1.0"
         ],
         "tilleuls/forgot-password-bundle": [
             "1.0"
@@ -1785,6 +2035,12 @@
             "4.0",
             "4.2",
             "5.0"
+        ],
+        "tiriel/firestore-odm-bundle": [
+            "0.2"
+        ],
+        "tiriel/firestore-security-bridge": [
+            "0.2"
         ],
         "toiba/fullcalendar-bundle": [
             "6.2"
@@ -1819,7 +2075,8 @@
             "1.0"
         ],
         "vincentlanglet/twig-cs-fixer": [
-            "0.6"
+            "0.6",
+            "3.0"
         ],
         "wandi/easyadmin-plus-bundle": [
             "0.1",
@@ -1840,7 +2097,8 @@
             "1.2"
         ],
         "wedrix/watchtower-bundle": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "weglot/translate-bundle": [
             "0.6"
@@ -1850,6 +2108,9 @@
         ],
         "wemxo/dynamic-form-bundle": [
             "1.0"
+        ],
+        "wickedone/phrase-tag-bundle": [
+            "2.0"
         ],
         "wiet-at/symfony-dev": [
             "1.0"
@@ -1887,13 +2148,16 @@
             "1.0"
         ],
         "yousign/zdd-message-bundle": [
-            "0.1"
+            "2.0"
         ],
         "ywh/cvss-bundle": [
             "1.0"
         ],
         "ywh/doctrine-encryption-bundle": [
             "1.0"
+        ],
+        "zemasterkrom/zmkr-cloudflare-turnstile-bundle": [
+            "0.1"
         ],
         "zendesk/zendesk_api_client_php": [
             "2.2"
@@ -1909,9 +2173,23 @@
         ],
         "zephyr/allmysms-bundle": [
             "1.0"
+        ],
+        "zim32/symfony-tracing-core": [
+            "1.0"
+        ],
+        "zim32/symfony-tracing-http-client": [
+            "1.0"
+        ],
+        "zim32/symfony-tracing-orm": [
+            "1.0"
         ]
     },
     "recipe-conflicts": {
+        "dahromy/glide-symfony": {
+            "1.0": {
+                "php": "<8.0"
+            }
+        },
         "doctrine/mongodb-odm-bundle": {
             "4.1": {
                 "doctrine/cache": "<1.11",
@@ -1934,6 +2212,11 @@
                 "symfony/symfony": "<5.0"
             }
         },
+        "sensiolabs/storybook-bundle": {
+            "0.1": {
+                "symfony/framework-bundle": "<6.4"
+            }
+        },
         "sentry/sentry-symfony": {
             "4.0": {
                 "symfony/framework-bundle": "<5.4"
@@ -1941,6 +2224,15 @@
             "4.6": {
                 "symfony/framework-bundle": "<5.4",
                 "symfony/monolog-bundle": "<3.7"
+            },
+            "5.0": {
+                "symfony/framework-bundle": "<5.4",
+                "symfony/monolog-bundle": "<3.7"
+            }
+        },
+        "softspring/permissions-bundle": {
+            "5.2": {
+                "php": "<8.1"
             }
         }
     },

@@ -1,9 +1,9 @@
 {
     "manifests": {
-        "yousign/zdd-message-bundle": {
+        "knplabs/dictionary-bundle": {
             "manifest": {
                 "bundles": {
-                    "Yousign\\ZddMessageBundle\\ZddMessageBundle": [
+                    "Knp\\DictionaryBundle\\KnpDictionaryBundle": [
                         "all"
                     ]
                 },
@@ -12,7 +12,7 @@
                 }
             },
             "files": {
-                "config/zdd_message.php": {
+                "config/packages/knp_dictionary.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -21,8 +21,9 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('zdd_message', [",
-                        "        'configurator' => null,",
+                        "    $containerConfigurator->extension('knp_dictionary', [",
+                        "        'dictionaries' => [",
+                        "        ],",
                         "    ]);",
                         "};",
                         ""
@@ -30,7 +31,7 @@
                     "executable": false
                 }
             },
-            "ref": "e002fc1c76a0b0b793cb101ff5737982acc3883d"
+            "ref": "6a32b54b2550030cb1d99bff040ba21e4fc0302d"
         }
     }
 }

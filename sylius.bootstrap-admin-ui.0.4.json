@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "sylius/bootstrap-admin-ui": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\BootstrapAdminUi\\Symfony\\SyliusBootstrapAdminUiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_bootstrap_admin_ui.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@SyliusBootstrapAdminUiBundle/config/app.php');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b8ab131623cfccd3b04d2a0f0c2225129f82ad54"
+        }
+    }
+}

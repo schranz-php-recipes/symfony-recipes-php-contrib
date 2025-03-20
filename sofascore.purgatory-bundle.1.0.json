@@ -1,0 +1,61 @@
+{
+    "manifests": {
+        "sofascore/purgatory-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sofascore\\PurgatoryBundle\\PurgatoryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                     </>",
+                    "  <bg=blue;fg=white>   Getting Started with </><bg=blue;fg=white;options=bold>sofascore/purgatory-bundle</><bg=blue;fg=white>   </>",
+                    "  <bg=blue;fg=white>                                                     </>",
+                    "",
+                    "  * <fg=blue>Configure</> a purger based on your HTTP cache backend in <comment>config/packages/purgatory.yaml</>",
+                    "  * <fg=blue>Read</> the complete documentation at <comment>https://sofascore.github.io/purgatory-bundle/</>"
+                ]
+            },
+            "files": {
+                "config/packages/purgatory.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('purgatory', [",
+                        "        'route_ignore_patterns' => [",
+                        "            '/^_profiler/',",
+                        "            '/^_wdt/',",
+                        "        ],",
+                        "        'purger' => [",
+                        "            'name' => 'symfony',",
+                        "        ],",
+                        "    ]);",
+                        "    if ($containerConfigurator->env() === 'dev') {",
+                        "        $containerConfigurator->extension('purgatory', [",
+                        "            'purger' => 'void',",
+                        "        ]);",
+                        "    }",
+                        "    if ($containerConfigurator->env() === 'test') {",
+                        "        $containerConfigurator->extension('purgatory', [",
+                        "            'purger' => 'in-memory',",
+                        "            'profiler_integration' => false,",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ab1f7f5398067dc6bd03bbd7d8aaa4983c1923cf"
+        }
+    }
+}

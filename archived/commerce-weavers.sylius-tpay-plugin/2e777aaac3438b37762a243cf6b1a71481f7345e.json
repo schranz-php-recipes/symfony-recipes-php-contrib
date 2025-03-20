@@ -1,0 +1,69 @@
+{
+    "manifests": {
+        "commerce-weavers/sylius-tpay-plugin": {
+            "manifest": {
+                "bundles": {
+                    "CommerceWeavers\\SyliusTpayPlugin\\CommerceWeaversSyliusTpayPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "IMPORTANT! Replace the `<replace_me>` with a value generated using the `vendor/bin/generate-defuse-key` command",
+                    "PAYUM_CYPHER_KEY": "<replace_me>"
+                },
+                "post-install-output": [
+                    "@@ -0,0 +1,4 @@",
+                    "  * <fg=blue>IMPORTANT!</> Remember to generate Payum's cypher key with the <comment>vendor/bin/generate-defuse-key</comment>",
+                    "    and add it to your environment variables as <comment>PAYUM_CYPHER_KEY</comment>",
+                    "",
+                    "  * <fg=blue>Read</> the Sylius Payum Plugin documentation at <comment>https://github.com/CommerceWeavers/SyliusTpayPlugin/wiki</>"
+                ]
+            },
+            "files": {
+                "config/packages/commerce_weavers_tpay_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@CommerceWeaversSyliusTpayPlugin/config/config.php');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/commerce_weavers_tpay_plugin.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@CommerceWeaversSyliusTpayPlugin/config/routes_webhook.php');",
+                        "",
+                        "    $routingConfigurator->import('@CommerceWeaversSyliusTpayPlugin/config/routes_shop.php')",
+                        "        ->prefix('/{_locale}')",
+                        "        ->requirements([",
+                        "            '_locale' => '^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$',",
+                        "        ]);",
+                        "",
+                        "    $routingConfigurator->import('@CommerceWeaversSyliusTpayPlugin/config/routes_admin.php')",
+                        "        ->prefix('/admin');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2e777aaac3438b37762a243cf6b1a71481f7345e"
+        }
+    }
+}

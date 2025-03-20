@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "softspring/doctrine-migrations-version-comparator": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "config/"
+                }
+            },
+            "files": {
+                "config/packages/sfs_doctrine_migrations.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->set(VersionNumberComparator::class);",
+                        "",
+                        "    $containerConfigurator->extension('doctrine_migrations', [",
+                        "        'services' => [",
+                        "            'Doctrine\\Migrations\\Version\\Comparator' => 'Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a6b0658b75b29bf13ccfff29a95e4da21b6f13be"
+        }
+    }
+}

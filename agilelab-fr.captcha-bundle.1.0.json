@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "agilelab-fr/captcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AgilelabFr\\CaptchaBundle\\AgilelabFrCaptchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/agilelab_fr_captcha.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('captcha_bundle', [",
+                        "        'width' => 120,",
+                        "        'height' => 40,",
+                        "        'length' => 6,",
+                        "        'lines' => 8,",
+                        "        'characters' => 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789',",
+                        "        'case_sensitive' => true,",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/agilelab_fr_captcha.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@AgilelabFrCaptchaBundle/config/routes.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1be65cf1c3ac0e14dc09b1bca5a61ed53e466136"
+        }
+    }
+}

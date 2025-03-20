@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "softspring/components": {
+            "manifest": {
+                "bundles": {
+                    "Softspring\\Component\\Components\\SfsComponentsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "config/",
+                    "templates/": "templates/"
+                }
+            },
+            "files": {
+                "config/packages/sfs_components.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('twig', [",
+                        "        'globals' => [",
+                        "            'sfs_components_theme' => 'bootstrap5',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/base.html.twig": {
+                    "contents": [
+                        "{% extends '@SfsComponents/base.html.twig' %}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "087f78782e233e4f9ba560a375da084069de98c2"
+        }
+    }
+}

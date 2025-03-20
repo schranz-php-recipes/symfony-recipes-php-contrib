@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "mezcalito/ux-search": {
+            "manifest": {
+                "bundles": {
+                    "Mezcalito\\UxSearchBundle\\MezcalitoUxSearchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MEZCALITO_UX_SEARCH_DEFAULT_DSN=\"meilisearch://key@localhost:7700\"",
+                    "MEZCALITO_UX_SEARCH_DEFAULT_DSN": "doctrine://default"
+                }
+            },
+            "files": {
+                "config/packages/mezcalito_ux_search.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('mezcalito_ux_search', [",
+                        "        'adapters' => [",
+                        "            'default' => '%env(MEZCALITO_UX_SEARCH_DEFAULT_DSN)%',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2595da0004f931a37461a44afecfd33578ba2c44"
+        }
+    }
+}

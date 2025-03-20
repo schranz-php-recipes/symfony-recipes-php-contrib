@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "bizkit/versioning-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Bizkit\\VersioningBundle\\BizkitVersioningBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your versioning strategy in <comment>config/packages/bizkit_versioning.yaml</>.",
+                    "  * <fg=blue>Read</> the complete documentation at <comment>https://github.com/HypeMC/versioning-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/bizkit_versioning.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('bizkit_versioning', [",
+                        "        'parameter_prefix' => 'application',",
+                        "        'strategy' => 'semver',",
+                        "        'vcs' => [",
+                        "            'tagging_mode' => 'ask',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c8784e2db121e3d8c5f71404d2c7ca7d10307ffd"
+        }
+    }
+}

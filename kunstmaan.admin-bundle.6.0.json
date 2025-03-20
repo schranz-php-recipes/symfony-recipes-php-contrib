@@ -25,7 +25,9 @@
                         "        'multi_language' => true,",
                         "        'required_locales' => 'nl|fr|en',",
                         "        'default_locale' => 'en',",
-                        "        'admin_locales' => ['en'],",
+                        "        'admin_locales' => [",
+                        "            'en',",
+                        "        ],",
                         "        'website_title' => 'MyProject',",
                         "        'exception_logging' => false,",
                         "    ]);",
@@ -54,7 +56,7 @@
                     "executable": false
                 }
             },
-            "ref": "4c50b168ce56e8ffbe96ad12ecfeea6d226bd7a1"
+            "ref": "37a6a76739f6a7d152e394175684ffb532a0c690"
         }
     }
 }

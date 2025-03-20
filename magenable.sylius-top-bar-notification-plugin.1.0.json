@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "magenable/sylius-top-bar-notification-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Magenable\\SyliusTopBarNotificationPlugin\\MagenableSyliusTopBarNotificationPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/magenable_top_bar_notification.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@MagenableSyliusTopBarNotificationPlugin/config/config.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/magenable_top_bar_notification.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@MagenableSyliusTopBarNotificationPlugin/config/routes/admin.yml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "928851f214539a96700f6ec9ae23dba13f099290"
+        }
+    }
+}

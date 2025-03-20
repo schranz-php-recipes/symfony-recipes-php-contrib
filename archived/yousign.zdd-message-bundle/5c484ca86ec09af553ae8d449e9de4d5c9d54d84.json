@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "yousign/zdd-message-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yousign\\ZddMessageBundle\\ZddMessageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/zdd_message.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5c484ca86ec09af553ae8d449e9de4d5c9d54d84"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "leapt/im-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Leapt\\ImBundle\\LeaptImBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/public/cache/"
+                ]
+            },
+            "files": {
+                "config/packages/leapt_im.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('leapt_im', [",
+                        "        'cache_path' => 'cache/im',",
+                        "        'formats' => [",
+                        "            'medium' => [",
+                        "                'thumbnail' => '100x100>',",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/leapt_im.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@LeaptImBundle/config/routing.php');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bf315a367bcb78b04a12bfe4d50f2e9f5c5c126c"
+        }
+    }
+}

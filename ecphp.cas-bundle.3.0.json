@@ -1,0 +1,102 @@
+{
+    "manifests": {
+        "ecphp/cas-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\CasBundle\\CasBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/cas_bundle.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('cas', [",
+                        "        'base_url' => 'https://ecas.ec.europa.eu/cas',",
+                        "        'protocol' => [",
+                        "            'login' => [",
+                        "                'path' => '/login',",
+                        "                'default_parameters' => [",
+                        "                    'service' => 'cas_bundle_homepage',",
+                        "                ],",
+                        "            ],",
+                        "            'serviceValidate' => [",
+                        "                'path' => '/p3/serviceValidate',",
+                        "                'default_parameters' => [",
+                        "                    'format' => 'JSON',",
+                        "                ],",
+                        "            ],",
+                        "            'logout' => [",
+                        "                'path' => '/logout',",
+                        "                'default_parameters' => [",
+                        "                    'service' => 'cas_bundle_homepage',",
+                        "                ],",
+                        "            ],",
+                        "            'proxy' => [",
+                        "                'path' => '/proxy',",
+                        "            ],",
+                        "            'proxyValidate' => [",
+                        "                'path' => '/p3/proxyValidate',",
+                        "                'default_parameters' => [",
+                        "                    'format' => 'JSON',",
+                        "                ],",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/cas_security.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('security', [",
+                        "        'providers' => [",
+                        "            'cas' => [",
+                        "                'id' => 'EcPhp\\CasBundle\\Security\\Core\\User\\CasUserProvider',",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/cas.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@CasBundle/Resources/config/routes/routes.php')",
+                        "        ->prefix('/cas');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "360cfedebb769a459217914c3d48406d1f11164b"
+        }
+    }
+}

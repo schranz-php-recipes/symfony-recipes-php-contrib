@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "21torr/hosting": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\Hosting\\HostingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HOSTING_TIER": "development",
+                    "HOSTING_INSTALLATION": ""
+                },
+                "gitignore": [
+                    "/.build-info.json"
+                ]
+            },
+            "files": {
+                "config/packages/hosting.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('hosting', [",
+                        "        'tier' => '%env(HOSTING_TIER)%',",
+                        "        'installation' => '%env(HOSTING_INSTALLATION)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/hosting.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@HostingBundle/config/routes.yaml')",
+                        "        ->prefix('/hosting');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e40a7fd64b0d858619b61301d574bd0f66b6f280"
+        }
+    }
+}

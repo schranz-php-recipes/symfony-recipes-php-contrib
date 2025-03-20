@@ -1,0 +1,61 @@
+{
+    "manifests": {
+        "fluffydiscord/roadrunner-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FluffyDiscord\\RoadRunnerBundle\\FluffyDiscordRoadRunnerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "install/.rr.yaml": ".rr.yaml"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "RR_RPC": "tcp://127.0.0.1:6001"
+                }
+            },
+            "files": {
+                "config/packages/fluffy_discord_road_runner.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('fluffy_discord_road_runner', [",
+                        "        'rr_config_path' => '.rr.yaml',",
+                        "        'http' => [",
+                        "            'lazy_boot' => false,",
+                        "            'early_router_initialization' => true,",
+                        "        ],",
+                        "        'centrifugo' => [",
+                        "            'lazy_boot' => false,",
+                        "        ],",
+                        "        'kv' => [",
+                        "            'auto_register' => true,",
+                        "            'serializer' => null,",
+                        "            'keypair_path' => 'bin/keypair.key',",
+                        "        ],",
+                        "    ]);",
+                        "    if ($containerConfigurator->env() === 'dev') {",
+                        "        $containerConfigurator->extension('fluffy_discord_road_runner', [",
+                        "            'http' => [",
+                        "                'early_router_initialization' => false,",
+                        "            ],",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5d6b36e8c7700fee37e74540c0227f4f67c34f36"
+        }
+    }
+}

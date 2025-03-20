@@ -1,0 +1,77 @@
+{
+    "manifests": {
+        "dahromy/glide-symfony": {
+            "manifest": {
+                "conflict": {
+                    "php": "<8.0"
+                },
+                "bundles": {
+                    "DahRomy\\Glide\\DahRomyGlideBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "GLIDE_SIGNATURE_KEY": "%generate(secret)%"
+                }
+            },
+            "files": {
+                "config/packages/dahromy_glide.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('dahromy_glide', [",
+                        "        'source' => '%kernel.project_dir%/public/uploads',",
+                        "        'cache' => '%kernel.project_dir%/var/cache/glide',",
+                        "        'signature_key' => '%env(GLIDE_SIGNATURE_KEY)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/glide.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('glide', [",
+                        "        'source' => '%kernel.project_dir%/public',",
+                        "        'cache' => '%kernel.project_dir%/var/cache/glide',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/glide.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
+                        "",
+                        "return static function (RoutingConfigurator $routingConfigurator): void {",
+                        "    $routingConfigurator->import('@DahRomyGlideBundle/Resources/config/routes.php', 'php');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "edd662d90f487ac0bb354674bcc97a985a25eb71"
+        }
+    }
+}

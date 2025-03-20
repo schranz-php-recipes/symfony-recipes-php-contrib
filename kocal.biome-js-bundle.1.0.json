@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "kocal/biome-js-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\BiomeJsBundle\\KocalBiomeJsBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "biome.json": "biome.json",
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "biome.json": {
+                    "contents": [
+                        "{",
+                        "    \"files\": {",
+                        "        \"ignore\": [",
+                        "            \"assets/vendor/*\",",
+                        "            \"assets/controllers.json\",",
+                        "            \"composer.json\",",
+                        "            \"public/assets/*\",",
+                        "            \"public/bundles/*\",",
+                        "            \"var/cache/*\",",
+                        "            \"vendor/*\"",
+                        "        ]",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_biome_js.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    if ($containerConfigurator->env() === 'dev') {",
+                        "        $containerConfigurator->extension('kocal_biome_js', [",
+                        "            'binary_version' => null,",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "70adc83e6913d2f9076b7cc6a5c700ae85761f5a"
+        }
+    }
+}

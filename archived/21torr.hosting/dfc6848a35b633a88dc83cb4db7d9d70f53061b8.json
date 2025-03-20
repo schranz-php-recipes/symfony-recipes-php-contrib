@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "21torr/hosting": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\Hosting\\HostingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HOSTING_TIER": "development"
+                },
+                "gitignore": [
+                    "/.build-info.json"
+                ]
+            },
+            "files": {
+                "config/packages/hosting.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('hosting', [",
+                        "        'tier' => '%env(HOSTING_TIER)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dfc6848a35b633a88dc83cb4db7d9d70f53061b8"
+        }
+    }
+}

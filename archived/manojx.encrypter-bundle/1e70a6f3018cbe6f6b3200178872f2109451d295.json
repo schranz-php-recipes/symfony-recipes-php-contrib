@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "manojx/encrypter-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ManojX\\EncrypterBundle\\EncrypterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ENCRYPTER_SECRET": "your_secret_key_here"
+                }
+            },
+            "files": {
+                "config/packages/encrypter.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('encrypter', [",
+                        "        'secret' => '%env(ENCRYPTER_SECRET)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1e70a6f3018cbe6f6b3200178872f2109451d295"
+        }
+    }
+}

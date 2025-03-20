@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "neo4j/neo4j-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Neo4j\\Neo4jBundle\\Neo4jBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "NEO4J_DEFAULT_CONNECTION_DSN": "neo4j://<my-username>:<my-password>@localhost"
+                }
+            },
+            "files": {
+                "config/packages/neo4j.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('neo4j', [",
+                        "        'drivers' => [",
+                        "            'default' => [",
+                        "                'dsn' => '%env(resolve:NEO4J_DEFAULT_CONNECTION_DSN)%',",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "844986f1086c69e0f5a2cf87a18cab95a9c5d97a"
+        }
+    }
+}

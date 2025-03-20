@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "zim32/symfony-tracing-http-client": {
+            "manifest": {
+                "bundles": {
+                    "Zim\\SymfonyHttpClientTracingBundle\\SymfonyHttpClientTracingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tracing_http_client.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('tracing', [",
+                        "        'tracers' => [",
+                        "            'http' => null,",
+                        "        ],",
+                        "    ]);",
+                        "",
+                        "    $containerConfigurator->extension('http_client_tracing', [",
+                        "        'decorated_services' => [",
+                        "            [",
+                        "                'service' => 'http_client',",
+                        "                'propagate' => false,",
+                        "                'eager_content' => true,",
+                        "            ],",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e9e5ab0596ceee813cc74abdfdad1f00e5a4da00"
+        }
+    }
+}

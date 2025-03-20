@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "alteis/hagreed-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Alteis\\HagreedBundle\\AlteisHagreedBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HAGREED_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/alteis_hagreed.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('alteis_hagreed', [",
+                        "        'token' => '%env(HAGREED_TOKEN)%',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "44adcff55c3d7a1dac1dfa59040949cf8dc36a8e"
+        }
+    }
+}

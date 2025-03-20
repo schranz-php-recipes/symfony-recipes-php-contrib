@@ -12,59 +12,34 @@
                 }
             },
             "files": {
-                "config/packages/prod/tsantos_serializer.php": {
+                "config/packages/prod/tsantos_serializer.yaml": {
                     "contents": [
-                        "<?php",
-                        "",
-                        "declare(strict_types=1);",
-                        "",
-                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
-                        "",
-                        "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('tsantos_serializer', [",
-                        "        'generation_strategy' => 'never',",
-                        "    ]);",
-                        "};",
+                        "tsantos_serializer:",
+                        "    generation_strategy: never",
                         ""
                     ],
                     "executable": false
                 },
-                "config/packages/test/tsantos_serializer.php": {
+                "config/packages/test/tsantos_serializer.yaml": {
                     "contents": [
-                        "<?php",
-                        "",
-                        "declare(strict_types=1);",
-                        "",
-                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
-                        "",
-                        "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('tsantos_serializer', [",
-                        "        'generation_strategy' => 'always',",
-                        "    ]);",
-                        "};",
+                        "tsantos_serializer:",
+                        "    generation_strategy: always",
                         ""
                     ],
                     "executable": false
                 },
-                "config/packages/tsantos_serializer.php": {
+                "config/packages/tsantos_serializer.yaml": {
                     "contents": [
-                        "<?php",
-                        "",
-                        "declare(strict_types=1);",
-                        "",
-                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
-                        "",
-                        "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('tsantos_serializer', [",
-                        "        'generation_strategy' => 'file_not_exists',",
-                        "    ]);",
-                        "};",
+                        "# Read the official documentation page of this bundle for further information about all possible configurations.",
+                        "# http://tsantos-serializer-bundle.readthedocs.io/",
+                        "tsantos_serializer:",
+                        "    generation_strategy: file_not_exists",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "5bd1a5b03633482996e7254da469b081f2e8b443"
+            "ref": "0e77ebcee14268963daa83bbf7dbda672876ef07"
         }
     }
 }
