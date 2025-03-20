@@ -6,7 +6,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('twig', [
-        'form_themes' => ['@KMSFroalaEditor/Form/froala_widget.html.twig'],
+        'form_themes' => [
+            '@KMSFroalaEditor/Form/froala_widget.html.twig',
+        ],
     ]);
 
     $containerConfigurator->extension('kms_froala_editor', [

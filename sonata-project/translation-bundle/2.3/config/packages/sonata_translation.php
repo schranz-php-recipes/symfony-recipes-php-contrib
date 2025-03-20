@@ -7,7 +7,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('sonata_admin', [
         'assets' => [
-            'extra_stylesheets' => ['bundles/sonatatranslation/css/sonata-translation.css'],
+            'extra_stylesheets' => [
+                'bundles/sonatatranslation/css/sonata-translation.css',
+            ],
         ],
     ]);
 
@@ -18,7 +20,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     ]);
 
     $containerConfigurator->extension('sonata_translation', [
-        'locales' => ['en'],
+        'locales' => [
+            'en',
+        ],
         'default_locale' => 'en',
     ]);
 };

@@ -9,7 +9,32 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'default_config' => 'simple_toolbar',
         'configs' => [
             'simple_toolbar' => [
-                'toolbar' => [['Bold', 'Italic', 'Strike', 'Link'], ['BulletedList', 'NumberedList', '-', 'Outdent', 'Indent'], ['Copy', 'Paste', 'PasteFromWord', '-', 'Undo', 'Redo'], ['Source']],
+                'toolbar' => [
+                    [
+                        'Bold',
+                        'Italic',
+                        'Strike',
+                        'Link',
+                    ],
+                    [
+                        'BulletedList',
+                        'NumberedList',
+                        '-',
+                        'Outdent',
+                        'Indent',
+                    ],
+                    [
+                        'Copy',
+                        'Paste',
+                        'PasteFromWord',
+                        '-',
+                        'Undo',
+                        'Redo',
+                    ],
+                    [
+                        'Source',
+                    ],
+                ],
             ],
         ],
     ]);

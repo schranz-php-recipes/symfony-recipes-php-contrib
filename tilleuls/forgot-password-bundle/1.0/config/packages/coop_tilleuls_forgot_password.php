@@ -10,7 +10,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'class' => 'App\Entity\PasswordToken',
             'expires_in' => '1 day',
             'user_field' => 'user',
-            'serialization_groups' => [],
+            'serialization_groups' => [
+            ],
         ],
         'user' => [
             'class' => 'App\Entity\User',

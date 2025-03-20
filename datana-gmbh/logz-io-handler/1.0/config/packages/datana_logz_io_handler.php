@@ -15,6 +15,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->arg('$host', 'listener-eu.logz.io');
 
     $services->set('Datana\LogzIo\Handler\Logger\Processor\AddApplicationNameProcessor')
-        ->args(['%env(LOGZ_IO_APPLICATION_NAME)%'])
+        ->args([
+            '%env(LOGZ_IO_APPLICATION_NAME)%',
+        ])
         ->tag('monolog.processor');
 };

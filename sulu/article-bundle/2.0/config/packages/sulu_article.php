@@ -7,7 +7,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('sulu_article', [
         'index_name' => '%env(resolve:ELASTICSEARCH_INDEX)%',
-        'hosts' => ['%env(resolve:ELASTICSEARCH_HOST)%'],
+        'hosts' => [
+            '%env(resolve:ELASTICSEARCH_HOST)%',
+        ],
         'types' => [
             'article' => [
                 'translation_key' => 'sulu_article.article',

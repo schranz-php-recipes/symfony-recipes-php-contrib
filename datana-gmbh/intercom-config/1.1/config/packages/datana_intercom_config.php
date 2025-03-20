@@ -8,5 +8,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Datana\Intercom\Config\Config')
-        ->args(['%env(INTERCOM_WORKSPACE_APP_ID)%', '%env(INTERCOM_IDENTITY_VERIFICATION_SECRET)%']);
+        ->args([
+            '%env(INTERCOM_WORKSPACE_APP_ID)%',
+            '%env(INTERCOM_IDENTITY_VERIFICATION_SECRET)%',
+        ]);
 };

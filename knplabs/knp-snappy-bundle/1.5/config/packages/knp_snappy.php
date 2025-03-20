@@ -9,12 +9,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'pdf' => [
             'enabled' => true,
             'binary' => '%env(WKHTMLTOPDF_PATH)%',
-            'options' => [],
+            'options' => [
+            ],
         ],
         'image' => [
             'enabled' => true,
             'binary' => '%env(WKHTMLTOIMAGE_PATH)%',
-            'options' => [],
+            'options' => [
+            ],
         ],
     ]);
 };

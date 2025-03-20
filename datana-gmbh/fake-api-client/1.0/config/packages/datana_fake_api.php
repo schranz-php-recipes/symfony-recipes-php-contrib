@@ -13,7 +13,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire();
 
     $services->set('Datana\FakeApi\Api\FakeApiClient')
-        ->args(['%env(FAKE_API_BASE_URI)%', '%env(FAKE_API_USERNAME)%', '%env(FAKE_API_PASSWORD)%', '%env(bool:FAKE_API_DISABLE_CACHE)%']);
+        ->args([
+            '%env(FAKE_API_BASE_URI)%',
+            '%env(FAKE_API_USERNAME)%',
+            '%env(FAKE_API_PASSWORD)%',
+            '%env(bool:FAKE_API_DISABLE_CACHE)%',
+        ]);
 
     $services->set(DateneingabenApi::class);
 

@@ -7,7 +7,8 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('elao_enum', [
         'doctrine' => [
-            'types' => [],
+            'types' => [
+            ],
         ],
     ]);
 };

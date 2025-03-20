@@ -9,7 +9,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'default_sanitizer' => 'default',
         'sanitizers' => [
             'default' => [
-                'extensions' => ['basic'],
+                'extensions' => [
+                    'basic',
+                ],
             ],
         ],
     ]);

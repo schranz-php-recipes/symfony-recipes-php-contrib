@@ -13,5 +13,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('broadway.event_store.dbal', 'Broadway\EventStore\Dbal\DBALEventStore')
-        ->args([service('doctrine.dbal.default_connection'), service('broadway.serializer.payload'), service('broadway.serializer.metadata'), 'events', false, service('broadway.uuid.converter')]);
+        ->args([
+            service('doctrine.dbal.default_connection'),
+            service('broadway.serializer.payload'),
+            service('broadway.serializer.metadata'),
+            'events',
+            false,
+            service('broadway.uuid.converter'),
+        ]);
 };

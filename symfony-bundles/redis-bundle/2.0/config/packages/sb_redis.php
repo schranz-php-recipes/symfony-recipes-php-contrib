@@ -8,8 +8,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('sb_redis', [
         'clients' => [
             'default' => [
-                '$options' => [],
-                '$parameters' => ['%env(REDIS_URL)%'],
+                '$options' => [
+                ],
+                '$parameters' => [
+                    '%env(REDIS_URL)%',
+                ],
             ],
         ],
     ]);

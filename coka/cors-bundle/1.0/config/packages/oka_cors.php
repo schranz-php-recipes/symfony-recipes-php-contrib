@@ -7,7 +7,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('oka_cors', [
         'default' => [
-            'expose_headers' => ['Accept-Encoding'],
+            'expose_headers' => [
+                'Accept-Encoding',
+            ],
             'max_age' => 3600,
         ],
     ]);

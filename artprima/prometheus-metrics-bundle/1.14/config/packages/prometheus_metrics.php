@@ -8,7 +8,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('artprima_prometheus_metrics', [
         'namespace' => 'myapp',
         'storage' => '%env(PROM_METRICS_DSN)%',
-        'ignored_routes' => ['prometheus_bundle_prometheus', '_wdt'],
+        'ignored_routes' => [
+            'prometheus_bundle_prometheus',
+            '_wdt',
+        ],
         'disable_default_promphp_metrics' => true,
     ]);
     if ($containerConfigurator->env() === 'test') {

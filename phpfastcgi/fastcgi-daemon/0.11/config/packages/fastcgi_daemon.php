@@ -15,6 +15,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->set(DriverContainer::class);
 
     $services->set('PHPFastCGI\FastCGIDaemon\Command\DaemonRunCommand')
-        ->args([service('App\FastCGIKernel'), service('PHPFastCGI\FastCGIDaemon\Driver\DriverContainer'), 'fastcgi-daemon:run'])
+        ->args([
+            service('App\FastCGIKernel'),
+            service('PHPFastCGI\FastCGIDaemon\Driver\DriverContainer'),
+            'fastcgi-daemon:run',
+        ])
         ->tag('console.command');
 };

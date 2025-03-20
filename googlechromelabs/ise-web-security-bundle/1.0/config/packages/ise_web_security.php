@@ -17,7 +17,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             ],
             'fetch_metadata' => [
                 'active' => true,
-                'allowed_endpoints' => [],
+                'allowed_endpoints' => [
+                ],
             ],
             'trusted_types' => [
                 'active' => false,

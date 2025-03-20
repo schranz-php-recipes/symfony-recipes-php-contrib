@@ -7,9 +7,11 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('setono_google_analytics', [
         'gtag' => [
-            'properties' => [[
-                'measurement_id' => '%env(GOOGLE_ANALYTICS_MEASUREMENT_ID)%',
-            ]],
+            'properties' => [
+                [
+                    'measurement_id' => '%env(GOOGLE_ANALYTICS_MEASUREMENT_ID)%',
+                ],
+            ],
         ],
     ]);
 };

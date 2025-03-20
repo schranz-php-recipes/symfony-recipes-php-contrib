@@ -15,8 +15,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'public_key' => '/var/oauth/public.key',
         ],
         'scopes' => [
-            'available' => ['EMAIL'],
-            'default' => ['EMAIL'],
+            'available' => [
+                'EMAIL',
+            ],
+            'default' => [
+                'EMAIL',
+            ],
         ],
         'persistence' => [
             'doctrine' => null,

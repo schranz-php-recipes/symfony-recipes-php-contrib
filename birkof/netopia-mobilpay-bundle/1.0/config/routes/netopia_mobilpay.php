@@ -11,7 +11,9 @@ return static function (RoutingConfigurator $routingConfigurator): void {
             'route' => 'default',
             'permanent' => true,
         ])
-        ->methods(['GET']);
+        ->methods([
+            'GET',
+        ]);
 
     $routingConfigurator->add('netopia_mobilpay_confirm_url', '/netopia-mobilpay/confirm')
         ->controller('FrameworkBundle:Redirect:redirect')
@@ -19,5 +21,7 @@ return static function (RoutingConfigurator $routingConfigurator): void {
             'route' => 'default',
             'permanent' => true,
         ])
-        ->methods(['POST']);
+        ->methods([
+            'POST',
+        ]);
 };

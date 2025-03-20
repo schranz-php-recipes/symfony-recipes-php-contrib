@@ -9,6 +9,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Happyr\Validator\Constraint\EntityExistValidator')
-        ->args([service('doctrine.orm.entity_manager')])
+        ->args([
+            service('doctrine.orm.entity_manager'),
+        ])
         ->tag('validator.constraint_validator');
 };

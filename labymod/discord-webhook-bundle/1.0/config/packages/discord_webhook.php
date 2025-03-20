@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('discord_webhook', [
         'default_url' => '%env(DWH_DEFAULT_URL)%',
-        'clients' => [],
+        'clients' => [
+        ],
     ]);
 };

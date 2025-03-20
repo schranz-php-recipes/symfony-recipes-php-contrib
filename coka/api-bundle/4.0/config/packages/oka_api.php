@@ -9,7 +9,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'cors' => [
             'default' => [
                 'allow_credentials' => true,
-                'expose_headers' => ['Accept-Encoding'],
+                'expose_headers' => [
+                    'Accept-Encoding',
+                ],
                 'max_age' => 3600,
             ],
         ],

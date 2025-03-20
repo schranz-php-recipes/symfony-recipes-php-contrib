@@ -11,10 +11,18 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->defaults();
 
     $services->set('app.event_store.default', 'Prooph\EventStore\Pdo\PostgresEventStore')
-        ->args([service('prooph_event_store.message_factory'), service('app.event_store.pdo_connection.postgres'), service('app.event_store.postgres.persistence_strategy')]);
+        ->args([
+            service('prooph_event_store.message_factory'),
+            service('app.event_store.pdo_connection.postgres'),
+            service('app.event_store.postgres.persistence_strategy'),
+        ]);
 
     $services->set('app.event_store.pdo_connection.postgres', PDO::class)
-        ->args(['%env(EVENT_STORE_DSN)%', '%env(EVENT_STORE_USER)%', '%env(EVENT_STORE_PASSWORD)%']);
+        ->args([
+            '%env(EVENT_STORE_DSN)%',
+            '%env(EVENT_STORE_USER)%',
+            '%env(EVENT_STORE_PASSWORD)%',
+        ]);
 
     $services->set('app.event_store.postgres.persistence_strategy', 'Prooph\EventStore\Pdo\PersistenceStrategy\PostgresSingleStreamStrategy');
 };

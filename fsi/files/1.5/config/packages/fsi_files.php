@@ -7,7 +7,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('fsi_files', [
         'default_entity_filesystem' => null,
-        'url_adapters' => [],
-        'entities' => [],
+        'url_adapters' => [
+        ],
+        'entities' => [
+        ],
     ]);
 };

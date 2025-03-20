@@ -9,5 +9,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->set('Pusher\Pusher')
         ->public()
-        ->args(['%env(PUSHER_KEY)%', '%env(PUSHER_SECRET)%', '%env(PUSHER_APP_ID)%']);
+        ->args([
+            '%env(PUSHER_KEY)%',
+            '%env(PUSHER_SECRET)%',
+            '%env(PUSHER_APP_ID)%',
+        ]);
 };

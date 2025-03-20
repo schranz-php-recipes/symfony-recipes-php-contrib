@@ -12,8 +12,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'notify_url' => '/omnipay_notify',
         'cancel_url' => '/omnipay_cancel',
         'data_keys' => [
-            'paymentId' => ['orderNumber'],
-            'customerEmail' => ['customerNumber'],
+            'paymentId' => [
+                'orderNumber',
+            ],
+            'customerEmail' => [
+                'customerNumber',
+            ],
         ],
         'gateways' => null,
     ]);

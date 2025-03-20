@@ -9,7 +9,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'namespace' => 'app',
         'adapter' => 'apcu',
         'listener' => [
-            'ignored_routes' => ['metrics', '_wdt'],
+            'ignored_routes' => [
+                'metrics',
+                '_wdt',
+            ],
         ],
     ]);
 };

@@ -6,6 +6,8 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('ndc_maintenance', [
-        'authorized_ips' => ['127.0.0.1'],
+        'authorized_ips' => [
+            '127.0.0.1',
+        ],
     ]);
 };

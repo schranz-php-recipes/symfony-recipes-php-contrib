@@ -42,7 +42,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 'client_id' => 'client_id',
                 'platform' => 'localPlatform',
                 'tool' => 'localTool',
-                'deployment_ids' => ['deploymentId1'],
+                'deployment_ids' => [
+                    'deploymentId1',
+                ],
                 'platform_key_chain' => 'platformKey',
                 'tool_key_chain' => 'toolKey',
                 'platform_jwks_url' => null,

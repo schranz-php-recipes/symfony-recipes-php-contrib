@@ -10,7 +10,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'projects' => [
             'my_project' => [
                 'api_key' => '%env(LOCO_PROJECT_API_KEY)%',
-                'domains' => ['messages'],
+                'domains' => [
+                    'messages',
+                ],
             ],
         ],
     ]);

@@ -13,7 +13,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire();
 
     $services->set('Datana\UrlShortener\Api\UrlShortenerClient')
-        ->args(['%env(URL_SHORTENER_API_BASE_URI)%', '%env(URL_SHORTENER_API_USERNAME)%', '%env(URL_SHORTENER_API_PASSWORD)%']);
+        ->args([
+            '%env(URL_SHORTENER_API_BASE_URI)%',
+            '%env(URL_SHORTENER_API_USERNAME)%',
+            '%env(URL_SHORTENER_API_PASSWORD)%',
+        ]);
 
     $services->set(UrlShortenerApi::class);
 

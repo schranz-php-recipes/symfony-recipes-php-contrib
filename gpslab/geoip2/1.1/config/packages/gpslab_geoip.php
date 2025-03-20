@@ -8,6 +8,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('gpslab_geoip', [
         'cache' => '%kernel.cache_dir%/GeoLite2-City.mmdb',
         'url' => 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz',
-        'locales' => ['en'],
+        'locales' => [
+            'en',
+        ],
     ]);
 };

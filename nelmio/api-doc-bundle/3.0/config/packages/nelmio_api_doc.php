@@ -14,7 +14,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             ],
         ],
         'areas' => [
-            'path_patterns' => ['^/api(?!/doc$)'],
+            'path_patterns' => [
+                '^/api(?!/doc$)',
+            ],
         ],
     ]);
 };

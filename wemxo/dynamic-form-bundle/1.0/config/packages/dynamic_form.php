@@ -7,7 +7,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('dynamic_form', [
         'recursive' => true,
-        'config_paths' => ['%kernel.project_dir%/config/dynamic_form'],
+        'config_paths' => [
+            '%kernel.project_dir%/config/dynamic_form',
+        ],
         'cache_pool' => null,
     ]);
 };

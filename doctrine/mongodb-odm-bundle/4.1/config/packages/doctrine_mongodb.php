@@ -12,7 +12,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'connections' => [
             'default' => [
                 'server' => '%env(resolve:MONGODB_URL)%',
-                'options' => [],
+                'options' => [
+                ],
             ],
         ],
         'default_database' => '%env(resolve:MONGODB_DB)%',
@@ -46,10 +47,15 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ]);
         $containerConfigurator->extension('services', [
             'doctrine_mongodb.system_cache_provider' => [
-                'factory' => ['Doctrine\Common\Cache\Psr6\DoctrineProvider', 'wrap'],
+                'factory' => [
+                    'Doctrine\Common\Cache\Psr6\DoctrineProvider',
+                    'wrap',
+                ],
                 'class' => 'Doctrine\Common\Cache\Psr6\DoctrineProvider',
                 'public' => false,
-                'arguments' => [service('doctrine_mongodb.system_cache_pool')],
+                'arguments' => [
+                    service('doctrine_mongodb.system_cache_pool'),
+                ],
             ],
         ]);
         $containerConfigurator->extension('framework', [

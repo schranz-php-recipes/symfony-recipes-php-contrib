@@ -6,7 +6,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('lexik_cron_file_generator', [
-        'env_available' => ['staging'],
+        'env_available' => [
+            'staging',
+        ],
         'user' => [
             'staging' => 'project_staging',
         ],

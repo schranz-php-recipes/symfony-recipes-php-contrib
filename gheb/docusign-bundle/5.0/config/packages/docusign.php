@@ -19,11 +19,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'api_uri' => 'https://www.docusign.net/restapi',
         'callback' => 'docusign_callback',
         'sign_path' => '/my/embedded/sign/path',
-        'signatures' => [[
-            'page' => 1,
-            'x_position' => 200,
-            'y_position' => 400,
-        ]],
+        'signatures' => [
+            [
+                'page' => 1,
+                'x_position' => 200,
+                'y_position' => 400,
+            ],
+        ],
         'storage' => [
             'adapter' => 'local',
             'options' => [

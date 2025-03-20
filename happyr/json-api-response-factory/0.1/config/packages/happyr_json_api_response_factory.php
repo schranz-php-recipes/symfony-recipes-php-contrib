@@ -9,10 +9,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Happyr\JsonApiResponseFactory\ResponseFactory')
-        ->args([service('happyr.fractal.manager')]);
+        ->args([
+            service('happyr.fractal.manager'),
+        ]);
 
     $services->set('happyr.fractal.manager', 'League\Fractal\Manager')
-        ->call('setSerializer', [service('happyr.fractal.json_api_serializer')]);
+        ->call('setSerializer', [
+            service('happyr.fractal.json_api_serializer'),
+        ]);
 
     $services->set('happyr.fractal.json_api_serializer', 'League\Fractal\Serializer\JsonApiSerializer');
 };

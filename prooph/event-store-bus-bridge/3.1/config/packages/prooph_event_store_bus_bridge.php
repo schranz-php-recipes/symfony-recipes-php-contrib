@@ -11,6 +11,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->defaults();
 
     $services->set('Prooph\EventStoreBusBridge\EventPublisher')
-        ->args([service('prooph_service_bus.default_event_bus')])
+        ->args([
+            service('prooph_service_bus.default_event_bus'),
+        ])
         ->tag('prooph_event_store.default.plugin');
 };

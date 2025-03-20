@@ -9,7 +9,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'oauth' => [
             'client_id' => '%env(ROUTMOUTE_DISCORD_CLIENT_ID)%',
             'client_secret' => '%env(ROUTMOUTE_DISCORD_CLIENT_SECRET)%',
-            'scope' => ['identify', 'email'],
+            'scope' => [
+                'identify',
+                'email',
+            ],
         ],
         'api' => [
             'bot_token' => '%env(ROUTMOUTE_DISCORD_BOT_TOKEN)%',

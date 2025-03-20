@@ -9,10 +9,12 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'data_collection' => '%kernel.debug%',
         'clients' => [
             'default' => [
-                'hosts' => [[
-                    'host' => '%env(MONGODB_HOST)%',
-                    'port' => '%env(int:MONGODB_PORT)%',
-                ]],
+                'hosts' => [
+                    [
+                        'host' => '%env(MONGODB_HOST)%',
+                        'port' => '%env(int:MONGODB_PORT)%',
+                    ],
+                ],
                 'username' => '%env(MONGODB_USER)%',
                 'password' => '%env(MONGODB_PASSWORD)%',
                 'replicaSet' => '',

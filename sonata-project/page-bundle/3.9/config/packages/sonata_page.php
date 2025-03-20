@@ -7,13 +7,19 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('sonata_block', [
         'context_manager' => 'sonata.page.block.context_manager',
-        'default_contexts' => ['sonata_page_bundle'],
+        'default_contexts' => [
+            'sonata_page_bundle',
+        ],
     ]);
 
     $containerConfigurator->extension('sonata_admin', [
         'assets' => [
-            'extra_javascripts' => ['bundles/sonatapage/sonata-page.back.min.js'],
-            'extra_stylesheets' => ['bundles/sonatapage/sonata-page.back.min.css'],
+            'extra_javascripts' => [
+                'bundles/sonatapage/sonata-page.back.min.js',
+            ],
+            'extra_stylesheets' => [
+                'bundles/sonatapage/sonata-page.back.min.css',
+            ],
         ],
     ]);
 
@@ -25,9 +31,24 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'enabled' => true,
             'priority' => 150,
         ],
-        'ignore_route_patterns' => ['^(.*)admin(.*)', '^_(.*)'],
-        'ignore_routes' => ['sonata_page_cache_esi', 'sonata_page_cache_ssi', 'sonata_page_js_sync_cache', 'sonata_page_js_async_cache', 'sonata_cache_esi', 'sonata_cache_ssi', 'sonata_cache_js_async', 'sonata_cache_js_sync', 'sonata_cache_apc'],
-        'ignore_uri_patterns' => ['^/admin\/'],
+        'ignore_route_patterns' => [
+            '^(.*)admin(.*)',
+            '^_(.*)',
+        ],
+        'ignore_routes' => [
+            'sonata_page_cache_esi',
+            'sonata_page_cache_ssi',
+            'sonata_page_js_sync_cache',
+            'sonata_page_js_async_cache',
+            'sonata_cache_esi',
+            'sonata_cache_ssi',
+            'sonata_cache_js_async',
+            'sonata_cache_js_sync',
+            'sonata_cache_apc',
+        ],
+        'ignore_uri_patterns' => [
+            '^/admin\/',
+        ],
         'default_template' => 'default',
         'templates' => [
             'default' => [
@@ -74,8 +95,12 @@ FFFFFFFF
         ],
         'direct_publication' => '%kernel.debug%',
         'catch_exceptions' => [
-            'not_found' => [404],
-            'fatal' => [500],
+            'not_found' => [
+                404,
+            ],
+            'fatal' => [
+                500,
+            ],
         ],
         'class' => [
             'page' => 'App\Entity\SonataPagePage',

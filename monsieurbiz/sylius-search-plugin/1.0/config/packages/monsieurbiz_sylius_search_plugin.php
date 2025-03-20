@@ -13,11 +13,21 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'instant' => '%kernel.project_dir%/vendor/monsieurbiz/sylius-search-plugin/src/Resources/config/elasticsearch/queries/instant.yaml',
             'taxon' => '%kernel.project_dir%/vendor/monsieurbiz/sylius-search-plugin/src/Resources/config/elasticsearch/queries/taxon.yaml',
         ],
-        'documentable_classes' => ['App\Entity\Product\Product'],
+        'documentable_classes' => [
+            'App\Entity\Product\Product',
+        ],
         'grid' => [
             'limits' => [
-                'taxon' => [9, 18, 27],
-                'search' => [9, 18, 27],
+                'taxon' => [
+                    9,
+                    18,
+                    27,
+                ],
+                'search' => [
+                    9,
+                    18,
+                    27,
+                ],
             ],
             'default_limit' => [
                 'taxon' => 9,
@@ -25,8 +35,16 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                 'instant' => 10,
             ],
             'sorting' => [
-                'taxon' => ['name', 'price', 'created_at'],
-                'search' => ['name', 'price', 'created_at'],
+                'taxon' => [
+                    'name',
+                    'price',
+                    'created_at',
+                ],
+                'search' => [
+                    'name',
+                    'price',
+                    'created_at',
+                ],
             ],
             'filters' => [
                 'apply_manually' => false,

@@ -8,10 +8,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set('Zendesk\API\HttpClient')
-        ->args(['%env(ZENDESK_API_SUBDOMAIN)%'])
+        ->args([
+            '%env(ZENDESK_API_SUBDOMAIN)%',
+        ])
         ->call('setAuth', [
-            'basic', [
+            'basic',
+            [
                 'username' => '%env(ZENDESK_API_USERNAME)%',
                 'token' => '%env(ZENDESK_API_TOKEN)%',
-            ], ]);
+            ],
+        ]);
 };

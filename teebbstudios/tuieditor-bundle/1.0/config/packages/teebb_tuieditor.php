@@ -10,7 +10,14 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'configs' => [
             'basic_config' => [
                 'to_html' => false,
-                'exts' => ['scrollSync', 'colorSyntax', 'uml', 'chart', 'mark', 'table'],
+                'exts' => [
+                    'scrollSync',
+                    'colorSyntax',
+                    'uml',
+                    'chart',
+                    'mark',
+                    'table',
+                ],
             ],
         ],
     ]);

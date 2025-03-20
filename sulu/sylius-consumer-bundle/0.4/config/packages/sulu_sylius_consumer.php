@@ -16,7 +16,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             ],
             'buses' => [
                 'sulu_sylius_producer.messenger_bus' => [
-                    'middleware' => ['doctrine_transaction'],
+                    'middleware' => [
+                        'doctrine_transaction',
+                    ],
                 ],
             ],
         ],

@@ -6,13 +6,19 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('sonata_block', [
-        'default_contexts' => ['sonata_page_bundle'],
+        'default_contexts' => [
+            'sonata_page_bundle',
+        ],
     ]);
 
     $containerConfigurator->extension('sonata_admin', [
         'assets' => [
-            'extra_javascripts' => ['bundles/sonatapage/app.js'],
-            'extra_stylesheets' => ['bundles/sonatapage/app.css'],
+            'extra_javascripts' => [
+                'bundles/sonatapage/app.js',
+            ],
+            'extra_stylesheets' => [
+                'bundles/sonatapage/app.css',
+            ],
         ],
     ]);
 
@@ -23,9 +29,24 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'enabled' => true,
             'priority' => 150,
         ],
-        'ignore_route_patterns' => ['^(.*)admin(.*)', '^_(.*)'],
-        'ignore_routes' => ['sonata_page_cache_esi', 'sonata_page_cache_ssi', 'sonata_page_js_sync_cache', 'sonata_page_js_async_cache', 'sonata_cache_esi', 'sonata_cache_ssi', 'sonata_cache_js_async', 'sonata_cache_js_sync', 'sonata_cache_apc'],
-        'ignore_uri_patterns' => ['^/admin\/'],
+        'ignore_route_patterns' => [
+            '^(.*)admin(.*)',
+            '^_(.*)',
+        ],
+        'ignore_routes' => [
+            'sonata_page_cache_esi',
+            'sonata_page_cache_ssi',
+            'sonata_page_js_sync_cache',
+            'sonata_page_js_async_cache',
+            'sonata_cache_esi',
+            'sonata_cache_ssi',
+            'sonata_cache_js_async',
+            'sonata_cache_js_sync',
+            'sonata_cache_apc',
+        ],
+        'ignore_uri_patterns' => [
+            '^/admin\/',
+        ],
         'default_template' => 'default',
         'templates' => [
             'default' => [
@@ -72,8 +93,12 @@ FFFFFFFF
         ],
         'direct_publication' => '%kernel.debug%',
         'catch_exceptions' => [
-            'not_found' => [404],
-            'fatal' => [500],
+            'not_found' => [
+                404,
+            ],
+            'fatal' => [
+                500,
+            ],
         ],
     ]);
 };

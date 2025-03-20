@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 
-return static function (RoutingConfigurator $routes): void {
-    $routes->import('@SurvosCommandBundle/config/routes.php')
-        ->prefix('/admin') // consider adding this path to the access_control key in security
-    ;
+return static function (RoutingConfigurator $routingConfigurator): void {
+    $routingConfigurator->import([
+        'path' => service('SurvosCommandBundle/src/Controller/'),
+        'namespace' => 'Survos\CommandBundle\Controller',
+    ], 'attribute')
+        ->prefix('/admin/commands');
 };
-
