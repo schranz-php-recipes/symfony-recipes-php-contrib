@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "keron-digital/auth-redis-storage-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "KeronDigital\\AuthRedisStorageBundle\\KeronDigitalAuthRedisStorageBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> KeronDigitalAuthRedisStorageBundle </>",
+                    "",
+                    "<fg=green>Bundle installed successfully!</>",
+                    "",
+                    "<fg=yellow>IMPORTANT:</> Please open the file <fg=cyan>config/packages/keron_digital_auth_redis_storage.yaml</>",
+                    "          and set the required <fg=cyan>redis_client_service_id</> option to point",
+                    "          to your application's Redis client service."
+                ]
+            },
+            "files": {
+                "config/packages/keron_digital_auth_redis_storage.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('keron_digital_auth_redis_storage', [",
+                        "        'redis_client_service_id' => 'CHANGE_ME_redis_service_id',",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4947c7a906717e4a5b73d42fdbb4ac2b6839b515"
+        }
+    }
+}

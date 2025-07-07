@@ -1,9 +1,9 @@
 {
     "manifests": {
-        "storyblok/symfony-bundle": {
+        "huluti/altcha-bundle": {
             "manifest": {
                 "bundles": {
-                    "Storyblok\\Bundle\\StoryblokBundle": [
+                    "Huluti\\AltchaBundle\\HulutiAltchaBundle": [
                         "all"
                     ]
                 },
@@ -11,15 +11,11 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
-                    "STORYBLOK_API_TOKEN": "",
-                    "STORYBLOK_VERSION": "draft",
-                    "#1": "STORYBLOK_ASSETS_API_TOKEN=",
-                    "#2": "STORYBLOK_WEBHOOK_SECRET="
+                    "ALTCHA_SECRET": "%generate(secret)%"
                 }
             },
             "files": {
-                "config/packages/storyblok.php": {
+                "config/packages/huluti_altcha.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -28,17 +24,21 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('storyblok', [",
-                        "        'base_uri' => '%env(STORYBLOK_API_BASE_URI)%',",
-                        "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
-                        "        'version' => '%env(STORYBLOK_VERSION)%',",
+                        "    $containerConfigurator->extension('huluti_altcha', [",
+                        "        'enable' => true,",
+                        "        'hmacKey' => '%env(ALTCHA_SECRET)%',",
                         "    ]);",
+                        "    if ($containerConfigurator->env() === 'test') {",
+                        "        $containerConfigurator->extension('huluti_altcha', [",
+                        "            'enable' => false,",
+                        "        ]);",
+                        "    }",
                         "};",
                         ""
                     ],
                     "executable": false
                 },
-                "config/routes/storyblok.php": {
+                "config/routes/huluti_altcha.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -47,14 +47,14 @@
                         "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
                         "",
                         "return static function (RoutingConfigurator $routingConfigurator): void {",
-                        "    $routingConfigurator->import('@StoryblokBundle/config/routes.php');",
+                        "    $routingConfigurator->import('@HulutiAltchaBundle/config/routes.yml');",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "58e8bd464fd587e45fbb00b5dc01dd4cf3830f3e"
+            "ref": "8d0a18b9ade58035dfeab44ef59d47ebd46fda2a"
         }
     }
 }

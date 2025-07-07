@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "psys/order-invoice-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Psys\\OrderInvoiceBundle\\PsysOrderInvoiceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "migrations/": "migrations/",
+                    "templates/": "templates/"
+                }
+            },
+            "files": {
+                "config/packages/psys_order_invoice.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('psys_order_invoice', [",
+                        "        'pdf_exporter' => [",
+                        "            'engine' => 'mpdf',",
+                        "            'template_path' => 'invoice/oi_default.html.twig',",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "612310a130dfb0f50cdede79ca0bbe1c3ba59960"
+        }
+    }
+}

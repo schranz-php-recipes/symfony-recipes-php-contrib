@@ -8,23 +8,28 @@
                     ]
                 },
                 "copy-from-recipe": {
-                    "biome.json": "biome.json",
-                    "config/": "%CONFIG_DIR%/"
-                }
+                    "config/": "%CONFIG_DIR%/",
+                    "biome.json": "biome.json"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/biome"
+                ]
             },
             "files": {
                 "biome.json": {
                     "contents": [
                         "{",
                         "    \"files\": {",
-                        "        \"ignore\": [",
-                        "            \"assets/vendor/*\",",
-                        "            \"assets/controllers.json\",",
-                        "            \"composer.json\",",
-                        "            \"public/assets/*\",",
-                        "            \"public/bundles/*\",",
-                        "            \"var/cache/*\",",
-                        "            \"vendor/*\"",
+                        "        \"includes\": [",
+                        "            \"**\",",
+                        "            \"!assets/vendor/*\",",
+                        "            \"!assets/controllers.json\",",
+                        "            \"!public/assets/*\",",
+                        "            \"!public/bundles/*\",",
+                        "            \"!var/*\",",
+                        "            \"!vendor/*\",",
+                        "            \"!composer.json\",",
+                        "            \"!package.json\"",
                         "        ]",
                         "    }",
                         "}",
@@ -43,7 +48,7 @@
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
                         "    if ($containerConfigurator->env() === 'dev') {",
                         "        $containerConfigurator->extension('kocal_biome_js', [",
-                        "            'binary_version' => 'v1.9.4',",
+                        "            'binary_version' => '2.0.0',",
                         "        ]);",
                         "    }",
                         "};",
@@ -52,7 +57,7 @@
                     "executable": false
                 }
             },
-            "ref": "0d748ba3284811eac50b2c63ed50d77924ff187f"
+            "ref": "667157e341ba4bfd837a2f3b497b5ced36e8bdfb"
         }
     }
 }

@@ -1,9 +1,9 @@
 {
     "manifests": {
-        "storyblok/symfony-bundle": {
+        "21torr/storyblok": {
             "manifest": {
                 "bundles": {
-                    "Storyblok\\Bundle\\StoryblokBundle": [
+                    "Torr\\Storyblok\\TorrStoryblokBundle": [
                         "all"
                     ]
                 },
@@ -11,11 +11,9 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
-                    "STORYBLOK_API_TOKEN": "",
-                    "STORYBLOK_VERSION": "draft",
-                    "#1": "STORYBLOK_ASSETS_API_TOKEN=",
-                    "#2": "STORYBLOK_WEBHOOK_SECRET="
+                    "STORYBLOK_SPACE_ID": "",
+                    "STORYBLOK_MANAGEMENT_TOKEN": "",
+                    "STORYBLOK_CONTENT_TOKEN": ""
                 }
             },
             "files": {
@@ -29,9 +27,9 @@
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
                         "    $containerConfigurator->extension('storyblok', [",
-                        "        'base_uri' => '%env(STORYBLOK_API_BASE_URI)%',",
-                        "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
-                        "        'version' => '%env(STORYBLOK_VERSION)%',",
+                        "        'space_id' => '%env(int:STORYBLOK_SPACE_ID)%',",
+                        "        'management_token' => '%env(STORYBLOK_MANAGEMENT_TOKEN)%',",
+                        "        'content_token' => '%env(STORYBLOK_CONTENT_TOKEN)%',",
                         "    ]);",
                         "};",
                         ""
@@ -47,14 +45,15 @@
                         "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
                         "",
                         "return static function (RoutingConfigurator $routingConfigurator): void {",
-                        "    $routingConfigurator->import('@StoryblokBundle/config/routes.php');",
+                        "    $routingConfigurator->import('@TorrStoryblokBundle/config/routes.yaml')",
+                        "        ->prefix('/storyblok/');",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "58e8bd464fd587e45fbb00b5dc01dd4cf3830f3e"
+            "ref": "71d0036b8876eedbed148018987f075e96996d9a"
         }
     }
 }

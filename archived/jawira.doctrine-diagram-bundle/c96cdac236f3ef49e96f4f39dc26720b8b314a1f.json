@@ -1,0 +1,66 @@
+{
+    "manifests": {
+        "jawira/doctrine-diagram-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jawira\\DoctrineDiagramBundle\\DoctrineDiagramBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_diagram.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    if ($containerConfigurator->env() === 'dev') {",
+                        "        $containerConfigurator->extension('doctrine_diagram', [",
+                        "            'er' => [",
+                        "                'filename' => '%kernel.project_dir%/er',",
+                        "                'size' => 'midi',",
+                        "            ],",
+                        "            'class' => [",
+                        "                'filename' => '%kernel.project_dir%/class',",
+                        "                'size' => 'midi',",
+                        "            ],",
+                        "            'convert' => [",
+                        "                'format' => 'svg',",
+                        "                'converter' => 'auto',",
+                        "            ],",
+                        "        ]);",
+                        "    }",
+                        "    if ($containerConfigurator->env() === 'test') {",
+                        "        $containerConfigurator->extension('doctrine_diagram', [",
+                        "            'er' => [",
+                        "                'filename' => '%kernel.project_dir%/er',",
+                        "                'size' => 'midi',",
+                        "            ],",
+                        "            'class' => [",
+                        "                'filename' => '%kernel.project_dir%/class',",
+                        "                'size' => 'midi',",
+                        "            ],",
+                        "            'convert' => [",
+                        "                'format' => 'svg',",
+                        "                'converter' => 'auto',",
+                        "            ],",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c96cdac236f3ef49e96f4f39dc26720b8b314a1f"
+        }
+    }
+}

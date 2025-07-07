@@ -33,6 +33,18 @@
                         "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
                         "        'version' => '%env(STORYBLOK_VERSION)%',",
                         "    ]);",
+                        "    if ($containerConfigurator->env() === 'prod') {",
+                        "        $containerConfigurator->extension('storyblok', [",
+                        "            'controller' => [",
+                        "                'cache' => [",
+                        "                    'public' => true,",
+                        "                    'max_age' => 3600,",
+                        "                    'smax_age' => 3600,",
+                        "                    'must_revalidate' => true,",
+                        "                ],",
+                        "            ],",
+                        "        ]);",
+                        "    }",
                         "};",
                         ""
                     ],
@@ -54,7 +66,7 @@
                     "executable": false
                 }
             },
-            "ref": "58e8bd464fd587e45fbb00b5dc01dd4cf3830f3e"
+            "ref": "977c49eb73f0d8749de6d19d9c61e7ae15c038d7"
         }
     }
 }

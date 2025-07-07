@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "sylius/mcp-server-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\McpServerPlugin\\SyliusMcpServerPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_mcp_server.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->import('@SyliusMcpServerPlugin/config/config.yaml');",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c61260b176f00d758647dcb7d181a742ad280aa5"
+        }
+    }
+}

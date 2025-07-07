@@ -1,25 +1,32 @@
 {
     "manifests": {
-        "storyblok/symfony-bundle": {
+        "sylius/mollie-plugin": {
             "manifest": {
                 "bundles": {
-                    "Storyblok\\Bundle\\StoryblokBundle": [
+                    "SyliusMolliePlugin\\SyliusMolliePlugin": [
                         "all"
                     ]
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "env": {
-                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
-                    "STORYBLOK_API_TOKEN": "",
-                    "STORYBLOK_VERSION": "draft",
-                    "#1": "STORYBLOK_ASSETS_API_TOKEN=",
-                    "#2": "STORYBLOK_WEBHOOK_SECRET="
-                }
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entry.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/admin/entry';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entry.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/shop/entry';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
             },
             "files": {
-                "config/packages/storyblok.php": {
+                "config/packages/sylius_mollie.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -28,17 +35,13 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('storyblok', [",
-                        "        'base_uri' => '%env(STORYBLOK_API_BASE_URI)%',",
-                        "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
-                        "        'version' => '%env(STORYBLOK_VERSION)%',",
-                        "    ]);",
+                        "    $containerConfigurator->import('@SyliusMolliePlugin/Resources/config/config.yaml');",
                         "};",
                         ""
                     ],
                     "executable": false
                 },
-                "config/routes/storyblok.php": {
+                "config/routes/sylius_mollie.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -47,14 +50,14 @@
                         "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
                         "",
                         "return static function (RoutingConfigurator $routingConfigurator): void {",
-                        "    $routingConfigurator->import('@StoryblokBundle/config/routes.php');",
+                        "    $routingConfigurator->import('@SyliusMolliePlugin/Resources/config/routing.yaml');",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "58e8bd464fd587e45fbb00b5dc01dd4cf3830f3e"
+            "ref": "753e5ef1cb3030b74b664e1cad08552b6da1cfb9"
         }
     }
 }

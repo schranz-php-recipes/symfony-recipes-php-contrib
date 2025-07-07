@@ -1,0 +1,55 @@
+{
+    "manifests": {
+        "macpaw/behat-http-mock-context": {
+            "manifest": {
+                "bundles": {
+                    "BehatHttpMockContext\\BehatHttpMockContextBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/behat-http-mock-context</comment>",
+                    "BehatHttpMockContextBundle is registered in the test environment.",
+                    "<fg=red>Add</> this to your behat.yml to finish setup:",
+                    "...",
+                    "contexts:",
+                    "  - BehatHttpMockContext\\Context\\MockContext",
+                    "..."
+                ]
+            },
+            "files": {
+                "config/packages/test/behat_http_mock_context.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "use function Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\tagged_iterator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $services = $containerConfigurator->services();",
+                        "",
+                        "    $services->set('mock_http_client', 'ExtendedMockHttpClient\\ExtendedMockHttpClient')",
+                        "        ->args([",
+                        "            '%env(YOUR_SERVICE_URL)%',",
+                        "        ])",
+                        "        ->tag('mock.http_client');",
+                        "",
+                        "    $services->set('BehatHttpMockContext\\Collection\\ExtendedMockHttpClientCollection')",
+                        "        ->args([",
+                        "            tagged_iterator('mock.http_client'),",
+                        "        ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "013f914f9688a8d0cfa4115cb8dccc7ca9ed44ba"
+        }
+    }
+}

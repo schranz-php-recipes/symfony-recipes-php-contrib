@@ -1,25 +1,22 @@
 {
     "manifests": {
-        "storyblok/symfony-bundle": {
+        "synolia/sylius-scheduler-command-plugin": {
             "manifest": {
                 "bundles": {
-                    "Storyblok\\Bundle\\StoryblokBundle": [
+                    "Synolia\\SyliusSchedulerCommandPlugin\\SynoliaSyliusSchedulerCommandPlugin": [
                         "all"
                     ]
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "env": {
-                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
-                    "STORYBLOK_API_TOKEN": "",
-                    "STORYBLOK_VERSION": "draft",
-                    "#1": "STORYBLOK_ASSETS_API_TOKEN=",
-                    "#2": "STORYBLOK_WEBHOOK_SECRET="
-                }
+                "post-install-output": [
+                    "  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database",
+                    "  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands"
+                ]
             },
             "files": {
-                "config/packages/storyblok.php": {
+                "config/packages/sylius_scheduler_command.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -28,17 +25,13 @@
                         "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
                         "",
                         "return static function (ContainerConfigurator $containerConfigurator): void {",
-                        "    $containerConfigurator->extension('storyblok', [",
-                        "        'base_uri' => '%env(STORYBLOK_API_BASE_URI)%',",
-                        "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
-                        "        'version' => '%env(STORYBLOK_VERSION)%',",
-                        "    ]);",
+                        "    $containerConfigurator->import('@SynoliaSyliusSchedulerCommandPlugin/config/config.yaml');",
                         "};",
                         ""
                     ],
                     "executable": false
                 },
-                "config/routes/storyblok.php": {
+                "config/routes/sylius_scheduler_command.php": {
                     "contents": [
                         "<?php",
                         "",
@@ -47,14 +40,15 @@
                         "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
                         "",
                         "return static function (RoutingConfigurator $routingConfigurator): void {",
-                        "    $routingConfigurator->import('@StoryblokBundle/config/routes.php');",
+                        "    $routingConfigurator->import('@SynoliaSyliusSchedulerCommandPlugin/config/admin_routing.yaml')",
+                        "        ->prefix('/%sylius_admin.path_name%');",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "58e8bd464fd587e45fbb00b5dc01dd4cf3830f3e"
+            "ref": "139cef10a419448cd4cdbebce68658cc03a89ce9"
         }
     }
 }

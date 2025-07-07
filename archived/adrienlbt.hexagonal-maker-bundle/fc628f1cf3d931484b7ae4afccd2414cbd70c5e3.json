@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "adrienlbt/hexagonal-maker-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AdrienLbt\\HexagonalMakerBundle\\HexagonalMakerBundle": [
+                        "dev"
+                    ]
+                },
+                "composer-scripts": {
+                    "make:hexagonal:autoload": "symfony-cmd"
+                },
+                "post-install-output": [
+                    "\ud83c\udf89 Le bundle Hexagonal Maker has been installed."
+                ],
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/hexagonal_maker_bundle.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    if ($containerConfigurator->env() === 'dev') {",
+                        "        $containerConfigurator->extension('hexagonal_maker', [",
+                        "            'application_path' => 'Application',",
+                        "            'domain_path' => 'Domain',",
+                        "            'infrastructure_path' => 'Infrastructure',",
+                        "        ]);",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fc628f1cf3d931484b7ae4afccd2414cbd70c5e3"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "devzair/mail-logger-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DevZair\\MailLoggerBundle\\MailLoggerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mail_logger.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return static function (ContainerConfigurator $containerConfigurator): void {",
+                        "    $containerConfigurator->extension('mail_logger', [",
+                        "        'enabled' => true,",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4a810c47789fe378a994f08f51640821f92d9b19"
+        }
+    }
+}

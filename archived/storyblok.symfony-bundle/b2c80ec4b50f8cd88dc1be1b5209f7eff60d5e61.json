@@ -33,6 +33,18 @@
                         "        'token' => '%env(STORYBLOK_API_TOKEN)%',",
                         "        'version' => '%env(STORYBLOK_VERSION)%',",
                         "    ]);",
+                        "    if ($containerConfigurator->env() === 'prod') {",
+                        "        $containerConfigurator->extension('storyblok', [",
+                        "            'controller' => [",
+                        "                'cache' => [",
+                        "                    'public' => true,",
+                        "                    'max_age' => 3600,",
+                        "                    'smax_age' => 3600,",
+                        "                    'must_revalidate' => true,",
+                        "                ],",
+                        "            ],",
+                        "        ]);",
+                        "    }",
                         "};",
                         ""
                     ],
@@ -47,14 +59,16 @@
                         "use Symfony\\Component\\Routing\\Loader\\Configurator\\RoutingConfigurator;",
                         "",
                         "return static function (RoutingConfigurator $routingConfigurator): void {",
-                        "    $routingConfigurator->import('@StoryblokBundle/config/routes.php');",
+                        "    $routingConfigurator->import('@StoryblokBundle/config/routes/webhook.php');",
+                        "",
+                        "    $routingConfigurator->import('@StoryblokBundle/config/routes/content_type.php');",
                         "};",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "58e8bd464fd587e45fbb00b5dc01dd4cf3830f3e"
+            "ref": "b2c80ec4b50f8cd88dc1be1b5209f7eff60d5e61"
         }
     }
 }

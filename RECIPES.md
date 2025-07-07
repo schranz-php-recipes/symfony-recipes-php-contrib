@@ -5,7 +5,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | Package | Latest Recipe |
 | --- | --- |
 | [21torr/hosting](https://packagist.org/packages/21torr/hosting) | [3.2](21torr/hosting/3.2) |
-| [21torr/storyblok](https://packagist.org/packages/21torr/storyblok) | [3.0](21torr/storyblok/3.0) |
+| [21torr/storyblok](https://packagist.org/packages/21torr/storyblok) | [3.15](21torr/storyblok/3.15) |
 | [21torr/task-manager](https://packagist.org/packages/21torr/task-manager) | [2.0](21torr/task-manager/2.0) |
 | [abel/keycloak-bearer-only-adapter-bundle](https://packagist.org/packages/abel/keycloak-bearer-only-adapter-bundle) | [1.0](abel/keycloak-bearer-only-adapter-bundle/1.0) |
 | [ablaise/meteion-bundle](https://packagist.org/packages/ablaise/meteion-bundle) | [1.0](ablaise/meteion-bundle/1.0) |
@@ -13,6 +13,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ad3n/ratchet-bundle](https://packagist.org/packages/ad3n/ratchet-bundle) | [0.4](ad3n/ratchet-bundle/0.4) |
 | [adback/adback-sdk-php-symfony](https://packagist.org/packages/adback/adback-sdk-php-symfony) | [2.4](adback/adback-sdk-php-symfony/2.4) |
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](adlarge/fixtures-documentation-bundle/1.1) |
+| [adrienlbt/hexagonal-maker-bundle](https://packagist.org/packages/adrienlbt/hexagonal-maker-bundle) | [1.2](adrienlbt/hexagonal-maker-bundle/1.2) |
 | [agilelab-fr/captcha-bundle](https://packagist.org/packages/agilelab-fr/captcha-bundle) | [1.0](agilelab-fr/captcha-bundle/1.0) |
 | [ajardin/blizzard-sdk-bundle](https://packagist.org/packages/ajardin/blizzard-sdk-bundle) | [1.0](ajardin/blizzard-sdk-bundle/1.0) |
 | [ajardin/docker-symfony](https://packagist.org/packages/ajardin/docker-symfony) | [0.2](ajardin/docker-symfony/0.2) |
@@ -79,6 +80,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cache/adapter-bundle](https://packagist.org/packages/cache/adapter-bundle) | [1.1](cache/adapter-bundle/1.1) |
 | [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [1.0](cache/cache-bundle/1.0) |
 | [ckrack/optimus-bundle](https://packagist.org/packages/ckrack/optimus-bundle) | [0.1](ckrack/optimus-bundle/0.1) |
+| [cmsig/seal-symfony-bundle](https://packagist.org/packages/cmsig/seal-symfony-bundle) | [0.8](cmsig/seal-symfony-bundle/0.8) |
 | [codebuds/mattermost-publication-bundle](https://packagist.org/packages/codebuds/mattermost-publication-bundle) | [0.3](codebuds/mattermost-publication-bundle/0.3) |
 | [codeception/codeception](https://packagist.org/packages/codeception/codeception) | [5.0](codeception/codeception/5.0) |
 | [coka/api-bundle](https://packagist.org/packages/coka/api-bundle) | [4.0](coka/api-bundle/4.0) |
@@ -98,7 +100,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [connectholland/cookie-consent-bundle](https://packagist.org/packages/connectholland/cookie-consent-bundle) | [0.4](connectholland/cookie-consent-bundle/0.4) |
 | [connectholland/timechimp-bundle](https://packagist.org/packages/connectholland/timechimp-bundle) | [1.0](connectholland/timechimp-bundle/1.0) |
 | [connectholland/uptime-robot-bundle](https://packagist.org/packages/connectholland/uptime-robot-bundle) | [1.0](connectholland/uptime-robot-bundle/1.0) |
-| [contao/core-bundle](https://packagist.org/packages/contao/core-bundle) | [4.6](contao/core-bundle/4.6) |
+| [contao/core-bundle](https://packagist.org/packages/contao/core-bundle) | [5.0](contao/core-bundle/5.0) |
 | [contao/installation-bundle](https://packagist.org/packages/contao/installation-bundle) | [4.10](contao/installation-bundle/4.10) |
 | [contentful/contentful-bundle](https://packagist.org/packages/contentful/contentful-bundle) | [4.0](contentful/contentful-bundle/4.0) |
 | [core23/facebook-bundle](https://packagist.org/packages/core23/facebook-bundle) | [0.4](core23/facebook-bundle/0.4) |
@@ -114,7 +116,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](cyberomulus/sitemap-generator-bundle/1.2) |
 | [dahromy/glide-symfony](https://packagist.org/packages/dahromy/glide-symfony) | [1.0](dahromy/glide-symfony/1.0) |
 | [dahromy/mvola-bundle](https://packagist.org/packages/dahromy/mvola-bundle) | [1.0](dahromy/mvola-bundle/1.0) |
-| [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [7.2](dama/doctrine-test-bundle/7.2) |
+| [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [8.3](dama/doctrine-test-bundle/8.3) |
 | [damienharper/auditor-bundle](https://packagist.org/packages/damienharper/auditor-bundle) | [4.0](damienharper/auditor-bundle/4.0) |
 | [damienharper/doctrine-audit-bundle](https://packagist.org/packages/damienharper/doctrine-audit-bundle) | [1.0](damienharper/doctrine-audit-bundle/1.0) |
 | [datana-gmbh/datapool-api](https://packagist.org/packages/datana-gmbh/datapool-api) | [3.16](datana-gmbh/datapool-api/3.16) |
@@ -138,6 +140,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [dekalee/enom-bundle](https://packagist.org/packages/dekalee/enom-bundle) | [1.0](dekalee/enom-bundle/1.0) |
 | [dekalee/mailjet-bundle](https://packagist.org/packages/dekalee/mailjet-bundle) | [2.1](dekalee/mailjet-bundle/2.1) |
 | [dekalee/pubsub-swarrot-bundle](https://packagist.org/packages/dekalee/pubsub-swarrot-bundle) | [1.0](dekalee/pubsub-swarrot-bundle/1.0) |
+| [devzair/mail-logger-bundle](https://packagist.org/packages/devzair/mail-logger-bundle) | [1.0](devzair/mail-logger-bundle/1.0) |
 | [disjfa/mozaic-bundle](https://packagist.org/packages/disjfa/mozaic-bundle) | [0.1](disjfa/mozaic-bundle/0.1) |
 | [disjfa/translation-bundle](https://packagist.org/packages/disjfa/translation-bundle) | [0.1](disjfa/translation-bundle/0.1) |
 | [dobryprogramator/smartform-bundle](https://packagist.org/packages/dobryprogramator/smartform-bundle) | [1.0](dobryprogramator/smartform-bundle/1.0) |
@@ -231,6 +234,8 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [gpslab/domain-event-bundle](https://packagist.org/packages/gpslab/domain-event-bundle) | [2.2](gpslab/domain-event-bundle/2.2) |
 | [gpslab/geoip2](https://packagist.org/packages/gpslab/geoip2) | [2.0](gpslab/geoip2/2.0) |
 | [gpslab/pagination-bundle](https://packagist.org/packages/gpslab/pagination-bundle) | [1.2](gpslab/pagination-bundle/1.2) |
+| [gurtok/seo-bundle](https://packagist.org/packages/gurtok/seo-bundle) | [1.0](gurtok/seo-bundle/1.0) |
+| [hakam/multi-tenancy-bundle](https://packagist.org/packages/hakam/multi-tenancy-bundle) | [2.8](hakam/multi-tenancy-bundle/2.8) |
 | [hans-peter-ording/nflfastr-symfony-bundle](https://packagist.org/packages/hans-peter-ording/nflfastr-symfony-bundle) | [0.9](hans-peter-ording/nflfastr-symfony-bundle/0.9) |
 | [happyr/entity-exists-validation-constraint](https://packagist.org/packages/happyr/entity-exists-validation-constraint) | [1.0](happyr/entity-exists-validation-constraint/1.0) |
 | [happyr/json-api-response-factory](https://packagist.org/packages/happyr/json-api-response-factory) | [0.1](happyr/json-api-response-factory/0.1) |
@@ -242,6 +247,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [holadev/amp-toolbox-bundle](https://packagist.org/packages/holadev/amp-toolbox-bundle) | [0.1](holadev/amp-toolbox-bundle/0.1) |
 | [horlyk/fetch-xml-bundle](https://packagist.org/packages/horlyk/fetch-xml-bundle) | [1.1](horlyk/fetch-xml-bundle/1.1) |
 | [hugosoltys/fitz-bundle](https://packagist.org/packages/hugosoltys/fitz-bundle) | [1.0](hugosoltys/fitz-bundle/1.0) |
+| [huluti/altcha-bundle](https://packagist.org/packages/huluti/altcha-bundle) | [1.0](huluti/altcha-bundle/1.0) |
 | [huluti/doctrine-relations-analyser](https://packagist.org/packages/huluti/doctrine-relations-analyser) | [0.3](huluti/doctrine-relations-analyser/0.3) |
 | [hwi/oauth-bundle](https://packagist.org/packages/hwi/oauth-bundle) | [2.0](hwi/oauth-bundle/2.0) |
 | [idci/keycloak-security-bundle](https://packagist.org/packages/idci/keycloak-security-bundle) | [2.0](idci/keycloak-security-bundle/2.0) |
@@ -262,7 +268,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jane-php/json-schema](https://packagist.org/packages/jane-php/json-schema) | [7.0](jane-php/json-schema/7.0) |
 | [jane-php/open-api-common](https://packagist.org/packages/jane-php/open-api-common) | [7.0](jane-php/open-api-common/7.0) |
 | [jawira/case-converter-twig](https://packagist.org/packages/jawira/case-converter-twig) | [0.0](jawira/case-converter-twig/0.0) |
-| [jawira/doctrine-diagram-bundle](https://packagist.org/packages/jawira/doctrine-diagram-bundle) | [0.7](jawira/doctrine-diagram-bundle/0.7) |
+| [jawira/doctrine-diagram-bundle](https://packagist.org/packages/jawira/doctrine-diagram-bundle) | [1.0](jawira/doctrine-diagram-bundle/1.0) |
 | [jbtcd/fitbit-bundle](https://packagist.org/packages/jbtcd/fitbit-bundle) | [1.0](jbtcd/fitbit-bundle/1.0) |
 | [jeandanyel/crud-bundle](https://packagist.org/packages/jeandanyel/crud-bundle) | [0.1](jeandanyel/crud-bundle/0.1) |
 | [jeandanyel/list-bundle](https://packagist.org/packages/jeandanyel/list-bundle) | [0.1](jeandanyel/list-bundle/0.1) |
@@ -276,6 +282,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jupi/prestashop-webservice-bundle](https://packagist.org/packages/jupi/prestashop-webservice-bundle) | [1.0](jupi/prestashop-webservice-bundle/1.0) |
 | [jurry/amqp-symfony-bundle](https://packagist.org/packages/jurry/amqp-symfony-bundle) | [1.0](jurry/amqp-symfony-bundle/1.0) |
 | [karser/karser-recaptcha3-bundle](https://packagist.org/packages/karser/karser-recaptcha3-bundle) | [0.1](karser/karser-recaptcha3-bundle/0.1) |
+| [keron-digital/auth-redis-storage-bundle](https://packagist.org/packages/keron-digital/auth-redis-storage-bundle) | [1.0](keron-digital/auth-redis-storage-bundle/1.0) |
 | [kerox/twig-image-placeholder-extension](https://packagist.org/packages/kerox/twig-image-placeholder-extension) | [1.0](kerox/twig-image-placeholder-extension/1.0) |
 | [kevinpapst/adminlte-bundle](https://packagist.org/packages/kevinpapst/adminlte-bundle) | [0.9](kevinpapst/adminlte-bundle/0.9) |
 | [kibatic/timezone-bundle](https://packagist.org/packages/kibatic/timezone-bundle) | [1.0](kibatic/timezone-bundle/1.0) |
@@ -288,7 +295,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [knplabs/packagist-api](https://packagist.org/packages/knplabs/packagist-api) | [1.6](knplabs/packagist-api/1.6) |
 | [knpuniversity/oauth2-client-bundle](https://packagist.org/packages/knpuniversity/oauth2-client-bundle) | [1.20](knpuniversity/oauth2-client-bundle/1.20) |
 | [knyk/mailbox-bundle](https://packagist.org/packages/knyk/mailbox-bundle) | [1.0](knyk/mailbox-bundle/1.0) |
-| [kocal/biome-js-bundle](https://packagist.org/packages/kocal/biome-js-bundle) | [1.1](kocal/biome-js-bundle/1.1) |
+| [kocal/biome-js-bundle](https://packagist.org/packages/kocal/biome-js-bundle) | [2.0](kocal/biome-js-bundle/2.0) |
 | [koff/i18n-form-bundle](https://packagist.org/packages/koff/i18n-form-bundle) | [4.0](koff/i18n-form-bundle/4.0) |
 | [kriswallsmith/buzz](https://packagist.org/packages/kriswallsmith/buzz) | [1.0](kriswallsmith/buzz/1.0) |
 | [kunicmarko/jms-messenger-adapter](https://packagist.org/packages/kunicmarko/jms-messenger-adapter) | [0.1](kunicmarko/jms-messenger-adapter/0.1) |
@@ -311,7 +318,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [kynno/smartbots-bundle](https://packagist.org/packages/kynno/smartbots-bundle) | [0.1](kynno/smartbots-bundle/0.1) |
 | [labymod/discord-webhook-bundle](https://packagist.org/packages/labymod/discord-webhook-bundle) | [1.0](labymod/discord-webhook-bundle/1.0) |
 | [lag/adminbundle](https://packagist.org/packages/lag/adminbundle) | [1.0](lag/adminbundle/1.0) |
-| [league/oauth2-server-bundle](https://packagist.org/packages/league/oauth2-server-bundle) | [0.3](league/oauth2-server-bundle/0.3) |
 | [league/tactician-bundle](https://packagist.org/packages/league/tactician-bundle) | [1.0](league/tactician-bundle/1.0) |
 | [leapt/core-bundle](https://packagist.org/packages/leapt/core-bundle) | [2.2](leapt/core-bundle/2.2) |
 | [leapt/froala-editor-bundle](https://packagist.org/packages/leapt/froala-editor-bundle) | [1.2](leapt/froala-editor-bundle/1.2) |
@@ -335,7 +341,10 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
 | [maba/webpack-bundle](https://packagist.org/packages/maba/webpack-bundle) | [1.0](maba/webpack-bundle/1.0) |
 | [machy8/webloader-bundle](https://packagist.org/packages/machy8/webloader-bundle) | [1.1](machy8/webloader-bundle/1.1) |
+| [macpaw/behat-doctrine-fixtures](https://packagist.org/packages/macpaw/behat-doctrine-fixtures) | [1.0](macpaw/behat-doctrine-fixtures/1.0) |
+| [macpaw/behat-http-mock-context](https://packagist.org/packages/macpaw/behat-http-mock-context) | [2.0](macpaw/behat-http-mock-context/2.0) |
 | [macpaw/behat-nelmio-describer](https://packagist.org/packages/macpaw/behat-nelmio-describer) | [1.0](macpaw/behat-nelmio-describer/1.0) |
+| [macpaw/behat-redis-context](https://packagist.org/packages/macpaw/behat-redis-context) | [1.0](macpaw/behat-redis-context/1.0) |
 | [macpaw/sentry-monolog-adapter](https://packagist.org/packages/macpaw/sentry-monolog-adapter) | [0.0](macpaw/sentry-monolog-adapter/0.0) |
 | [macpaw/symfony-health-check-bundle](https://packagist.org/packages/macpaw/symfony-health-check-bundle) | [1.0](macpaw/symfony-health-check-bundle/1.0) |
 | [mael/intervention-image-bundle](https://packagist.org/packages/mael/intervention-image-bundle) | [1.0](mael/intervention-image-bundle/1.0) |
@@ -458,7 +467,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [pentatrion/vite-bundle](https://packagist.org/packages/pentatrion/vite-bundle) | [6.5](pentatrion/vite-bundle/6.5) |
 | [php-amqplib/rabbitmq-bundle](https://packagist.org/packages/php-amqplib/rabbitmq-bundle) | [1.12](php-amqplib/rabbitmq-bundle/1.12) |
 | [php-http/httplug-bundle](https://packagist.org/packages/php-http/httplug-bundle) | [1.6](php-http/httplug-bundle/1.6) |
-| [php-llm/llm-chain-bundle](https://packagist.org/packages/php-llm/llm-chain-bundle) | [0.16](php-llm/llm-chain-bundle/0.16) |
+| [php-llm/llm-chain-bundle](https://packagist.org/packages/php-llm/llm-chain-bundle) | [0.19](php-llm/llm-chain-bundle/0.19) |
 | [php-translation/loco-adapter](https://packagist.org/packages/php-translation/loco-adapter) | [0.8](php-translation/loco-adapter/0.8) |
 | [php-translation/symfony-bundle](https://packagist.org/packages/php-translation/symfony-bundle) | [0.10](php-translation/symfony-bundle/0.10) |
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](phpfastcache/phpfastcache-bundle/3.0) |
@@ -489,6 +498,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [prooph/event-store-symfony-bundle](https://packagist.org/packages/prooph/event-store-symfony-bundle) | [0.10](prooph/event-store-symfony-bundle/0.10) |
 | [prooph/pdo-event-store](https://packagist.org/packages/prooph/pdo-event-store) | [1.15](prooph/pdo-event-store/1.15) |
 | [prooph/service-bus-symfony-bundle](https://packagist.org/packages/prooph/service-bus-symfony-bundle) | [0.6](prooph/service-bus-symfony-bundle/0.6) |
+| [psys/order-invoice-bundle](https://packagist.org/packages/psys/order-invoice-bundle) | [1.0](psys/order-invoice-bundle/1.0) |
 | [pugx/geo-form-bundle](https://packagist.org/packages/pugx/geo-form-bundle) | [0.2](pugx/geo-form-bundle/0.2) |
 | [pusher/pusher-php-server](https://packagist.org/packages/pusher/pusher-php-server) | [3.0](pusher/pusher-php-server/3.0) |
 | [qandidate/toggle-bundle](https://packagist.org/packages/qandidate/toggle-bundle) | [1.0](qandidate/toggle-bundle/1.0) |
@@ -508,6 +518,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ro0nl/http-responder](https://packagist.org/packages/ro0nl/http-responder) | [0.1](ro0nl/http-responder/0.1) |
 | [rokka/client-bundle](https://packagist.org/packages/rokka/client-bundle) | [1.0](rokka/client-bundle/1.0) |
 | [rossel/mwu-sdk](https://packagist.org/packages/rossel/mwu-sdk) | [0.1](rossel/mwu-sdk/0.1) |
+| [rossel/rossel-kafka](https://packagist.org/packages/rossel/rossel-kafka) | [0.0](rossel/rossel-kafka/0.0) |
 | [roukmoute/hashids-bundle](https://packagist.org/packages/roukmoute/hashids-bundle) | [1.4](roukmoute/hashids-bundle/1.4) |
 | [routmoute/routmoute-discord-bundle](https://packagist.org/packages/routmoute/routmoute-discord-bundle) | [1.1](routmoute/routmoute-discord-bundle/1.1) |
 | [routmoute/routmoute-sirene-bundle](https://packagist.org/packages/routmoute/routmoute-sirene-bundle) | [1.0](routmoute/routmoute-sirene-bundle/1.0) |
@@ -526,6 +537,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sensiolabs/storybook-bundle](https://packagist.org/packages/sensiolabs/storybook-bundle) | [0.1](sensiolabs/storybook-bundle/0.1) |
 | [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [5.0](sentry/sentry-symfony/5.0) |
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |
+| [setono/sylius-toggle-vat-plugin](https://packagist.org/packages/setono/sylius-toggle-vat-plugin) | [1.0](setono/sylius-toggle-vat-plugin/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [4.0](shopware/app-bundle/4.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](siburuxue/doctrine-helper/1.0) |
@@ -573,7 +585,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [stefandoorn/sitemap-plugin](https://packagist.org/packages/stefandoorn/sitemap-plugin) | [2.0](stefandoorn/sitemap-plugin/2.0) |
 | [stof/doctrine-extensions-bundle](https://packagist.org/packages/stof/doctrine-extensions-bundle) | [1.2](stof/doctrine-extensions-bundle/1.2) |
 | [stogon/unleash-bundle](https://packagist.org/packages/stogon/unleash-bundle) | [0.4](stogon/unleash-bundle/0.4) |
-| [storyblok/symfony-bundle](https://packagist.org/packages/storyblok/symfony-bundle) | [0.1](storyblok/symfony-bundle/0.1) |
+| [storyblok/symfony-bundle](https://packagist.org/packages/storyblok/symfony-bundle) | [1.5](storyblok/symfony-bundle/1.5) |
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](sulu/article-bundle/2.0) |
 | [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [2.4](sulu/form-bundle/2.4) |
 | [sulu/headless-bundle](https://packagist.org/packages/sulu/headless-bundle) | [0.1](sulu/headless-bundle/0.1) |
@@ -596,23 +608,28 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/admin-order-creation-plugin](https://packagist.org/packages/sylius/admin-order-creation-plugin) | [0.6](sylius/admin-order-creation-plugin/0.6) |
 | [sylius/admin-ui](https://packagist.org/packages/sylius/admin-ui) | [0.4](sylius/admin-ui/0.4) |
 | [sylius/bootstrap-admin-ui](https://packagist.org/packages/sylius/bootstrap-admin-ui) | [0.4](sylius/bootstrap-admin-ui/0.4) |
+| [sylius/cms-plugin](https://packagist.org/packages/sylius/cms-plugin) | [1.0](sylius/cms-plugin/1.0) |
 | [sylius/customer-order-cancellation-plugin](https://packagist.org/packages/sylius/customer-order-cancellation-plugin) | [0.2](sylius/customer-order-cancellation-plugin/0.2) |
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
 | [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [1.0](sylius/invoicing-plugin/1.0) |
+| [sylius/mcp-server-plugin](https://packagist.org/packages/sylius/mcp-server-plugin) | [0.1](sylius/mcp-server-plugin/0.1) |
+| [sylius/mollie-plugin](https://packagist.org/packages/sylius/mollie-plugin) | [3.0](sylius/mollie-plugin/3.0) |
 | [sylius/paypal-plugin](https://packagist.org/packages/sylius/paypal-plugin) | [2.0](sylius/paypal-plugin/2.0) |
+| [sylius/product-bundle-plugin](https://packagist.org/packages/sylius/product-bundle-plugin) | [1.0](sylius/product-bundle-plugin/1.0) |
 | [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [2.0](sylius/refund-plugin/2.0) |
 | [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.12](sylius/resource-bundle/1.12) |
 | [sylius/twig-extra](https://packagist.org/packages/sylius/twig-extra) | [0.4](sylius/twig-extra/0.4) |
 | [sylius/twig-hooks](https://packagist.org/packages/sylius/twig-hooks) | [0.4](sylius/twig-hooks/0.4) |
 | [sylius/ui-translations](https://packagist.org/packages/sylius/ui-translations) | [0.4](sylius/ui-translations/0.4) |
+| [sylius/wishlist-plugin](https://packagist.org/packages/sylius/wishlist-plugin) | [1.0](sylius/wishlist-plugin/1.0) |
 | [symandy/makefile-maker-bundle](https://packagist.org/packages/symandy/makefile-maker-bundle) | [0.5](symandy/makefile-maker-bundle/0.5) |
 | [symfony-bundles/kafka-bundle](https://packagist.org/packages/symfony-bundles/kafka-bundle) | [1.0](symfony-bundles/kafka-bundle/1.0) |
 | [symfony-bundles/redis-bundle](https://packagist.org/packages/symfony-bundles/redis-bundle) | [2.0](symfony-bundles/redis-bundle/2.0) |
 | [symfony/apache-pack](https://packagist.org/packages/symfony/apache-pack) | [1.0](symfony/apache-pack/1.0) |
 | [symfonycorp/connect](https://packagist.org/packages/symfonycorp/connect) | [7.0](symfonycorp/connect/7.0) |
 | [symfonycorp/connect-bundle](https://packagist.org/packages/symfonycorp/connect-bundle) | [5.0](symfonycorp/connect-bundle/5.0) |
-| [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [1.0](synolia/sylius-mail-tester-plugin/1.0) |
-| [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [2.0](synolia/sylius-scheduler-command-plugin/2.0) |
+| [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [3.0](synolia/sylius-mail-tester-plugin/3.0) |
+| [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [4.0](synolia/sylius-scheduler-command-plugin/4.0) |
 | [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [1.10](systemsdk/easy-log-bundle/1.10) |
 | [tales-from-a-dev/flowbite-bundle](https://packagist.org/packages/tales-from-a-dev/flowbite-bundle) | [0.4](tales-from-a-dev/flowbite-bundle/0.4) |
 | [tales-from-a-dev/twig-tailwind-extra](https://packagist.org/packages/tales-from-a-dev/twig-tailwind-extra) | [0.2](tales-from-a-dev/twig-tailwind-extra/0.2) |
@@ -674,6 +691,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ywh/doctrine-encryption-bundle](https://packagist.org/packages/ywh/doctrine-encryption-bundle) | [1.0](ywh/doctrine-encryption-bundle/1.0) |
 | [zemasterkrom/zmkr-cloudflare-turnstile-bundle](https://packagist.org/packages/zemasterkrom/zmkr-cloudflare-turnstile-bundle) | [0.1](zemasterkrom/zmkr-cloudflare-turnstile-bundle/0.1) |
 | [zendesk/zendesk_api_client_php](https://packagist.org/packages/zendesk/zendesk_api_client_php) | [2.2](zendesk/zendesk_api_client_php/2.2) |
+| [zenstruck/messenger-monitor-bundle](https://packagist.org/packages/zenstruck/messenger-monitor-bundle) | [0.5](zenstruck/messenger-monitor-bundle/0.5) |
 | [zenstruck/redis](https://packagist.org/packages/zenstruck/redis) | [0.1](zenstruck/redis/0.1) |
 | [zenstruck/signed-url-bundle](https://packagist.org/packages/zenstruck/signed-url-bundle) | [0.1](zenstruck/signed-url-bundle/0.1) |
 | [zenstruck/twig-service-bundle](https://packagist.org/packages/zenstruck/twig-service-bundle) | [0.2](zenstruck/twig-service-bundle/0.2) |
