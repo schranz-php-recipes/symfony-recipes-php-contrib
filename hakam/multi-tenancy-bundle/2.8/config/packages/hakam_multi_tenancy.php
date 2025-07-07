@@ -1,0 +1,27 @@
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->extension('hakam_multi_tenancy', [
+        'tenant_database_className' => 'App\Entity\Main\TenantDbConfig',
+        'tenant_database_identifier' => 'id',
+        'tenant_connection' => [
+            'url' => '%env(resolve:TENANT_DEFAULT_DATABASE_URL)%',
+        ],
+        'tenant_migration' => [
+            'tenant_migration_namespace' => 'DoctrineMigrations\Tenant',
+            'tenant_migration_path' => 'migrations/Tenant',
+        ],
+        'tenant_entity_manager' => [
+            'mapping' => [
+                'type' => 'attribute',
+                'dir' => '%kernel.project_dir%/src/Entity/Tenant',
+                'prefix' => 'App\Entity\Tenant',
+                'alias' => 'Tenant',
+            ],
+        ],
+    ]);
+};

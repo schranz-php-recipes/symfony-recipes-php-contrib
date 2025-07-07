@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     if ($containerConfigurator->env() === 'dev') {
         $containerConfigurator->extension('kocal_biome_js', [
-            'binary_version' => 'latest_stable',
+            'binary_version' => 'v1.9.4',
         ]);
     }
 };
